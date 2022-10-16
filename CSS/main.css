@@ -12,18 +12,20 @@ body
     align-items: center;
     height: 100vh;
     background-color: #121212;
-    color: antiquewhite;
+    color: #453b3b;
 }
 div
 {
-    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     text-align: center;
     width: 300px;
     height: 450px;
     border-radius: 5px;
     padding-top: 100px;
     padding-bottom: 30px;
-    background: rgb(240, 139, 139);
+    background: #a4a5c6;
 }
 h1
 {
