@@ -1,0 +1,59 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.temp
+{
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: black;
+    color: aqua;
+    padding-top: 20px;
+    
+}
+.in
+{
+    position: relative;
+    color: aquamarine;
+    background-color: black;
+    left: 20%;
+    height: 30px;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    display: block;
+
+}
+.btn
+{
+    background-color: aquamarine;
+    border-radius: 3px;
+    width: 50px;
+    height: 30px;
+    color: black;
+    cursor:pointer;
+    margin-top: 40px;
+}
+.in:focus
+{
+    color: antiquewhite;
+    background-color: black;
+    left: 15%;
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    display: block;
+
+}
