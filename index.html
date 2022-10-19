@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travi5</title>
+    <link href="CSS/main.css" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+    <script>
+        var count=1;
+        function changeColor()
+        {
+            
+            
+            if(count==0)
+            {
+                document.getElementById("title0").style.color="#328b96";
+                document.getElementById("pa0").style.color="#453b3b";
+                document.getElementById("div0").style.backgroundColor="#a4a5c6";
+                count=1;
+                
+            }
+            else
+            {
+                document.getElementById("title0").style.color="#784d84";
+                document.getElementById("pa0").style.color="#405159";
+                document.getElementById("div0").style.backgroundColor="#b78f8f";
+                count=0;
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div0">
+        <h1 id="title0">Hello</h1>
+        <br>
+        <p id="pa0">Travi5...</p>
+        <br>
+        <button onclick="changeColor()" style="background:#928787 ;">click</button>
+        <br>
+        <a href="0.html" style="font-size: 13px;" target="_blank">Log in</a>
+    </div>
+</body>
+</html>
