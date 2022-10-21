@@ -1,0 +1,64 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: aqua;
+}
+.container
+{
+    
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    background-color: antiquewhite;
+    padding: 40px;
+
+}
+.dates
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+input[type="date"]
+{
+    border: 1px solid black;
+}
+p
+{
+    font-size: 20px;
+    background-color: #dae6fd;
+    text-align: center;
+    color: #38395e;
+    text-transform: capitalize;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    top: 60%;
+}
+button
+{
+    display: block;
+    position: relative;
+    background-color: #1b64f5;
+    color: #ffffff;
+    border: none;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+}
