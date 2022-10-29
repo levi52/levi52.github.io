@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="birth.css">
+    <script>
+        var count=1;
+        function show()
+        {
+            var doge=document.getElementById("doge");
+            var word=document.getElementById("word");
+            var e1=document.getElementById("e1");
+            var e2=document.getElementById("e2");
+            if(count==0)
+            {
+                word.style.color="antiquewhite";
+                e1.className="e11";
+                e2.className="e22";
+                doge.innerHTML="<img src='' alt='' class='doge' >";
+                count=1;
+            }
+            else if(count==1)
+            {
+                word.style.color="black";
+                e1.className="e1";
+                e2.className="e2";
+                doge.innerHTML="<img src='doge.webp' alt='' class='doge' ><img src='doge.webp' alt='' class='doge' >";
+                count=0;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="eye">
+            <div class="e11" id="e1">
+
+            </div>
+            <div class="e22" id="e2">
+                
+            </div>
+        </div>
+        <h1 class="head">Happy Birthday</h1>
+        
+        <button onclick="show()" class="btn">click</button>
+        <div class="pass">
+            <p class="word" id="word">To:丁祥</p>
+        </div>
+        <div class="clk">
+            <p id="doge"></p>
+        </div>
+    </div>
+</body>
+</html>
+<!-- // function timer(x,y,z)
+// {
+//     var hh=document.getElementById("hh");
+//     var now=Date.now();
+//     var end=new Date(x,y-1,z);
+//     var ends=end.getTime();
+//     var ss=ends-now;
+//     var s=Math.floor(ss/1000);
+//     var day=Math.floor(s/60/60/24);
+//     var hour=Math.floor(s/60/60%24);
+//     var min=Math.floor(s/60%60);
+//     var sec=Math.floor(s%60);
+//     var tm="倒计时"+day+"天"+hour+"时"+min+"分"+sec+"秒";
+//     hh.innerHTML=tm;
+// }
+// setInterval(function(){
+//     station(2022,10,31);
+// },1000); -->
