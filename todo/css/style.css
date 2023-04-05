@@ -10,7 +10,9 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(179, 179, 255);
+    /*background-color: rgb(179, 179, 255);*/
+     /*background-color: #668B8B;*/
+    background-color: #708090;
     flex-direction: column;
 }
 .title
