@@ -1,0 +1,102 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(179, 179, 255);
+    flex-direction: column;
+}
+.title
+{
+    margin-bottom: 20px;
+    border: 2px solid rgb(74, 225, 255);
+    background-color: rgb(119, 230, 255);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 10px 10px 8px rgba(0, 0,0, 0.4);
+}
+#app
+{
+    min-width: 10%;
+    background-color: rgb(255, 228, 195);
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0,0, 0.4);
+}
+.in
+{
+    padding: 3px;
+    background-color: rgb(255, 204, 141);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+input
+{
+    border: none;
+    margin: 5px;
+    outline: none;
+    text-align: center;
+    background-color: rgb(184, 255, 255);
+    color: rgb(1, 75, 88);
+    font-size: medium;
+    box-shadow: 3px 3px 3px rgba(0, 0,0, 0.4);
+    border-radius: 10px;
+    padding: 5px;
+}
+#clear
+{
+    padding: 5px;
+    margin: 5px;
+}
+#clear button
+{
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 18px;
+    background-color: rgb(211, 164, 255);
+    border: none;
+    border-radius: 5px;
+    color: brown;
+    box-shadow: 3px 3px 3px rgba(0, 0,0, 0.4);
+}
+.list
+{
+    margin-top: 5px;
+    margin-bottom: 8px;
+    background-color: aqua;
+    padding: 6px;
+    font-size: large;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0,0, 0.4);
+    word-wrap:break-word;
+    max-width: 320px;
+    /* position: relative; */
+}
+.list button
+{
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 18px;
+    background-color: rgb(88, 83, 90);
+    border: none;
+    border-radius: 5px;
+    color: rgb(1, 234, 255);
+    right: 5px;
+    margin-left: 280px;
+    display: flex;
+    justify-content: flex-end;
+    /* position: absolute; */
+}
+.count
+{
+    font-size: medium;
+    text-align: left;
+}

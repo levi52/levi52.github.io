@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+    <!-- <script src="./js/vue.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/list-outline.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="title">
+        
+        <h1><img src="./img/list-outline.svg" alt="" width="30px"> TO DO LIST</h1>
+    </div>
+    
+    <div id="app">
+        <div class="in">
+            <input placeholder="ENTER" type="text" v-model="inValue" @keyup.enter="add" >
+            <span v-show="doList!=0" id="clear"><button @click="clearAll">c</button></span>
+        </div>
+        <div class="list" v-for="(item,index) in doList">
+            <span>{{index+1}}. </span>
+            <label>{{item}}</label>
+            <button @click="remove(index)">x</button>
+        </div>
+        <div class="count">
+            <span v-if="doList.length==0">Nothing</span>
+            <span v-if="doList.length==1">{{doList.length}} thing</span>
+            <span v-if="doList.length>1">{{doList.length}} things</span>
+        </div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            doList:[],
+            inValue: ""
+        },
+        methods: {
+            add: function() {
+                this.doList.push(this.inValue);
+            },
+            remove: function(index) 
+            {
+                this.doList.splice(index,1);
+            },
+            clearAll: function() {
+                this.doList=[];
+            }
+        },
+    })
+</script>
+</html>
