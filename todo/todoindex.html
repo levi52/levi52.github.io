@@ -13,18 +13,22 @@
 <body>
     <div class="title">
         
-        <h1><img src="./img/list-outline.svg" alt="" width="30px"> TO DO LIST</h1>
+        <h1><img src="./img/list-outline.svg" alt="" width="25px"> TO DO LIST</h1>
     </div>
     
     <div id="app">
         <div class="in">
             <input placeholder="ENTER" type="text" v-model="inValue" @keyup.enter="add" >
-            <span v-show="doList!=0" id="clear"><button @click="clearAll">c</button></span>
+            <span v-show="doList!=0" id="clear"><button @click="clearAll"><img src="./img/trash-outline.svg" alt="" width="15px"></button></span>
         </div>
         <div class="list" v-for="(item,index) in doList">
             <span>{{index+1}}. </span>
             <label>{{item}}</label>
-            <button @click="remove(index)">x</button>
+            <div class="editbutton">
+                <button @click="change(index)"><img src="./img/create-outline.svg" alt="" width="24px"></button>
+                <button @click="copy(index)"><img src="./img/copy-outline.svg" alt="" width="24px"></button>
+                <button @click="remove(index)"><img src="./img/close-outline.svg" alt="" width="24px"></button>
+            </div>
         </div>
         <div class="count">
             <span v-if="doList.length==0">Nothing</span>
@@ -48,10 +52,24 @@
             {
                 this.doList.splice(index,1);
             },
+            copy: function(index) {
+                let copyText = this.doList[index];
+
+
+                console.log(copyText)
+                navigator.clipboard.writeText(copyText);
+
+            },
+            change: function(index) {
+                let changeText = this.inValue;
+                this.doList[index] = changeText;
+                console.log(this.doList[index]);
+            },
             clearAll: function() {
                 this.doList=[];
             }
         },
     })
+    
 </script>
 </html>
