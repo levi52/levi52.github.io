@@ -6,7 +6,7 @@
   <link href="https://levi52.github.io/atom.xml" rel="self"/>
   
   <link href="https://levi52.github.io/"/>
-  <updated>2024-05-15T08:58:01.229Z</updated>
+  <updated>2024-05-15T09:29:30.351Z</updated>
   <id>https://levi52.github.io/</id>
   
   <author>
@@ -21,14 +21,10 @@
     <link href="https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/"/>
     <id>https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/</id>
     <published>2024-05-15T08:47:50.000Z</published>
-    <updated>2024-05-15T08:58:01.229Z</updated>
+    <updated>2024-05-15T09:29:30.351Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;【祖传点灯】安信可Ai-M61-32S + 自由发挥&lt;/p&gt;
-&lt;h1 id=&quot;一、软件安装&quot;&gt;&lt;a href=&quot;#一、软件安装&quot; class=&quot;headerlink&quot; title=&quot;一、软件安装&quot;&gt;&lt;/a&gt;一、软件安装&lt;/h1&gt;&lt;p&gt;👉&lt;a href=&quot;https://b</summary>
-      
+    <summary type="html">安信可Ai-M61-32S Windows环境搭建 + 点灯</summary>
     
     
     
@@ -50,17 +46,10 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/</id>
     <published>2024-05-15T08:43:29.000Z</published>
-    <updated>2024-05-15T08:58:03.270Z</updated>
+    <updated>2024-05-15T09:30:07.821Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;移植Squareline Studio到工程&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h1 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;</summary>
-      
+    <summary type="html">使用Squareline_Studio设计UI移植到ESP32S3N8R8</summary>
     
     
     
@@ -86,13 +75,10 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/</id>
     <published>2024-05-15T08:26:23.000Z</published>
-    <updated>2024-05-15T08:58:05.642Z</updated>
+    <updated>2024-05-15T09:30:39.363Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;@&lt;a href=&quot;%E7%AB%8B%E5%88%9BESP32%E5%BC%80%E5%8F%91%E6%9D%BF+2.8%E5%AF%B8TFT%E7%94%B5%E5%AE%B9%E8%A7%A6%E6%91%B8%E5%B1%8F%5BST7789+GT911%</summary>
-      
+    <summary type="html">lvgl官方案例配置测试</summary>
     
     
     
@@ -118,13 +104,10 @@
     <link href="https://levi52.github.io/2024/05/15/hello-world/"/>
     <id>https://levi52.github.io/2024/05/15/hello-world/</id>
     <published>2024-05-15T06:56:03.972Z</published>
-    <updated>2024-05-15T06:56:03.972Z</updated>
+    <updated>2024-05-15T09:31:01.554Z</updated>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
+    <summary type="html">hexo blog</summary>
     
     
     
