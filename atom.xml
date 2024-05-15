@@ -6,7 +6,7 @@
   <link href="https://levi52.github.io/atom.xml" rel="self"/>
   
   <link href="https://levi52.github.io/"/>
-  <updated>2024-05-15T09:29:30.351Z</updated>
+  <updated>2024-05-15T10:10:24.199Z</updated>
   <id>https://levi52.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GitHub Profile</title>
+    <link href="https://levi52.github.io/2024/05/15/GitHub-Profile/"/>
+    <id>https://levi52.github.io/2024/05/15/GitHub-Profile/</id>
+    <published>2024-05-15T10:06:28.000Z</published>
+    <updated>2024-05-15T10:10:24.199Z</updated>
+    
+    
+    <summary type="html">GitHub Profile 设置</summary>
+    
+    
+    
+    <category term="GitHub" scheme="https://levi52.github.io/categories/GitHub/"/>
+    
+    <category term="教程" scheme="https://levi52.github.io/categories/GitHub/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="GitHub" scheme="https://levi52.github.io/tags/GitHub/"/>
+    
+    <category term="icon" scheme="https://levi52.github.io/tags/icon/"/>
+    
+  </entry>
+  
+  <entry>
     <title>安信可Ai-M61-32S环境搭建 + 点灯</title>
     <link href="https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/"/>
     <id>https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/</id>
     <published>2024-05-15T08:47:50.000Z</published>
-    <updated>2024-05-15T09:29:30.351Z</updated>
+    <updated>2024-05-15T10:08:36.440Z</updated>
     
     
     <summary type="html">安信可Ai-M61-32S Windows环境搭建 + 点灯</summary>
@@ -29,6 +52,8 @@
     
     
     <category term="Ai-M61-32S" scheme="https://levi52.github.io/categories/Ai-M61-32S/"/>
+    
+    <category term="教程" scheme="https://levi52.github.io/categories/Ai-M61-32S/%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="Ai-M61-32S" scheme="https://levi52.github.io/tags/Ai-M61-32S/"/>
@@ -46,7 +71,7 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/</id>
     <published>2024-05-15T08:43:29.000Z</published>
-    <updated>2024-05-15T09:30:07.821Z</updated>
+    <updated>2024-05-15T10:08:30.052Z</updated>
     
     
     <summary type="html">使用Squareline_Studio设计UI移植到ESP32S3N8R8</summary>
@@ -54,6 +79,8 @@
     
     
     <category term="ESP32" scheme="https://levi52.github.io/categories/ESP32/"/>
+    
+    <category term="教程" scheme="https://levi52.github.io/categories/ESP32/%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="ESP32" scheme="https://levi52.github.io/tags/ESP32/"/>
@@ -75,7 +102,7 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/</id>
     <published>2024-05-15T08:26:23.000Z</published>
-    <updated>2024-05-15T09:30:39.363Z</updated>
+    <updated>2024-05-15T10:08:26.825Z</updated>
     
     
     <summary type="html">lvgl官方案例配置测试</summary>
@@ -83,6 +110,8 @@
     
     
     <category term="ESP32" scheme="https://levi52.github.io/categories/ESP32/"/>
+    
+    <category term="教程" scheme="https://levi52.github.io/categories/ESP32/%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="ESP32" scheme="https://levi52.github.io/tags/ESP32/"/>
