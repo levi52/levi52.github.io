@@ -76,7 +76,7 @@
 </li>
 </ul>
 <h2 id="添加对象"><a href="#添加对象" class="headerlink" title="添加对象"></a>添加对象</h2><p>只有将控件对象添加到组中，才能通过<code>keypad</code>控制</p>
-<p>打开如下目录界面文件<code>lvgl/screens/ui_mainpage.c</code></p>
+<p>打开如下目录界面文件<code>lvgl_gui/screens/ui_mainpage.c</code></p>
 <p>可以看到在设计界面时一共添加了四个控件</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">ui_Button2</span><br><span class="line">ui_Switch2</span><br><span class="line">ui_Switch1</span><br><span class="line">ui_Dropdown2</span><br></pre></td></tr></table></figure>
 
@@ -266,6 +266,24 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2024/05/15/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>ESP32S3N8R8 + Squareline_Studio设计移植</title>
     <url>/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/</url>
     <content><![CDATA[<blockquote>
@@ -317,6 +335,88 @@
         <tag>Squareline Studio</tag>
         <tag>触摸屏</tag>
         <tag>立创</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安信可Ai-M61-32S环境搭建 + 点灯</title>
+    <url>/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/</url>
+    <content><![CDATA[<p>【祖传点灯】安信可Ai-M61-32S + 自由发挥</p>
+<h1 id="一、软件安装"><a href="#一、软件安装" class="headerlink" title="一、软件安装"></a>一、软件安装</h1><p>👉<a href="https://bbs.ai-thinker.com/forum.php?mod=viewthread&tid=282&extra=page=2&_dsign=7fea3002"><strong><font color="#12507b">零基础搭建小安派Windows 开发环境</font></strong></a>👈</p>
+<h1 id="二、克隆仓库"><a href="#二、克隆仓库" class="headerlink" title="二、克隆仓库"></a>二、克隆仓库</h1><p>在项目文件夹右键，选择<code>open git bash here</code>，输入如下指令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/Ai-Thinker-Open/AiPi-Open-Kits.git -b master</span><br></pre></td></tr></table></figure>
+<p>开始从<code>gitee</code>克隆仓库</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/download.gif"></p>
+<p>等待下载，完成如下图所示</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/downloaded.png"></p>
+<h1 id="三、拉取M61的SDK子模块"><a href="#三、拉取M61的SDK子模块" class="headerlink" title="三、拉取M61的SDK子模块"></a>三、拉取M61的SDK子模块</h1><h2 id="1-修改文件"><a href="#1-修改文件" class="headerlink" title="1. 修改文件"></a>1. 修改文件</h2><p>由于<code>github</code>访问较慢，在拉取 SDK 之前，需要修改子模块仓库位置。</p>
+<p>进入 <code>AiPi-Open-Kits</code> 中，用文本打开 <code>.gitmodules</code> 文件 <strong>url</strong> 参数中的 <code>github.com</code> 改成 <code>gitee.com</code>：</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/gitee.gif"></p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/gitee.png"></p>
+<h2 id="2-拉取文件"><a href="#2-拉取文件" class="headerlink" title="2. 拉取文件"></a>2. 拉取文件</h2><p>继续输入如下命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd AiPi-Open-Kits/</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/submodule1.png"></p>
+<h1 id="四、拉取-M61-SDK-中的子模块"><a href="#四、拉取-M61-SDK-中的子模块" class="headerlink" title="四、拉取 M61 SDK 中的子模块"></a>四、拉取 M61 SDK 中的子模块</h1><h2 id="1-拉取文件"><a href="#1-拉取文件" class="headerlink" title="1. 拉取文件"></a>1. 拉取文件</h2><p>继续输入如下命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd aithinker_Ai-M6X_SDK/</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/submodule2.png"></p>
+<h2 id="2-克隆工具链"><a href="#2-克隆工具链" class="headerlink" title="2. 克隆工具链"></a>2. 克隆工具链</h2><p>完成后，输入如下指令，克隆适用 Windows 的编译工具链</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/bouffalolab/toolchain_gcc_t-head_windows.git -b master</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/toolchain.png"></p>
+<h1 id="五、环境变量设置"><a href="#五、环境变量设置" class="headerlink" title="五、环境变量设置"></a>五、环境变量设置</h1><h2 id="1-打开环境变量"><a href="#1-打开环境变量" class="headerlink" title="1. 打开环境变量"></a>1. 打开环境变量</h2><p>打开电脑高级系统设置，点击环境变量</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env.png"></p>
+<p>在弹出的窗口中选择系统变量里的<code>Path</code>，点击编辑</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/sysenv.png"></p>
+<h2 id="2-添加环境变量"><a href="#2-添加环境变量" class="headerlink" title="2. 添加环境变量"></a>2. 添加环境变量</h2><p>选择新建，然后点击浏览，添加如下路径</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">aithinker_Ai-M6X_SDK\toolchain_gcc_t-head_windows\bin</span><br><span class="line">aithinker_Ai-M6X_SDK\tools\make</span><br><span class="line">aithinker_Ai-M6X_SDK\tools\ninja</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env1.png"></p>
+<p>添加完成后，如下图</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env2.png"></p>
+<p>注意还需要把 <code>aithinker_Ai-M6X_SDK\tools\make</code> 路径上移到最高层</p>
+<h2 id="3-验证"><a href="#3-验证" class="headerlink" title="3. 验证"></a>3. 验证</h2><p>验证配置是否成功</p>
+<p>在桌面按住 <code>shift</code> 键点击 <code>鼠标右键</code> 选择<code>在此处打开PowersShell窗口</code></p>
+<p><code>Windows PowerShell</code>窗口中，输入如下命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make -v</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">riscv64-unknown-elf-gcc -v</span><br></pre></td></tr></table></figure>
+
+<p>成功时，输出如下图</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/powershell.png"></p>
+<h1 id="六、编译程序"><a href="#六、编译程序" class="headerlink" title="六、编译程序"></a>六、编译程序</h1><h2 id="1-打开源码"><a href="#1-打开源码" class="headerlink" title="1. 打开源码"></a>1. 打开源码</h2><p>使用<code>VS Code</code>打开前面克隆的源码</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode1.png"></p>
+<p>选择<code>AiPi-Eyes-DU</code>文件夹，右键选择<code>在集成终端中打开</code></p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode2.png"></p>
+<h2 id="2-编译程序"><a href="#2-编译程序" class="headerlink" title="2. 编译程序"></a>2. 编译程序</h2><p>输入<code>make</code>命令</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode3.png"></p>
+<h2 id="3-处理报错"><a href="#3-处理报错" class="headerlink" title="3. 处理报错"></a>3. 处理报错</h2><p>编译报错</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/error1.png"></p>
+<p>根据报错，打开如下文件</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit1.png"></p>
+<p>注释掉如下两行代码，然后再次执行<code>make</code>指令</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit2.png"></p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit2.png"></p>
+<h1 id="七、烧录程序"><a href="#七、烧录程序" class="headerlink" title="七、烧录程序"></a>七、烧录程序</h1><h2 id="1-查看端口"><a href="#1-查看端口" class="headerlink" title="1. 查看端口"></a>1. 查看端口</h2><p>打开<code>设备管理器</code>，查看端口</p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/serial.png"></p>
+<h2 id="2-烧录"><a href="#2-烧录" class="headerlink" title="2. 烧录"></a>2. 烧录</h2><p>可以看到端口为<code>COM19</code>，回到编辑器，在终端输入如下指令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make flash COMX=COM19</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/success.png"></p>
+<p>烧写开发板前，先按住烧录按键不松手再按一下复位按键，然后松手进入烧录模式</p>
+<p><a href="https://docs.ai-thinker.com/_media/en/ai-m61-32s-kit_v1.1.0%E8%A7%84%E6%A0%BC%E4%B9%A620230324.pdf"><strong><font color="#12507b">ai-m61-32s-kit_v1.1.0规格书</font></strong></a></p>
+<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/boot.png"></p>
+<h1 id="八、效果演示"><a href="#八、效果演示" class="headerlink" title="八、效果演示"></a>八、效果演示</h1><p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/led.gif"></p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>]]></content>
+      <categories>
+        <category>Ai-M61-32S</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Ai-M61-32S</tag>
+        <tag>安信可</tag>
+        <tag>环境搭建</tag>
+        <tag>点灯</tag>
       </tags>
   </entry>
   <entry>
@@ -574,106 +674,6 @@
       <tags>
         <tag>GitHub</tag>
         <tag>icon</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2024/05/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>安信可Ai-M61-32S环境搭建 + 点灯</title>
-    <url>/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/</url>
-    <content><![CDATA[<p>【祖传点灯】安信可Ai-M61-32S + 自由发挥</p>
-<h1 id="一、软件安装"><a href="#一、软件安装" class="headerlink" title="一、软件安装"></a>一、软件安装</h1><p>👉<a href="https://bbs.ai-thinker.com/forum.php?mod=viewthread&tid=282&extra=page=2&_dsign=7fea3002"><strong><font color="#12507b">零基础搭建小安派Windows 开发环境</font></strong></a>👈</p>
-<h1 id="二、克隆仓库"><a href="#二、克隆仓库" class="headerlink" title="二、克隆仓库"></a>二、克隆仓库</h1><p>在项目文件夹右键，选择<code>open git bash here</code>，输入如下指令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/Ai-Thinker-Open/AiPi-Open-Kits.git -b master</span><br></pre></td></tr></table></figure>
-<p>开始从<code>gitee</code>克隆仓库</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/download.gif"></p>
-<p>等待下载，完成如下图所示</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/downloaded.png"></p>
-<h1 id="三、拉取M61的SDK子模块"><a href="#三、拉取M61的SDK子模块" class="headerlink" title="三、拉取M61的SDK子模块"></a>三、拉取M61的SDK子模块</h1><h2 id="1-修改文件"><a href="#1-修改文件" class="headerlink" title="1. 修改文件"></a>1. 修改文件</h2><p>由于<code>github</code>访问较慢，在拉取 SDK 之前，需要修改子模块仓库位置。</p>
-<p>进入 <code>AiPi-Open-Kits</code> 中，用文本打开 <code>.gitmodules</code> 文件 <strong>url</strong> 参数中的 <code>github.com</code> 改成 <code>gitee.com</code>：</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/gitee.gif"></p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/gitee.png"></p>
-<h2 id="2-拉取文件"><a href="#2-拉取文件" class="headerlink" title="2. 拉取文件"></a>2. 拉取文件</h2><p>继续输入如下命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd AiPi-Open-Kits/</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/submodule1.png"></p>
-<h1 id="四、拉取-M61-SDK-中的子模块"><a href="#四、拉取-M61-SDK-中的子模块" class="headerlink" title="四、拉取 M61 SDK 中的子模块"></a>四、拉取 M61 SDK 中的子模块</h1><h2 id="1-拉取文件"><a href="#1-拉取文件" class="headerlink" title="1. 拉取文件"></a>1. 拉取文件</h2><p>继续输入如下命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd aithinker_Ai-M6X_SDK/</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/submodule2.png"></p>
-<h2 id="2-克隆工具链"><a href="#2-克隆工具链" class="headerlink" title="2. 克隆工具链"></a>2. 克隆工具链</h2><p>完成后，输入如下指令，克隆适用 Windows 的编译工具链</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/bouffalolab/toolchain_gcc_t-head_windows.git -b master</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/toolchain.png"></p>
-<h1 id="五、环境变量设置"><a href="#五、环境变量设置" class="headerlink" title="五、环境变量设置"></a>五、环境变量设置</h1><h2 id="1-打开环境变量"><a href="#1-打开环境变量" class="headerlink" title="1. 打开环境变量"></a>1. 打开环境变量</h2><p>打开电脑高级系统设置，点击环境变量</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env.png"></p>
-<p>在弹出的窗口中选择系统变量里的<code>Path</code>，点击编辑</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/sysenv.png"></p>
-<h2 id="2-添加环境变量"><a href="#2-添加环境变量" class="headerlink" title="2. 添加环境变量"></a>2. 添加环境变量</h2><p>选择新建，然后点击浏览，添加如下路径</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">aithinker_Ai-M6X_SDK\toolchain_gcc_t-head_windows\bin</span><br><span class="line">aithinker_Ai-M6X_SDK\tools\make</span><br><span class="line">aithinker_Ai-M6X_SDK\tools\ninja</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env1.png"></p>
-<p>添加完成后，如下图</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/env2.png"></p>
-<p>注意还需要把 <code>aithinker_Ai-M6X_SDK\tools\make</code> 路径上移到最高层</p>
-<h2 id="3-验证"><a href="#3-验证" class="headerlink" title="3. 验证"></a>3. 验证</h2><p>验证配置是否成功</p>
-<p>在桌面按住 <code>shift</code> 键点击 <code>鼠标右键</code> 选择<code>在此处打开PowersShell窗口</code></p>
-<p><code>Windows PowerShell</code>窗口中，输入如下命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make -v</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">riscv64-unknown-elf-gcc -v</span><br></pre></td></tr></table></figure>
-
-<p>成功时，输出如下图</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/powershell.png"></p>
-<h1 id="六、编译程序"><a href="#六、编译程序" class="headerlink" title="六、编译程序"></a>六、编译程序</h1><h2 id="1-打开源码"><a href="#1-打开源码" class="headerlink" title="1. 打开源码"></a>1. 打开源码</h2><p>使用<code>VS Code</code>打开前面克隆的源码</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode1.png"></p>
-<p>选择<code>AiPi-Eyes-DU</code>文件夹，右键选择<code>在集成终端中打开</code></p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode2.png"></p>
-<h2 id="2-编译程序"><a href="#2-编译程序" class="headerlink" title="2. 编译程序"></a>2. 编译程序</h2><p>输入<code>make</code>命令</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/vscode3.png"></p>
-<h2 id="3-处理报错"><a href="#3-处理报错" class="headerlink" title="3. 处理报错"></a>3. 处理报错</h2><p>编译报错</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/error1.png"></p>
-<p>根据报错，打开如下文件</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit1.png"></p>
-<p>注释掉如下两行代码，然后再次执行<code>make</code>指令</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit2.png"></p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/edit2.png"></p>
-<h1 id="七、烧录程序"><a href="#七、烧录程序" class="headerlink" title="七、烧录程序"></a>七、烧录程序</h1><h2 id="1-查看端口"><a href="#1-查看端口" class="headerlink" title="1. 查看端口"></a>1. 查看端口</h2><p>打开<code>设备管理器</code>，查看端口</p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/serial.png"></p>
-<h2 id="2-烧录"><a href="#2-烧录" class="headerlink" title="2. 烧录"></a>2. 烧录</h2><p>可以看到端口为<code>COM19</code>，回到编辑器，在终端输入如下指令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make flash COMX=COM19</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/success.png"></p>
-<p>烧写开发板前，先按住烧录按键不松手再按一下复位按键，然后松手进入烧录模式</p>
-<p><a href="https://docs.ai-thinker.com/_media/en/ai-m61-32s-kit_v1.1.0%E8%A7%84%E6%A0%BC%E4%B9%A620230324.pdf"><strong><font color="#12507b">ai-m61-32s-kit_v1.1.0规格书</font></strong></a></p>
-<p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/boot.png"></p>
-<h1 id="八、效果演示"><a href="#八、效果演示" class="headerlink" title="八、效果演示"></a>八、效果演示</h1><p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/led.gif"></p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>]]></content>
-      <categories>
-        <category>Ai-M61-32S</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Ai-M61-32S</tag>
-        <tag>安信可</tag>
-        <tag>环境搭建</tag>
-        <tag>点灯</tag>
       </tags>
   </entry>
 </search>
