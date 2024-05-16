@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-16T12:05:11.374Z</updated>
+  <updated>2024-05-16T13:13:26.811Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>预告</title>
+    <link href="http://example.com/posts/224bc55d/"/>
+    <id>http://example.com/posts/224bc55d/</id>
+    <published>2024-05-16T13:10:34.000Z</published>
+    <updated>2024-05-16T13:13:26.811Z</updated>
+    
+    
+    <summary type="html">ESP32_ ...</summary>
+    
+    
+    
+    <category term="ESP32" scheme="http://example.com/categories/ESP32/"/>
+    
+    <category term="预告" scheme="http://example.com/categories/ESP32/%E9%A2%84%E5%91%8A/"/>
+    
+    
+    <category term="ESP32" scheme="http://example.com/tags/ESP32/"/>
+    
+    <category term="PlatformIO" scheme="http://example.com/tags/PlatformIO/"/>
+    
+    <category term="多功能开关" scheme="http://example.com/tags/%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%BC%80%E5%85%B3/"/>
+    
+    <category term="自制" scheme="http://example.com/tags/%E8%87%AA%E5%88%B6/"/>
+    
+    <category term="立创" scheme="http://example.com/tags/%E7%AB%8B%E5%88%9B/"/>
+    
+    <category term="1.8寸TFT" scheme="http://example.com/tags/1-8%E5%AF%B8TFT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ESP32S3-输入设备Keypad</title>
     <link href="http://example.com/posts/c4d6bdd0/"/>
     <id>http://example.com/posts/c4d6bdd0/</id>
     <published>2024-05-16T03:20:34.000Z</published>
-    <updated>2024-05-16T12:05:11.374Z</updated>
+    <updated>2024-05-16T13:11:14.680Z</updated>
     
     
     <summary type="html">无触摸，使用按键来控制屏幕控件</summary>
