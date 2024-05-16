@@ -1465,7 +1465,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #0637ff;
+    background: #cded44;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1904,6 +1904,16 @@ pre code {
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 5px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  bottom: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
