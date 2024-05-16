@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-levi.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-levi.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-levi.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -17,29 +17,31 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"levi52.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"show_result":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="使用Squareline_Studio设计UI移植到ESP32S3N8R8">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ESP32S3N8R8 + Squareline_Studio设计移植">
-<meta property="og:url" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/index.html">
+<meta property="og:url" content="http://example.com/posts/b97be97c/index.html">
 <meta property="og:site_name" content="Levi52&#39;s Blog">
 <meta property="og:description" content="使用Squareline_Studio设计UI移植到ESP32S3N8R8">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/Squareline.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/project_setting.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/project_setting1.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/export.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/file_folder.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/copy_file.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/lvgl_conf.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/ui_init.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S1.png">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S2.jpg">
-<meta property="og:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S3.jpg">
+<meta property="og:image" content="http://example.com/posts/b97be97c/Squareline.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/project_setting.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/project_setting1.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/export.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/file_folder.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/copy_file.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/lvgl_conf.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/ui_init.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/S1.png">
+<meta property="og:image" content="http://example.com/posts/b97be97c/S2.jpg">
+<meta property="og:image" content="http://example.com/posts/b97be97c/S3.jpg">
 <meta property="article:published_time" content="2024-05-15T08:43:29.000Z">
-<meta property="article:modified_time" content="2024-05-16T03:26:05.582Z">
+<meta property="article:modified_time" content="2024-05-16T12:05:11.379Z">
 <meta property="article:author" content="Levi52">
 <meta property="article:tag" content="ESP32">
 <meta property="article:tag" content="PlatformIO">
@@ -49,14 +51,14 @@
 <meta property="article:tag" content="触摸屏">
 <meta property="article:tag" content="立创">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/Squareline.png">
+<meta name="twitter:image" content="http://example.com/posts/b97be97c/Squareline.png">
 
 
-<link rel="canonical" href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/">
+<link rel="canonical" href="http://example.com/posts/b97be97c/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/","path":"2024/05/15/ESP32S3N8R8-Squareline-Studio设计移植/","title":"ESP32S3N8R8 + Squareline_Studio设计移植"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/posts/b97be97c/","path":"posts/b97be97c/","title":"ESP32S3N8R8 + Squareline_Studio设计移植"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>ESP32S3N8R8 + Squareline_Studio设计移植 | Levi52's Blog</title>
@@ -224,7 +226,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/posts/b97be97c/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -246,6 +248,8 @@
         </h1>
 
         <div class="post-meta-container">
+          
+
           <div class="post-meta">
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -260,7 +264,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-05-16 11:26:05" itemprop="dateModified" datetime="2024-05-16T11:26:05+08:00">2024-05-16</time>
+      <time title="修改时间：2024-05-16 20:05:11" itemprop="dateModified" datetime="2024-05-16T20:05:11+08:00">2024-05-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -314,35 +318,35 @@
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><blockquote>
 <p>硬件：<a target="_blank" rel="noopener" href="https://lckfb.com/">立创ESP32S3R8N8开发板</a> + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font>+ <font style="color: #dc4040">Squareline Studio</font></p>
 </blockquote>
-<h1 id="Squareline-Studio"><a href="#Squareline-Studio" class="headerlink" title="Squareline Studio"></a>Squareline Studio</h1><h2 id="设计UI"><a href="#设计UI" class="headerlink" title="设计UI"></a>设计UI</h2><p><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/Squareline.png" alt="image-"></p>
+<h1 id="Squareline-Studio"><a href="#Squareline-Studio" class="headerlink" title="Squareline Studio"></a>Squareline Studio</h1><h2 id="设计UI"><a href="#设计UI" class="headerlink" title="设计UI"></a>设计UI</h2><p><img src="/posts/b97be97c/Squareline.png" alt="image-"></p>
 <h2 id="导出文件"><a href="#导出文件" class="headerlink" title="导出文件"></a>导出文件</h2><ul>
-<li><p>工程设置<br>按如下所示设置工程，<code>Project Export Root</code>和<code>UI Files Export Path</code>路径可以选择为LVGL工程目录下新建的<code>export</code>文件夹<br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/project_setting.png"><br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/project_setting1.png"></p>
+<li><p>工程设置<br>按如下所示设置工程，<code>Project Export Root</code>和<code>UI Files Export Path</code>路径可以选择为LVGL工程目录下新建的<code>export</code>文件夹<br><img src="/posts/b97be97c/project_setting.png"><br><img src="/posts/b97be97c/project_setting1.png"></p>
 </li>
-<li><p>Export<br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/export.png"></p>
+<li><p>Export<br><img src="/posts/b97be97c/export.png"></p>
 </li>
 </ul>
 <h1 id="PlatformIO"><a href="#PlatformIO" class="headerlink" title="PlatformIO"></a>PlatformIO</h1><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><ul>
-<li><p>导出文件<br>以下为<font color="#dc4140">Squareline Studio</font>导出的文件<br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/file_folder.png" alt="image-"></p>
+<li><p>导出文件<br>以下为<font color="#dc4140">Squareline Studio</font>导出的文件<br><img src="/posts/b97be97c/file_folder.png" alt="image-"></p>
 </li>
-<li><p>移植文件<br>资源文件复制到<font color="#dc4140">src&#x2F;lvgl_gui</font><br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/copy_file.png" alt="image-"></p>
+<li><p>移植文件<br>资源文件复制到<font color="#dc4140">src&#x2F;lvgl_gui</font><br><img src="/posts/b97be97c/copy_file.png" alt="image-"></p>
 </li>
 </ul>
 <h2 id="LVGL"><a href="#LVGL" class="headerlink" title="LVGL"></a>LVGL</h2><ul>
-<li>修改lvgl<br>修改lvgl_conf.h，如下所示，关闭案例编译<br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/lvgl_conf.png" alt="image-"></li>
+<li>修改lvgl<br>修改lvgl_conf.h，如下所示，关闭案例编译<br><img src="/posts/b97be97c/lvgl_conf.png" alt="image-"></li>
 </ul>
 <h2 id="main"><a href="#main" class="headerlink" title="main"></a>main</h2><ul>
 <li><p>添加头文件</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ui.h&quot;</span></span></span><br></pre></td></tr></table></figure></li>
 <li><p>UI初始化<br>删去之前LVGL官方案例的内容，添加如下代码</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ui_init</span>();</span><br></pre></td></tr></table></figure>
-<p><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/ui_init.png" alt="image-"></p>
+<p><img src="/posts/b97be97c/ui_init.png" alt="image-"></p>
 </li>
 <li><p>lvgl显示</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">lvgl_task</span><span class="params">(<span class="type">void</span> *pt)</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        lv_timer_handler(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line"></span><br><span class="line">        vTaskDelay(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p><code>setup()</code>中创建任务</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xTaskCreatePinnedToCore(lvgl_task, <span class="string">&quot;lvgl display&quot;</span>, <span class="number">1024</span> * <span class="number">15</span>, <span class="literal">NULL</span>, <span class="number">2</span>, <span class="literal">NULL</span>, <span class="number">1</span>);</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S1.png" alt="image-"><br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S2.jpg" alt="image-"><br><img src="/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/S3.jpg" alt="image-"></p>
+<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p><img src="/posts/b97be97c/S1.png" alt="image-"><br><img src="/posts/b97be97c/S2.jpg" alt="image-"><br><img src="/posts/b97be97c/S3.jpg" alt="image-"></p>
 <h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
 
     </div>
@@ -361,7 +365,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/" title="ESP32S3N8R8 + Squareline_Studio设计移植">https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio设计移植/</a>
+      <a href="http://example.com/posts/b97be97c/" title="ESP32S3N8R8 + Squareline_Studio设计移植">http://example.com/posts/b97be97c/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -390,12 +394,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/" rel="prev" title="ESP32S3N8R8 + lvgl测试官方案例">
+                <a href="/posts/2c4e27ec/" rel="prev" title="ESP32S3N8R8 + lvgl测试官方案例">
                   <i class="fa fa-angle-left"></i> ESP32S3N8R8 + lvgl测试官方案例
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/" rel="next" title="安信可Ai-M61-32S环境搭建 + 点灯">
+                <a href="/posts/17ee55dc/" rel="next" title="安信可Ai-M61-32S环境搭建 + 点灯">
                   安信可Ai-M61-32S环境搭建 + 点灯 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
@@ -511,6 +515,7 @@ setInterval("createtime()",250);
 
 
 
+  <script src="/js/third-party/pace.js"></script>
 
 
   
