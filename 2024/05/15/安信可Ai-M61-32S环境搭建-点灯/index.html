@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/boot.png">
 <meta property="og:image" content="https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/led.gif">
 <meta property="article:published_time" content="2024-05-15T08:47:50.000Z">
-<meta property="article:modified_time" content="2024-05-15T10:08:36.440Z">
+<meta property="article:modified_time" content="2024-05-16T03:26:16.209Z">
 <meta property="article:author" content="Levi52">
 <meta property="article:tag" content="Ai-M61-32S">
 <meta property="article:tag" content="安信可">
@@ -169,7 +169,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、软件安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">二、克隆仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8B%89%E5%8F%96M61%E7%9A%84SDK%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-number">3.</span> <span class="nav-text">三、拉取M61的SDK子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">1. 修改文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8B%89%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">2. 拉取文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8B%89%E5%8F%96-M61-SDK-%E4%B8%AD%E7%9A%84%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-number">4.</span> <span class="nav-text">四、拉取 M61 SDK 中的子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8B%89%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">1. 拉取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%85%8B%E9%9A%86%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="nav-number">4.2.</span> <span class="nav-text">2. 克隆工具链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">五、环境变量设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%89%93%E5%BC%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">5.1.</span> <span class="nav-text">1. 打开环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">5.2.</span> <span class="nav-text">2. 添加环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%AA%8C%E8%AF%81"><span class="nav-number">5.3.</span> <span class="nav-text">3. 验证</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.</span> <span class="nav-text">六、编译程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%89%93%E5%BC%80%E6%BA%90%E7%A0%81"><span class="nav-number">6.1.</span> <span class="nav-text">1. 打开源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.2.</span> <span class="nav-text">2. 编译程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A4%84%E7%90%86%E6%8A%A5%E9%94%99"><span class="nav-number">6.3.</span> <span class="nav-text">3. 处理报错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%83%A7%E5%BD%95%E7%A8%8B%E5%BA%8F"><span class="nav-number">7.</span> <span class="nav-text">七、烧录程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3"><span class="nav-number">7.1.</span> <span class="nav-text">1. 查看端口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%83%A7%E5%BD%95"><span class="nav-number">7.2.</span> <span class="nav-text">2. 烧录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="nav-number">8.</span> <span class="nav-text">八、效果演示</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、软件安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">二、克隆仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%8B%89%E5%8F%96M61%E7%9A%84SDK%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-number">3.</span> <span class="nav-text">三、拉取M61的SDK子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">1. 修改文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8B%89%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">2. 拉取文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%8B%89%E5%8F%96-M61-SDK-%E4%B8%AD%E7%9A%84%E5%AD%90%E6%A8%A1%E5%9D%97"><span class="nav-number">4.</span> <span class="nav-text">四、拉取 M61 SDK 中的子模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%8B%89%E5%8F%96%E6%96%87%E4%BB%B6"><span class="nav-number">4.1.</span> <span class="nav-text">1. 拉取文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%85%8B%E9%9A%86%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="nav-number">4.2.</span> <span class="nav-text">2. 克隆工具链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">5.</span> <span class="nav-text">五、环境变量设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%89%93%E5%BC%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">5.1.</span> <span class="nav-text">1. 打开环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">5.2.</span> <span class="nav-text">2. 添加环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E9%AA%8C%E8%AF%81"><span class="nav-number">5.3.</span> <span class="nav-text">3. 验证</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.</span> <span class="nav-text">六、编译程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%89%93%E5%BC%80%E6%BA%90%E7%A0%81"><span class="nav-number">6.1.</span> <span class="nav-text">1. 打开源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%BC%96%E8%AF%91%E7%A8%8B%E5%BA%8F"><span class="nav-number">6.2.</span> <span class="nav-text">2. 编译程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A4%84%E7%90%86%E6%8A%A5%E9%94%99"><span class="nav-number">6.3.</span> <span class="nav-text">3. 处理报错</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E7%83%A7%E5%BD%95%E7%A8%8B%E5%BA%8F"><span class="nav-number">7.</span> <span class="nav-text">七、烧录程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3"><span class="nav-number">7.1.</span> <span class="nav-text">1. 查看端口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%83%A7%E5%BD%95"><span class="nav-number">7.2.</span> <span class="nav-text">2. 烧录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="nav-number">8.</span> <span class="nav-text">八、效果演示</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">9.</span> <span class="nav-text">END</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,7 +184,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -261,9 +261,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2024-05-15 16:47:50 / 修改时间：18:08:36" itemprop="dateCreated datePublished" datetime="2024-05-15T16:47:50+08:00">2024-05-15</time>
+      <time title="创建时间：2024-05-15 16:47:50" itemprop="dateCreated datePublished" datetime="2024-05-15T16:47:50+08:00">2024-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-05-16 11:26:16" itemprop="dateModified" datetime="2024-05-16T11:26:16+08:00">2024-05-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -378,7 +384,7 @@
 <p><a target="_blank" rel="noopener" href="https://docs.ai-thinker.com/_media/en/ai-m61-32s-kit_v1.1.0%E8%A7%84%E6%A0%BC%E4%B9%A620230324.pdf"><strong><font color="#12507b">ai-m61-32s-kit_v1.1.0规格书</font></strong></a></p>
 <p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/boot.png"></p>
 <h1 id="八、效果演示"><a href="#八、效果演示" class="headerlink" title="八、效果演示"></a>八、效果演示</h1><p><img src="/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/led.gif"></p>
-
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
     </div>
 
     
@@ -458,13 +464,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">16k</span>
+    <span title="站点总字数">24k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">28 分钟</span>
+    <span title="站点阅读时长">44 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

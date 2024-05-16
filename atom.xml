@@ -6,7 +6,7 @@
   <link href="https://levi52.github.io/atom.xml" rel="self"/>
   
   <link href="https://levi52.github.io/"/>
-  <updated>2024-05-15T10:10:24.199Z</updated>
+  <updated>2024-05-16T03:29:08.136Z</updated>
   <id>https://levi52.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ESP32S3-输入设备Keypad</title>
+    <link href="https://levi52.github.io/2024/05/16/ESP32S3-%E8%BE%93%E5%85%A5%E8%AE%BE%E5%A4%87Keypad/"/>
+    <id>https://levi52.github.io/2024/05/16/ESP32S3-%E8%BE%93%E5%85%A5%E8%AE%BE%E5%A4%87Keypad/</id>
+    <published>2024-05-16T03:20:34.000Z</published>
+    <updated>2024-05-16T03:29:08.136Z</updated>
+    
+    
+    <summary type="html">无触摸，使用按键来控制屏幕控件</summary>
+    
+    
+    
+    <category term="ESP32" scheme="https://levi52.github.io/categories/ESP32/"/>
+    
+    <category term="教程" scheme="https://levi52.github.io/categories/ESP32/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="ESP32" scheme="https://levi52.github.io/tags/ESP32/"/>
+    
+    <category term="PlatformIO" scheme="https://levi52.github.io/tags/PlatformIO/"/>
+    
+    <category term="lvgl" scheme="https://levi52.github.io/tags/lvgl/"/>
+    
+    <category term="2.8寸TFT" scheme="https://levi52.github.io/tags/2-8%E5%AF%B8TFT/"/>
+    
+    <category term="多功能开关" scheme="https://levi52.github.io/tags/%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%BC%80%E5%85%B3/"/>
+    
+    <category term="自制" scheme="https://levi52.github.io/tags/%E8%87%AA%E5%88%B6/"/>
+    
+    <category term="Squareline Studio" scheme="https://levi52.github.io/tags/Squareline-Studio/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub Profile</title>
@@ -44,7 +77,7 @@
     <link href="https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/"/>
     <id>https://levi52.github.io/2024/05/15/%E5%AE%89%E4%BF%A1%E5%8F%AFAi-M61-32S%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA-%E7%82%B9%E7%81%AF/</id>
     <published>2024-05-15T08:47:50.000Z</published>
-    <updated>2024-05-15T10:08:36.440Z</updated>
+    <updated>2024-05-16T03:26:16.209Z</updated>
     
     
     <summary type="html">安信可Ai-M61-32S Windows环境搭建 + 点灯</summary>
@@ -71,7 +104,7 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-Squareline-Studio%E8%AE%BE%E8%AE%A1%E7%A7%BB%E6%A4%8D/</id>
     <published>2024-05-15T08:43:29.000Z</published>
-    <updated>2024-05-15T10:08:30.052Z</updated>
+    <updated>2024-05-16T03:26:05.582Z</updated>
     
     
     <summary type="html">使用Squareline_Studio设计UI移植到ESP32S3N8R8</summary>
@@ -89,9 +122,11 @@
     
     <category term="lvgl" scheme="https://levi52.github.io/tags/lvgl/"/>
     
-    <category term="2.8寸触摸屏" scheme="https://levi52.github.io/tags/2-8%E5%AF%B8%E8%A7%A6%E6%91%B8%E5%B1%8F/"/>
+    <category term="2.8寸TFT" scheme="https://levi52.github.io/tags/2-8%E5%AF%B8TFT/"/>
     
     <category term="Squareline Studio" scheme="https://levi52.github.io/tags/Squareline-Studio/"/>
+    
+    <category term="触摸屏" scheme="https://levi52.github.io/tags/%E8%A7%A6%E6%91%B8%E5%B1%8F/"/>
     
     <category term="立创" scheme="https://levi52.github.io/tags/%E7%AB%8B%E5%88%9B/"/>
     
@@ -102,7 +137,7 @@
     <link href="https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/"/>
     <id>https://levi52.github.io/2024/05/15/ESP32S3N8R8-lvgl%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E6%A1%88%E4%BE%8B/</id>
     <published>2024-05-15T08:26:23.000Z</published>
-    <updated>2024-05-15T10:08:26.825Z</updated>
+    <updated>2024-05-16T03:25:59.457Z</updated>
     
     
     <summary type="html">lvgl官方案例配置测试</summary>
@@ -120,11 +155,11 @@
     
     <category term="lvgl" scheme="https://levi52.github.io/tags/lvgl/"/>
     
-    <category term="2.8寸触摸屏" scheme="https://levi52.github.io/tags/2-8%E5%AF%B8%E8%A7%A6%E6%91%B8%E5%B1%8F/"/>
+    <category term="2.8寸TFT" scheme="https://levi52.github.io/tags/2-8%E5%AF%B8TFT/"/>
+    
+    <category term="触摸屏" scheme="https://levi52.github.io/tags/%E8%A7%A6%E6%91%B8%E5%B1%8F/"/>
     
     <category term="立创" scheme="https://levi52.github.io/tags/%E7%AB%8B%E5%88%9B/"/>
-    
-    <category term="Arduino" scheme="https://levi52.github.io/tags/Arduino/"/>
     
   </entry>
   
