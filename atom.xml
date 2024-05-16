@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-16T13:13:26.811Z</updated>
+  <updated>2024-05-16T13:15:57.012Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="http://example.com/posts/224bc55d/"/>
     <id>http://example.com/posts/224bc55d/</id>
     <published>2024-05-16T13:10:34.000Z</published>
-    <updated>2024-05-16T13:13:26.811Z</updated>
+    <updated>2024-05-16T13:15:57.012Z</updated>
     
     
-    <summary type="html">ESP32_ ...</summary>
+    <summary type="html">... ... ...</summary>
     
     
     
@@ -45,6 +45,12 @@
     
     <category term="1.8寸TFT" scheme="http://example.com/tags/1-8%E5%AF%B8TFT/"/>
     
+    <category term="预告" scheme="http://example.com/tags/%E9%A2%84%E5%91%8A/"/>
+    
+    <category term="3D" scheme="http://example.com/tags/3D/"/>
+    
+    <category term="传感器" scheme="http://example.com/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
+    
   </entry>
   
   <entry>
@@ -52,7 +58,7 @@
     <link href="http://example.com/posts/c4d6bdd0/"/>
     <id>http://example.com/posts/c4d6bdd0/</id>
     <published>2024-05-16T03:20:34.000Z</published>
-    <updated>2024-05-16T13:11:14.680Z</updated>
+    <updated>2024-05-16T13:16:00.979Z</updated>
     
     
     <summary type="html">无触摸，使用按键来控制屏幕控件</summary>

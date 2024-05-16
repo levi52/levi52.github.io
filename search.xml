@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>预告</title>
-    <url>/posts/224bc55d/</url>
-    <content><![CDATA[<p>预告ESP32_ …</p>
-]]></content>
-      <categories>
-        <category>ESP32</category>
-        <category>预告</category>
-      </categories>
-      <tags>
-        <tag>ESP32</tag>
-        <tag>PlatformIO</tag>
-        <tag>多功能开关</tag>
-        <tag>自制</tag>
-        <tag>立创</tag>
-        <tag>1.8寸TFT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ESP32S3-输入设备Keypad</title>
     <url>/posts/c4d6bdd0/</url>
     <content><![CDATA[<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a><font style="color: #6e9afc">配置</font></h1><blockquote>
@@ -126,6 +108,27 @@
         <tag>多功能开关</tag>
         <tag>自制</tag>
         <tag>Squareline Studio</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预告</title>
+    <url>/posts/224bc55d/</url>
+    <content><![CDATA[<p>… … … … …</p>
+]]></content>
+      <categories>
+        <category>ESP32</category>
+        <category>预告</category>
+      </categories>
+      <tags>
+        <tag>ESP32</tag>
+        <tag>PlatformIO</tag>
+        <tag>多功能开关</tag>
+        <tag>自制</tag>
+        <tag>立创</tag>
+        <tag>1.8寸TFT</tag>
+        <tag>预告</tag>
+        <tag>3D</tag>
+        <tag>传感器</tag>
       </tags>
   </entry>
   <entry>
