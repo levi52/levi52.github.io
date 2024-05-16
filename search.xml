@@ -370,7 +370,9 @@
   <entry>
     <title>安信可Ai-M61-32S环境搭建 + 点灯</title>
     <url>/posts/17ee55dc/</url>
-    <content><![CDATA[<p>【祖传点灯】安信可Ai-M61-32S + 自由发挥</p>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.bilibili.com/video/BV1Vi421k7Mu">bilibili: 【Ai-M61】安信可Ai-M61-32S环境搭建+祖传点灯</a> </p>
+</blockquote>
 <h1 id="一、软件安装"><a href="#一、软件安装" class="headerlink" title="一、软件安装"></a>一、软件安装</h1><p>👉<a href="https://bbs.ai-thinker.com/forum.php?mod=viewthread&tid=282&extra=page=2&_dsign=7fea3002"><strong><font color="#12507b">零基础搭建小安派Windows 开发环境</font></strong></a>👈</p>
 <h1 id="二、克隆仓库"><a href="#二、克隆仓库" class="headerlink" title="二、克隆仓库"></a>二、克隆仓库</h1><p>在项目文件夹右键，选择<code>open git bash here</code>，输入如下指令</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://gitee.com/Ai-Thinker-Open/AiPi-Open-Kits.git -b master</span><br></pre></td></tr></table></figure>
@@ -453,7 +455,10 @@
     <title>ESP32S3N8R8 + Squareline_Studio设计移植</title>
     <url>/posts/b97be97c/</url>
     <content><![CDATA[<blockquote>
-<p>移植Squareline Studio到工程</p>
+<p><a href="https://www.bilibili.com/video/BV1CC411J72J">bilibili: 【ESP32】初试Squareline Studio设计 简单控制屏幕亮度</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://blog.csdn.net/Levi_5/article/details/138243662">CSDN: 【ESP32】立创ESP32S3N8R8开发板+2.8寸TFT电容触摸屏+Squareline Studio+PlatformIO</a></p>
 </blockquote>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><blockquote>
 <p>硬件：<a href="https://lckfb.com/">立创ESP32S3R8N8开发板</a> + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font>+ <font style="color: #dc4040">Squareline Studio</font></p>
@@ -506,8 +511,12 @@
   <entry>
     <title>ESP32S3N8R8 + lvgl测试官方案例</title>
     <url>/posts/2c4e27ec/</url>
-    <content><![CDATA[<p>@<a href="%E7%AB%8B%E5%88%9BESP32%E5%BC%80%E5%8F%91%E6%9D%BF+2.8%E5%AF%B8TFT%E7%94%B5%E5%AE%B9%E8%A7%A6%E6%91%B8%E5%B1%8F%5BST7789+GT911%5D">TOC</a></p>
-<p><a href="https://blog.csdn.net/Levi_5/article/details/137572195?spm=1001.2014.3001.5501">【ESP32】立创ESP32S3R8N8开发板+2.8寸TFT电容触摸屏ST7789+GT911+PlatformIO-CSDN博客</a></p>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.bilibili.com/video/BV1AT421m7Xa">bilibili: 【ESP32】2.8寸电容触摸屏(ST7789+GT911) lvgl 案例测试</a></p>
+</blockquote>
+<blockquote>
+<p><a href="https://blog.csdn.net/Levi_5/article/details/137572195">CSDN: 【ESP32】立创ESP32S3R8N8开发板+2.8寸TFT电容触摸屏ST7789+GT911+PlatformIO</a></p>
+</blockquote>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a><font style="color: #6e9afc">配置</font></h1><blockquote>
 <p>硬件：立创ESP32S3R8N8开发板 + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font></p>
 </blockquote>
