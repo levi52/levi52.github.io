@@ -124,7 +124,7 @@
   <entry>
     <title>预告</title>
     <url>/posts/224bc55d/</url>
-    <content><![CDATA[<p>… … … … …</p>
+    <content><![CDATA[<p><img src="/posts/224bc55d/icon.png" alt="icon"><br>… … … … …</p>
 ]]></content>
       <categories>
         <category>ESP32</category>
