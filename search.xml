@@ -115,9 +115,9 @@
         <tag>PlatformIO</tag>
         <tag>lvgl</tag>
         <tag>2.8寸TFT</tag>
-        <tag>Squareline Studio</tag>
         <tag>多功能开关</tag>
         <tag>自制</tag>
+        <tag>Squareline Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -132,9 +132,9 @@
       <tags>
         <tag>ESP32</tag>
         <tag>PlatformIO</tag>
-        <tag>立创</tag>
         <tag>多功能开关</tag>
         <tag>自制</tag>
+        <tag>立创</tag>
         <tag>1.8寸TFT</tag>
         <tag>预告</tag>
         <tag>3D</tag>
@@ -528,8 +528,8 @@
         <tag>PlatformIO</tag>
         <tag>lvgl</tag>
         <tag>2.8寸TFT</tag>
-        <tag>触摸屏</tag>
         <tag>Squareline Studio</tag>
+        <tag>触摸屏</tag>
         <tag>立创</tag>
       </tags>
   </entry>
