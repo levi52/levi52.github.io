@@ -123,22 +123,219 @@
   <entry>
     <title>预告</title>
     <url>/posts/224bc55d/</url>
-    <content><![CDATA[<p><img src="/posts/224bc55d/icon.png" alt="icon"><br><a href="/html/wifiConfig.html">wifiConfig</a><br>… … … … …</p>
+    <content><![CDATA[<p>… … … … …</p>
 ]]></content>
       <categories>
-        <category>ESP32</category>
         <category>预告</category>
+      </categories>
+      <tags>
+        <tag>预告</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【立创开源】ESP32_UV_BOX</title>
+    <url>/posts/df56fc06/</url>
+    <content><![CDATA[<h1 id="ESP-UV-BOX"><a href="#ESP-UV-BOX" class="headerlink" title="ESP_UV_BOX"></a>ESP_UV_BOX</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前买了个紫外线模块，一直放着吃灰😶，偶然看到<a href="https://oshwhub.com/activities/Xiari">夏日征集令</a>，想着可以试试(又要白嫖立创🥰)，然后就有了这个项目。<br>复刻别的项目剩了块ESP32-WROOM-32D，所以就选择了它作为主控；紫外线部分直接用加热台把模块拆了，所以没有单独买元件；做灯板剩了些WS2812灯珠，所以加上一颗，以下为制作过程记录</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>紫外线指数</li>
+<li>环境温湿度</li>
+<li>气压海拔</li>
+<li>简易照明</li>
+<li>天气时钟(网络)</li>
+</ul>
+<h2 id="成本"><a href="#成本" class="headerlink" title="成本"></a>成本</h2><p>这里只列出了主要的器件，详情见BOM</p>
+<table>
+<thead>
+<tr>
+<th>主要元件</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ESP32-WROOM-32D(8MB)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>紫外线模块</td>
+<td>7.05</td>
+</tr>
+<tr>
+<td>AHT20</td>
+<td>1.62</td>
+</tr>
+<tr>
+<td>BMP280</td>
+<td>1.04</td>
+</tr>
+<tr>
+<td>四脚拨轮开关</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>CH340K</td>
+<td>1.4</td>
+</tr>
+</tbody></table>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><blockquote>
+<p>硬件设计见<a href="https://oshwhub.com/levi_01/simple-esp-uv-detection-box">立创开源硬件平台</a></p>
+</blockquote>
+<h2 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h2><blockquote>
+<p>存在问题：下载完程序，可以运行，但是板子上电不运行，需要按复位，<a href="https://esp32.com/viewtopic.php?t=17326">&gt;去除BOOT0按键的电容&lt;</a>，解决问题<br>贴片开关的质量也不太行，开关手柄会断🙃<br>侧边按键质量似乎也不太好，按复位有时也没用🙃</p>
+</blockquote>
+<h2 id="主控电路"><a href="#主控电路" class="headerlink" title="主控电路"></a>主控电路</h2><h3 id="主控"><a href="#主控" class="headerlink" title="主控"></a>主控</h3><p>主控选择ESP32-WROOM-32D-N8，外围电路参考<a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_cn.pdf">官方技术规格书</a>。<br>引出SPI用于控制屏幕，IIC用于控制AHT20和BMP280，ADC用于采集电压值，以及按键控制<br><img src="/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png" alt="image.png"></p>
+<h3 id="自动下载"><a href="#自动下载" class="headerlink" title="自动下载"></a>自动下载</h3><p>串口芯片使用CH340K<br><img src="/posts/df56fc06/7d89effc779e4274b354b0442a294865.png" alt="image.png"></p>
+<h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><h3 id="电源切换电路"><a href="#电源切换电路" class="headerlink" title="电源切换电路"></a>电源切换电路</h3><p>使用PMOS，当没有外部电源时使用电池供电，有外部电源输入时不使用电池供电<br><img src="/posts/df56fc06/286190f2fcf24bc4bdd4d62e1ae7b63f.png" alt="image.png"></p>
+<h3 id="充电电路"><a href="#充电电路" class="headerlink" title="充电电路"></a>充电电路</h3><p>电池管理使用<a href="https://item.szlcsc.com/772193.html?kw=C725790&fromZone=s">TP4056</a>，电路参考<a href="https://atta.szlcsc.com/upload/public/pdf/source/20231109/CF74897CE79A500F7FE27A45ADCCC631.pdf">TP4056数据手册</a><br><img src="/posts/df56fc06/04faa10853da4b83bcad620b4eaec60e.png" alt="image.png"><br>充电电流如下，根据锂电池参数选择合适的电阻</p>
+<table>
+<thead>
+<tr>
+<th>Rprog(K)</th>
+<th>Ibat(mA)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.2</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>500</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>400</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>300</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>200</td>
+</tr>
+<tr>
+<td>12.0</td>
+<td>200</td>
+</tr>
+</tbody></table>
+<h2 id="外设"><a href="#外设" class="headerlink" title="外设"></a>外设</h2><h3 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h3><p>板载一个RESET和BOOT侧边按键，使用拨轮开关作为控制输入<br><img src="/posts/df56fc06/95154bb067354b339ee88efdf9f44841.png" alt="image.png"></p>
+<h3 id="TFT"><a href="#TFT" class="headerlink" title="TFT"></a>TFT</h3><p>使用1.8寸TFT屏幕插接，分辨率128x160，屏幕驱动ST7735，屏幕驱动电路参考屏幕原理图，可以通过BLK引脚控制屏幕亮度<br><img src="/posts/df56fc06/658738bf7cb94c4aae2a0b04c17d5cd0.png" alt="image.png"></p>
+<h3 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h3><p>紫外线部分电路参考紫外线模块电路设计</p>
+<p><img src="/posts/df56fc06/e0976dceda7b422ca7a9527d7b2ea3c3.png" alt="image.png"><br>通过采集电压，根据电压范围，得到紫外线强度</p>
+<p><img src="/posts/df56fc06/a360adfc92294010813b1446675f38d3.png" alt="image.png"></p>
+<h3 id="AHT20-BMP280"><a href="#AHT20-BMP280" class="headerlink" title="AHT20 BMP280"></a>AHT20 BMP280</h3><p>这两个器件，用烙铁不好焊，加热台方便些<br>AHT20可以检测环境温湿度<br><img src="/posts/df56fc06/4889306f2ecd47be96a50341cb9e54e4.png" alt="image.png"><br>BMP280可以检测大气压，温度，以及海拔高度(由压力和温度计算得到)<br><img src="/posts/df56fc06/78478d91f0de4458a481425c3c324f6f.png" alt="image.png"></p>
+<h2 id="面板"><a href="#面板" class="headerlink" title="面板"></a>面板</h2><p>使用立创EDA设计简单的面板</p>
+<h1 id="3D外壳"><a href="#3D外壳" class="headerlink" title="3D外壳"></a>3D外壳</h1><p>1.8寸版本<br>本次使用SOLIDWORKS2023建模</p>
+<h2 id="立创EDA导出模型"><a href="#立创EDA导出模型" class="headerlink" title="立创EDA导出模型"></a>立创EDA导出模型</h2><p><img src="/posts/df56fc06/68f3f871f74840cbb606b4e4b1bb5266.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/704b2689309b4b698dfd63b14240b134.png" alt="image.png"></p>
+<h2 id="SOLIDWORKS"><a href="#SOLIDWORKS" class="headerlink" title="SOLIDWORKS"></a>SOLIDWORKS</h2><p>使用SOLIDWORKS打开导出的<code>step</code>格式文件</p>
+<p><img src="/posts/df56fc06/6aab246aaed542ff8417809e7f9d992f.png" alt="image.png"><br>打开后如下图所示，可以看到电路板模型缺少丝印图案</p>
+<p><img src="/posts/df56fc06/56bb3bbf915a4040905f02d3ea609aaf.png" alt="image.png"><br>回到PCB工程，打开PCB的2D视图</p>
+<p><img src="/posts/df56fc06/8504cd94eda44d3985993ba18a6c7922.png" alt="image.png"><br>导出上下面丝印图<br>如下图点击PCB上表面，选择外观</p>
+<p><img src="/posts/df56fc06/e9846749266348c0bd20d668b8c3bc04.png" alt="image.png"><br>选择导出的顶层丝印图</p>
+<p><img src="/posts/df56fc06/e564401d3a914499a25c5fe3635eca73.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/32b6a6851a6840719853b7a28ec2dee9.png" alt="image.png"><br>还需要调整丝印的位置和大小，选择映射</p>
+<p><img src="/posts/df56fc06/6ad561c3388b47de856ce23cbf653e3e.png" alt="image.png"><br>根据实际情况，调整以下参数</p>
+<p><img src="/posts/df56fc06/9ad75608bfe44ad08e2c8bbb698fa1e8.png" alt="image.png"><br>之后便可以开始外壳的建模，最终效果如下<br><img src="/posts/df56fc06/3a0be8a343c244bf81d3b6264f99ca71.png" alt="image.png"></p>
+<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><blockquote>
+<p>详细代码见<a href="https://github.com/levi52/ESP32_UV_BOX">levi52@GitHub: ESP32_UV_BOX</a></p>
+</blockquote>
+<h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><p>在主界面下设四个功能页，之后各级再设功能分页，主要结构如下<br><img src="/posts/df56fc06/d554d5ff9ca640db81f2d0c2856ac90b.png" alt="image.png"></p>
+<blockquote>
+<p>设计参考：<br><a href="https://space.bilibili.com/14368720">B站：黑人黑科技</a>的视频<a href="https://www.bilibili.com/video/BV19j41187SF">DIY万能遥控器</a><br><a href="https://oshwhub.com/bukaiyuan/works">OSHWHub: 黑人黑科技</a>的开源工程<a href="https://oshwhub.com/bukaiyuan/ESP32-hang-mu-yao-kong-qi">ESP32 万能遥控器</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/db83837706a14e418feb2864e9fb52ca.png" alt="主菜单.png"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
+<p>开发工具：Visual Studio Code + PlatformIO<br>图标：<a href="https://www.iconfont.cn/">iconfont-阿里巴巴</a><br>颜色：<a href="https://rgbcolorpicker.com/565">RGB COLOR PICKER</a><br>中文转换：<a href="https://www.jyshare.com/front-end/3602/">中文转UNICODE</a><br>图片转换：<a href="https://notisrac.github.io/FileToCArray/">FileToCArray</a></p>
+</blockquote>
+<p>代码结构主要如下</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">ESP32_UV_BOX</span><br><span class="line">│  clearBuildDir<span class="selector-class">.bat</span>   build文件删除</span><br><span class="line">│  default_8MB<span class="selector-class">.csv</span>     存储分区</span><br><span class="line">│  LICENSE             开源协议</span><br><span class="line">│  platformio<span class="selector-class">.ini</span>      开发配置</span><br><span class="line">│  README<span class="selector-class">.md</span>           说明文档</span><br><span class="line">├─assets/              静态文件</span><br><span class="line">├─include</span><br><span class="line">│      README</span><br><span class="line">├─lib                  外部库</span><br><span class="line">│  │  README</span><br><span class="line">│  └─ArduinoZlib </span><br><span class="line">├─<span class="attribute">src</span>                  主要文件</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.cpp</span>       按键控制</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.h</span></span><br><span class="line">│  │  <span class="selector-tag">main</span><span class="selector-class">.cpp</span>         主程序</span><br><span class="line">│  │  network<span class="selector-class">.cpp</span>      网络请求</span><br><span class="line">│  │  network<span class="selector-class">.h</span></span><br><span class="line">│  │  sensor<span class="selector-class">.cpp</span>       传感器</span><br><span class="line">│  │  sensor<span class="selector-class">.h</span></span><br><span class="line">│  │  ui<span class="selector-class">.cpp</span>           界面</span><br><span class="line">│  │  ui<span class="selector-class">.h</span></span><br><span class="line">│  ├─<span class="attribute">font</span>/             字体文件</span><br><span class="line">│  └─img/              图片文件</span><br><span class="line">└─test/                测试文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><p>屏幕尺寸为1.8寸，分辨率是128x160，屏幕驱动是ST7735，使用<a href="https://github.com/Bodmer/TFT_eSPI">TFT_eSPI</a>库驱动屏幕，所有界面使用<code>TFT_eSPI</code>绘制</p>
+<p>使用<code>TFT_eSPI</code>需要修改配置文件<code>User_Setup.h</code>，根据屏幕类型和显示情况修改内容</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_DRIVER <span class="comment">// 屏幕驱动</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_RGB <span class="comment">// 颜色顺序</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  128  <span class="comment">// 屏幕宽度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 160  <span class="comment">// 屏幕高度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_GREENTAB2  <span class="comment">// 仅ST7735</span></span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON // 黑白反转</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_OFF</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_BL   17 <span class="comment">// 背光引脚</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 23</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   5  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    2  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST   4  <span class="comment">// Reset pin (could connect to RST pin)</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>ledc</code>控制引脚输出PWM调节屏幕背光亮度</p>
+<h3 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h3><p>使用<code>mathertel/OneButton</code>库来实现按键的控制，分别注册短按，双击和长按函数来实现不同的操作</p>
+<p>上下短按为页面切换，中间短按为进入页面，中间长按为返回上一级</p>
+<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><h4 id="UV-1"><a href="#UV-1" class="headerlink" title="UV"></a>UV</h4><p>使用S12SD传感器来检测紫外线，然后经过放大，使用ADC采集电压，根据电压范围判断紫外线指数等级</p>
+<p>下图为紫外线模块<br><img src="/posts/df56fc06/922ab3f72ef447daafb15dbb491e8795.png" alt="image.png"><br>程序中使用此函数获取紫外线指数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">uint8_t</span> <span class="title">sensor_uv_data</span><span class="params">(<span class="type">void</span>)</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图中为Arduino对应的数值，详情见<a href="https://wiki.dfrobot.com.cn/_SKU_SEN0162__UV_Sensor">DFROBOT: UV Sensor</a><br><img src="/posts/df56fc06/6ba2cbb88a73430790e063d3e377f5a7.png" alt="image.png"></p>
+</blockquote>
+<h4 id="AHT20"><a href="#AHT20" class="headerlink" title="AHT20"></a>AHT20</h4><p>使用<code>dvarrel/AHT20</code>库读取AHT20温湿度传感器的数据<br>主要为如下内容，AHT20数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">AHT20Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> humidity;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_aht20_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">AHT20Data <span class="title">sensor_aht20_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="BMP280"><a href="#BMP280" class="headerlink" title="BMP280"></a>BMP280</h4><p>使用<code>seeed-studio/Grove - Barometer Sensor BMP280</code>库读取BMP280传感器的数据<br>主要为如下内容，BMP280数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">BMP280Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> pressure;</span><br><span class="line">    <span class="type">float</span> altitude;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_bmp280_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">BMP280Data <span class="title">sensor_bmp280_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在函数<code>bool BMP280::init(void)</code>中注释掉<code>Wire.begin()</code><br>在主程序中上面两个传感器初始化前，要先使用<code>Wire.begin(21, 22);</code>来设置<code>IIC</code>引脚</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="配网"><a href="#配网" class="headerlink" title="配网"></a>配网</h4><p>初次使用时，会建立如下网络<code>ESP_UV_BOX_WIFI</code>，<br><img src="/posts/df56fc06/c8f8e9414a8448d6b543b0ff38702aef.png" alt="image.png"><br>连接网络，浏览器打开网址<code>192.168.1.1</code>，会出现如下配网页面</p>
+<blockquote>
+<p>页面代码参考: <a href="https://blog.csdn.net/YANGJIERUN/article/details/129092371">CSDN: 请收藏！分享一个ESP32&#x2F;ESP8266高颜值WIFI配网页面代码-带下拉选择框和中英文版本。文末有arduino配网代码。</a></p>
+</blockquote>
+<p>一共四个输入框，分别是<code>WIFI SSID</code>, <code>WIFI PASSWORD</code>, <code>Private KEY</code>, <code>Location ID</code></p>
+<blockquote>
+<p>相关链接：<a href="https://id.qweather.com/#/login?redirect=https%3A%2F%2Fconsole.qweather.com%2F%23%2Fapps&lang=zh">和风天气控制台</a>、<a href="https://docs.qq.com/sheet/DTWNWWU9FeXhwSERG?tab=BB08J2">城市 ID</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/3d43aa47c4a04f188f323f635d9e87d4.png" alt="image.png"><br>点击保存后，芯片会重启连接网络</p>
+<p>网络配置相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">wifi_scan</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_connect</span><span class="params">(<span class="type">int</span> timeOut_s)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_disconnect</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ap_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">server_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleRoot</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleConfigWifi</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleNotFound</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">doClient</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifiConfigBySoftAP</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气时钟"><a href="#天气时钟" class="headerlink" title="天气时钟"></a>天气时钟</h4><p>天气等数据使用和风天气API，免费订阅每天可以有1000次请求</p>
+<blockquote>
+<p><a href="https://dev.qweather.com/docs/finance/subscription/#comparison">订阅规则</a></p>
+</blockquote>
+<ul>
+<li>实时天气数据使用<a href="https://www.qweather.com/">和风天气</a>的<a href="https://dev.qweather.com/">API</a>，具体代码参考<a href="https://space.bilibili.com/393773788">B站：大聪明的二手脑袋</a>的视频<a href="https://www.bilibili.com/video/BV1wj421Z7Ds">Dudu天气时钟版本更新，全面对接和风天气，2.0版本继续开源</a></li>
+<li>时间数据使用<code>arduino-libraries/NTPClient</code>库获取网络时间<br>网络天气相关函数如下</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_now</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_future</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_air</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_city_id</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">urlEncode</span><span class="params">(<span class="type">const</span> String&amp; text)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>网络相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">time_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_time</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>同上，使用和风天气API，屏幕显示未来六天天气状况</p>
+<h4 id="空气质量"><a href="#空气质量" class="headerlink" title="空气质量"></a>空气质量</h4><p>同上，使用和风天气API，屏幕显示颗粒物PM10，颗粒物PM2.5，二氧化氮NO2，二氧化硫SO2，一氧化碳CO，臭氧O3</p>
+<h4 id="哔哩哔哩"><a href="#哔哩哔哩" class="headerlink" title="哔哩哔哩"></a>哔哩哔哩</h4><p>通过如下API接口获得JSON格式的数据，使用<a href="https://arduinojson.org/">ArduinoJson</a>库解析获得关注数和粉丝数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//api.bilibili.com/x/relation/stat?vmid=用户UID</span></span><br></pre></td></tr></table></figure>
+
+<p>可以使用官网提供的<a href="https://arduinojson.org/v7/assistant/#/step1">工具</a>生成解析代码</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ttl&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;mid&quot;</span><span class="punctuation">:</span> <span class="number">378576508</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;following&quot;</span><span class="punctuation">:</span> <span class="number">318</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;whisper&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;follower&quot;</span><span class="punctuation">:</span> <span class="number">56</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成的解析代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// String input;</span></span><br><span class="line"></span><br><span class="line">JsonDocument doc;</span><br><span class="line"></span><br><span class="line">DeserializationError error = <span class="built_in">deserializeJson</span>(doc, input);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (error) &#123;</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;deserializeJson() failed: &quot;</span>);</span><br><span class="line">  Serial.<span class="built_in">println</span>(error.<span class="built_in">c_str</span>());</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> code = doc[<span class="string">&quot;code&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* message = doc[<span class="string">&quot;message&quot;</span>]; <span class="comment">// &quot;0&quot;</span></span><br><span class="line"><span class="type">int</span> ttl = doc[<span class="string">&quot;ttl&quot;</span>]; <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">JsonObject data = doc[<span class="string">&quot;data&quot;</span>];</span><br><span class="line"><span class="type">long</span> data_mid = data[<span class="string">&quot;mid&quot;</span>]; <span class="comment">// 378576508</span></span><br><span class="line"><span class="type">int</span> data_following = data[<span class="string">&quot;following&quot;</span>]; <span class="comment">// 318</span></span><br><span class="line"><span class="type">int</span> data_whisper = data[<span class="string">&quot;whisper&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_black = data[<span class="string">&quot;black&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_follower = data[<span class="string">&quot;follower&quot;</span>]; <span class="comment">// 56</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>使用<code>fastled/FastLED</code>库驱动板载的一颗WS2812灯珠，暂时只添加不同颜色灯切换功能</p>
+<h1 id="实物"><a href="#实物" class="headerlink" title="实物"></a>实物</h1><h2 id="PCB"><a href="#PCB" class="headerlink" title="PCB"></a>PCB</h2><p><img src="/posts/df56fc06/9c97f95d9de94ff3805473966e0f3ed2.png" alt="image.png"></p>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>下图为部分页面<br><img src="/posts/df56fc06/59e9f63003d04a4f83c02cc1ec1dbcde.png" alt="image.png"><br>后续会上传B站视频</p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>最后非常感谢立创🥰提供的机会和各种优惠券，帮助我们实现想法，做出实物，参加征集令活动收获颇多，未来继续努力😄</p>
+<p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=8087F7&vCenter=true&random=false&width=435&lines=The+end..." alt="Typing SVG" style="display: inline-block; margin-right: 10px;"></a></p>
+<div style="display:flex">
+<a href="https://github.com/levi52" target="_blank"><img src="https://img.shields.io/badge/levi52-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://oshwhub.com/levi_01/works" target="_blank"><img src="https://img.shields.io/badge/levi_01-%40oshwhub?style=flat-square&logo=easyeda&logoColor=white&color=%235588ff" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://space.bilibili.com/378576508" target="_blank"><img src="https://img.shields.io/badge/travi5-%40bilibili?style=flat-square&logo=bilibili&logoColor=white&color=%2301affd" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://blog.csdn.net/Levi_5" target="_blank"><img src="https://img.shields.io/badge/Hi1L-CSDN?style=flat-square&logoColor=white&label=CSDN&color=%23fc5531" style="display: inline-block; margin-right: 10px;"></a> 
+<a href="https://levi52.github.io/" target="_blank"><img src="https://img.shields.io/badge/levi52_blog-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+</div>]]></content>
+      <categories>
+        <category>ESP32</category>
+        <category>开源</category>
       </categories>
       <tags>
         <tag>ESP32</tag>
         <tag>PlatformIO</tag>
-        <tag>多功能开关</tag>
         <tag>自制</tag>
         <tag>立创</tag>
+        <tag>开源</tag>
+        <tag>紫外线</tag>
+        <tag>AHT20</tag>
+        <tag>BMP280</tag>
         <tag>1.8寸TFT</tag>
-        <tag>预告</tag>
-        <tag>3D</tag>
-        <tag>传感器</tag>
+        <tag>外壳</tag>
+        <tag>面板</tag>
       </tags>
   </entry>
   <entry>

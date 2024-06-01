@@ -6,7 +6,7 @@
   <link href="https://levi52.github.io/atom.xml" rel="self"/>
   
   <link href="https://levi52.github.io/"/>
-  <updated>2024-05-28T12:28:39.859Z</updated>
+  <updated>2024-06-01T04:36:43.486Z</updated>
   <id>https://levi52.github.io/</id>
   
   <author>
@@ -17,39 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>预告</title>
-    <link href="https://levi52.github.io/posts/224bc55d/"/>
-    <id>https://levi52.github.io/posts/224bc55d/</id>
-    <published>2024-05-16T13:10:34.000Z</published>
-    <updated>2024-05-28T12:28:39.859Z</updated>
+    <title>【立创开源】ESP32_UV_BOX</title>
+    <link href="https://levi52.github.io/posts/df56fc06/"/>
+    <id>https://levi52.github.io/posts/df56fc06/</id>
+    <published>2024-06-01T03:07:20.000Z</published>
+    <updated>2024-06-01T04:36:43.486Z</updated>
     
     
-    <summary type="html">... ... ...</summary>
+    <summary type="html">ESP32 UV BOX</summary>
     
     
     
     <category term="ESP32" scheme="https://levi52.github.io/categories/ESP32/"/>
     
-    <category term="预告" scheme="https://levi52.github.io/categories/ESP32/%E9%A2%84%E5%91%8A/"/>
+    <category term="开源" scheme="https://levi52.github.io/categories/ESP32/%E5%BC%80%E6%BA%90/"/>
     
     
     <category term="ESP32" scheme="https://levi52.github.io/tags/ESP32/"/>
     
     <category term="PlatformIO" scheme="https://levi52.github.io/tags/PlatformIO/"/>
     
-    <category term="多功能开关" scheme="https://levi52.github.io/tags/%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%BC%80%E5%85%B3/"/>
-    
     <category term="自制" scheme="https://levi52.github.io/tags/%E8%87%AA%E5%88%B6/"/>
     
     <category term="立创" scheme="https://levi52.github.io/tags/%E7%AB%8B%E5%88%9B/"/>
     
+    <category term="开源" scheme="https://levi52.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="紫外线" scheme="https://levi52.github.io/tags/%E7%B4%AB%E5%A4%96%E7%BA%BF/"/>
+    
+    <category term="AHT20" scheme="https://levi52.github.io/tags/AHT20/"/>
+    
+    <category term="BMP280" scheme="https://levi52.github.io/tags/BMP280/"/>
+    
     <category term="1.8寸TFT" scheme="https://levi52.github.io/tags/1-8%E5%AF%B8TFT/"/>
     
+    <category term="外壳" scheme="https://levi52.github.io/tags/%E5%A4%96%E5%A3%B3/"/>
+    
+    <category term="面板" scheme="https://levi52.github.io/tags/%E9%9D%A2%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>预告</title>
+    <link href="https://levi52.github.io/posts/224bc55d/"/>
+    <id>https://levi52.github.io/posts/224bc55d/</id>
+    <published>2024-05-16T13:10:34.000Z</published>
+    <updated>2024-06-01T03:21:38.895Z</updated>
+    
+    
+    <summary type="html">... ... ...</summary>
+    
+    
+    
+    <category term="预告" scheme="https://levi52.github.io/categories/%E9%A2%84%E5%91%8A/"/>
+    
+    
     <category term="预告" scheme="https://levi52.github.io/tags/%E9%A2%84%E5%91%8A/"/>
-    
-    <category term="3D" scheme="https://levi52.github.io/tags/3D/"/>
-    
-    <category term="传感器" scheme="https://levi52.github.io/tags/%E4%BC%A0%E6%84%9F%E5%99%A8/"/>
     
   </entry>
   

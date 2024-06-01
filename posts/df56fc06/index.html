@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-levi.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-levi.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-levi.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"levi52.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"show_result":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="ESP32 UV BOX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【立创开源】ESP32_UV_BOX">
+<meta property="og:url" content="https://levi52.github.io/posts/df56fc06/index.html">
+<meta property="og:site_name" content="Levi52&#39;s Blog">
+<meta property="og:description" content="ESP32 UV BOX">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/7d89effc779e4274b354b0442a294865.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/286190f2fcf24bc4bdd4d62e1ae7b63f.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/04faa10853da4b83bcad620b4eaec60e.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/95154bb067354b339ee88efdf9f44841.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/658738bf7cb94c4aae2a0b04c17d5cd0.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/e0976dceda7b422ca7a9527d7b2ea3c3.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/a360adfc92294010813b1446675f38d3.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/4889306f2ecd47be96a50341cb9e54e4.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/78478d91f0de4458a481425c3c324f6f.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/68f3f871f74840cbb606b4e4b1bb5266.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/704b2689309b4b698dfd63b14240b134.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/6aab246aaed542ff8417809e7f9d992f.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/56bb3bbf915a4040905f02d3ea609aaf.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/8504cd94eda44d3985993ba18a6c7922.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/e9846749266348c0bd20d668b8c3bc04.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/e564401d3a914499a25c5fe3635eca73.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/32b6a6851a6840719853b7a28ec2dee9.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/6ad561c3388b47de856ce23cbf653e3e.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/9ad75608bfe44ad08e2c8bbb698fa1e8.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/3a0be8a343c244bf81d3b6264f99ca71.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/d554d5ff9ca640db81f2d0c2856ac90b.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/db83837706a14e418feb2864e9fb52ca.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/922ab3f72ef447daafb15dbb491e8795.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/6ba2cbb88a73430790e063d3e377f5a7.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/c8f8e9414a8448d6b543b0ff38702aef.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/3d43aa47c4a04f188f323f635d9e87d4.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/9c97f95d9de94ff3805473966e0f3ed2.png">
+<meta property="og:image" content="https://levi52.github.io/posts/df56fc06/59e9f63003d04a4f83c02cc1ec1dbcde.png">
+<meta property="og:image" content="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=30&pause=1000&color=8087F7&vCenter=true&random=false&width=435&lines=The+end...">
+<meta property="og:image" content="https://img.shields.io/badge/levi52-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0">
+<meta property="og:image" content="https://img.shields.io/badge/levi_01-%40oshwhub?style=flat-square&logo=easyeda&logoColor=white&color=%235588ff">
+<meta property="og:image" content="https://img.shields.io/badge/travi5-%40bilibili?style=flat-square&logo=bilibili&logoColor=white&color=%2301affd">
+<meta property="og:image" content="https://img.shields.io/badge/Hi1L-CSDN?style=flat-square&logoColor=white&label=CSDN&color=%23fc5531">
+<meta property="og:image" content="https://img.shields.io/badge/levi52_blog-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0">
+<meta property="article:published_time" content="2024-06-01T03:07:20.000Z">
+<meta property="article:modified_time" content="2024-06-01T04:36:43.486Z">
+<meta property="article:author" content="Levi52">
+<meta property="article:tag" content="ESP32">
+<meta property="article:tag" content="PlatformIO">
+<meta property="article:tag" content="自制">
+<meta property="article:tag" content="立创">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="紫外线">
+<meta property="article:tag" content="AHT20">
+<meta property="article:tag" content="BMP280">
+<meta property="article:tag" content="1.8寸TFT">
+<meta property="article:tag" content="外壳">
+<meta property="article:tag" content="面板">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://levi52.github.io/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png">
+
+
+<link rel="canonical" href="https://levi52.github.io/posts/df56fc06/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://levi52.github.io/posts/df56fc06/","path":"posts/df56fc06/","title":"【立创开源】ESP32_UV_BOX"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【立创开源】ESP32_UV_BOX | Levi52's Blog</title>
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Levi52's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Levi52's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">REMEMBER YOU WILL DIE</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-book fa-fw"></i>资源</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ESP-UV-BOX"><span class="nav-number">1.</span> <span class="nav-text">ESP_UV_BOX</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E6%9C%AC"><span class="nav-number">1.3.</span> <span class="nav-text">成本</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">硬件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE"><span class="nav-number">2.1.</span> <span class="nav-text">原理图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E6%8E%A7%E7%94%B5%E8%B7%AF"><span class="nav-number">2.2.</span> <span class="nav-text">主控电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%8E%A7"><span class="nav-number">2.2.1.</span> <span class="nav-text">主控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.2.2.</span> <span class="nav-text">自动下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E6%BA%90%E7%94%B5%E8%B7%AF"><span class="nav-number">2.3.</span> <span class="nav-text">电源电路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E6%BA%90%E5%88%87%E6%8D%A2%E7%94%B5%E8%B7%AF"><span class="nav-number">2.3.1.</span> <span class="nav-text">电源切换电路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%85%E7%94%B5%E7%94%B5%E8%B7%AF"><span class="nav-number">2.3.2.</span> <span class="nav-text">充电电路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%96%E8%AE%BE"><span class="nav-number">2.4.</span> <span class="nav-text">外设</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E9%94%AE"><span class="nav-number">2.4.1.</span> <span class="nav-text">按键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TFT"><span class="nav-number">2.4.2.</span> <span class="nav-text">TFT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UV"><span class="nav-number">2.4.3.</span> <span class="nav-text">UV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AHT20-BMP280"><span class="nav-number">2.4.4.</span> <span class="nav-text">AHT20 BMP280</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E6%9D%BF"><span class="nav-number">2.5.</span> <span class="nav-text">面板</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3D%E5%A4%96%E5%A3%B3"><span class="nav-number">3.</span> <span class="nav-text">3D外壳</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%8B%E5%88%9BEDA%E5%AF%BC%E5%87%BA%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.1.</span> <span class="nav-text">立创EDA导出模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SOLIDWORKS"><span class="nav-number">3.2.</span> <span class="nav-text">SOLIDWORKS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">程序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">页面结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">4.2.</span> <span class="nav-text">代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%95%8C%E9%9D%A2"><span class="nav-number">4.2.1.</span> <span class="nav-text">界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6"><span class="nav-number">4.2.2.</span> <span class="nav-text">控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="nav-number">4.2.3.</span> <span class="nav-text">传感器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UV-1"><span class="nav-number">4.2.3.1.</span> <span class="nav-text">UV</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AHT20"><span class="nav-number">4.2.3.2.</span> <span class="nav-text">AHT20</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BMP280"><span class="nav-number">4.2.3.3.</span> <span class="nav-text">BMP280</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C"><span class="nav-number">4.2.4.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%91"><span class="nav-number">4.2.4.1.</span> <span class="nav-text">配网</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A9%E6%B0%94%E6%97%B6%E9%92%9F"><span class="nav-number">4.2.4.2.</span> <span class="nav-text">天气时钟</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5"><span class="nav-number">4.2.4.3.</span> <span class="nav-text">天气预报</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F"><span class="nav-number">4.2.4.4.</span> <span class="nav-text">空气质量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9"><span class="nav-number">4.2.4.5.</span> <span class="nav-text">哔哩哔哩</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%81%AF%E5%85%89"><span class="nav-number">4.2.5.</span> <span class="nav-text">灯光</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E7%89%A9"><span class="nav-number">5.</span> <span class="nav-text">实物</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PCB"><span class="nav-number">5.1.</span> <span class="nav-text">PCB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.2.</span> <span class="nav-text">页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#END"><span class="nav-number">6.</span> <span class="nav-text">END</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi52"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Levi52</p>
+  <div class="site-description" itemprop="description">NEED NOT TO KNOW</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/levi52" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;levi52" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/378576508" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;378576508" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com" rel="noopener" target="_blank">GitHub</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://bilibili.com/" title="https:&#x2F;&#x2F;bilibili.com" rel="noopener" target="_blank">bilibili</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://levi52.github.io/posts/df56fc06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi52">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Levi52's Blog">
+      <meta itemprop="description" content="NEED NOT TO KNOW">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【立创开源】ESP32_UV_BOX | Levi52's Blog">
+      <meta itemprop="description" content="ESP32 UV BOX">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【立创开源】ESP32_UV_BOX
+        </h1>
+
+        <div class="post-meta-container">
+          
+
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-06-01 11:07:20 / 修改时间：12:36:43" itemprop="dateCreated datePublished" datetime="2024-06-01T11:07:20+08:00">2024-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ESP32/" itemprop="url" rel="index"><span itemprop="name">ESP32</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/ESP32/%E5%BC%80%E6%BA%90/" itemprop="url" rel="index"><span itemprop="name">开源</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">ESP32 UV BOX</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="ESP-UV-BOX"><a href="#ESP-UV-BOX" class="headerlink" title="ESP_UV_BOX"></a>ESP_UV_BOX</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>以前买了个紫外线模块，一直放着吃灰😶，偶然看到<a target="_blank" rel="noopener" href="https://oshwhub.com/activities/Xiari">夏日征集令</a>，想着可以试试(又要白嫖立创🥰)，然后就有了这个项目。<br>复刻别的项目剩了块ESP32-WROOM-32D，所以就选择了它作为主控；紫外线部分直接用加热台把模块拆了，所以没有单独买元件；做灯板剩了些WS2812灯珠，所以加上一颗，以下为制作过程记录</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>紫外线指数</li>
+<li>环境温湿度</li>
+<li>气压海拔</li>
+<li>简易照明</li>
+<li>天气时钟(网络)</li>
+</ul>
+<h2 id="成本"><a href="#成本" class="headerlink" title="成本"></a>成本</h2><p>这里只列出了主要的器件，详情见BOM</p>
+<table>
+<thead>
+<tr>
+<th>主要元件</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ESP32-WROOM-32D(8MB)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>紫外线模块</td>
+<td>7.05</td>
+</tr>
+<tr>
+<td>AHT20</td>
+<td>1.62</td>
+</tr>
+<tr>
+<td>BMP280</td>
+<td>1.04</td>
+</tr>
+<tr>
+<td>四脚拨轮开关</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>CH340K</td>
+<td>1.4</td>
+</tr>
+</tbody></table>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><blockquote>
+<p>硬件设计见<a target="_blank" rel="noopener" href="https://oshwhub.com/levi_01/simple-esp-uv-detection-box">立创开源硬件平台</a></p>
+</blockquote>
+<h2 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h2><blockquote>
+<p>存在问题：下载完程序，可以运行，但是板子上电不运行，需要按复位，<a target="_blank" rel="noopener" href="https://esp32.com/viewtopic.php?t=17326">&gt;去除BOOT0按键的电容&lt;</a>，解决问题<br>贴片开关的质量也不太行，开关手柄会断🙃<br>侧边按键质量似乎也不太好，按复位有时也没用🙃</p>
+</blockquote>
+<h2 id="主控电路"><a href="#主控电路" class="headerlink" title="主控电路"></a>主控电路</h2><h3 id="主控"><a href="#主控" class="headerlink" title="主控"></a>主控</h3><p>主控选择ESP32-WROOM-32D-N8，外围电路参考<a target="_blank" rel="noopener" href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_cn.pdf">官方技术规格书</a>。<br>引出SPI用于控制屏幕，IIC用于控制AHT20和BMP280，ADC用于采集电压值，以及按键控制<br><img src="/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png" alt="image.png"></p>
+<h3 id="自动下载"><a href="#自动下载" class="headerlink" title="自动下载"></a>自动下载</h3><p>串口芯片使用CH340K<br><img src="/posts/df56fc06/7d89effc779e4274b354b0442a294865.png" alt="image.png"></p>
+<h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><h3 id="电源切换电路"><a href="#电源切换电路" class="headerlink" title="电源切换电路"></a>电源切换电路</h3><p>使用PMOS，当没有外部电源时使用电池供电，有外部电源输入时不使用电池供电<br><img src="/posts/df56fc06/286190f2fcf24bc4bdd4d62e1ae7b63f.png" alt="image.png"></p>
+<h3 id="充电电路"><a href="#充电电路" class="headerlink" title="充电电路"></a>充电电路</h3><p>电池管理使用<a target="_blank" rel="noopener" href="https://item.szlcsc.com/772193.html?kw=C725790&fromZone=s">TP4056</a>，电路参考<a target="_blank" rel="noopener" href="https://atta.szlcsc.com/upload/public/pdf/source/20231109/CF74897CE79A500F7FE27A45ADCCC631.pdf">TP4056数据手册</a><br><img src="/posts/df56fc06/04faa10853da4b83bcad620b4eaec60e.png" alt="image.png"><br>充电电流如下，根据锂电池参数选择合适的电阻</p>
+<table>
+<thead>
+<tr>
+<th>Rprog(K)</th>
+<th>Ibat(mA)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.2</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>500</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>400</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>300</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>200</td>
+</tr>
+<tr>
+<td>12.0</td>
+<td>200</td>
+</tr>
+</tbody></table>
+<h2 id="外设"><a href="#外设" class="headerlink" title="外设"></a>外设</h2><h3 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h3><p>板载一个RESET和BOOT侧边按键，使用拨轮开关作为控制输入<br><img src="/posts/df56fc06/95154bb067354b339ee88efdf9f44841.png" alt="image.png"></p>
+<h3 id="TFT"><a href="#TFT" class="headerlink" title="TFT"></a>TFT</h3><p>使用1.8寸TFT屏幕插接，分辨率128x160，屏幕驱动ST7735，屏幕驱动电路参考屏幕原理图，可以通过BLK引脚控制屏幕亮度<br><img src="/posts/df56fc06/658738bf7cb94c4aae2a0b04c17d5cd0.png" alt="image.png"></p>
+<h3 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h3><p>紫外线部分电路参考紫外线模块电路设计</p>
+<p><img src="/posts/df56fc06/e0976dceda7b422ca7a9527d7b2ea3c3.png" alt="image.png"><br>通过采集电压，根据电压范围，得到紫外线强度</p>
+<p><img src="/posts/df56fc06/a360adfc92294010813b1446675f38d3.png" alt="image.png"></p>
+<h3 id="AHT20-BMP280"><a href="#AHT20-BMP280" class="headerlink" title="AHT20 BMP280"></a>AHT20 BMP280</h3><p>这两个器件，用烙铁不好焊，加热台方便些<br>AHT20可以检测环境温湿度<br><img src="/posts/df56fc06/4889306f2ecd47be96a50341cb9e54e4.png" alt="image.png"><br>BMP280可以检测大气压，温度，以及海拔高度(由压力和温度计算得到)<br><img src="/posts/df56fc06/78478d91f0de4458a481425c3c324f6f.png" alt="image.png"></p>
+<h2 id="面板"><a href="#面板" class="headerlink" title="面板"></a>面板</h2><p>使用立创EDA设计简单的面板</p>
+<h1 id="3D外壳"><a href="#3D外壳" class="headerlink" title="3D外壳"></a>3D外壳</h1><p>1.8寸版本<br>本次使用SOLIDWORKS2023建模</p>
+<h2 id="立创EDA导出模型"><a href="#立创EDA导出模型" class="headerlink" title="立创EDA导出模型"></a>立创EDA导出模型</h2><p><img src="/posts/df56fc06/68f3f871f74840cbb606b4e4b1bb5266.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/704b2689309b4b698dfd63b14240b134.png" alt="image.png"></p>
+<h2 id="SOLIDWORKS"><a href="#SOLIDWORKS" class="headerlink" title="SOLIDWORKS"></a>SOLIDWORKS</h2><p>使用SOLIDWORKS打开导出的<code>step</code>格式文件</p>
+<p><img src="/posts/df56fc06/6aab246aaed542ff8417809e7f9d992f.png" alt="image.png"><br>打开后如下图所示，可以看到电路板模型缺少丝印图案</p>
+<p><img src="/posts/df56fc06/56bb3bbf915a4040905f02d3ea609aaf.png" alt="image.png"><br>回到PCB工程，打开PCB的2D视图</p>
+<p><img src="/posts/df56fc06/8504cd94eda44d3985993ba18a6c7922.png" alt="image.png"><br>导出上下面丝印图<br>如下图点击PCB上表面，选择外观</p>
+<p><img src="/posts/df56fc06/e9846749266348c0bd20d668b8c3bc04.png" alt="image.png"><br>选择导出的顶层丝印图</p>
+<p><img src="/posts/df56fc06/e564401d3a914499a25c5fe3635eca73.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/32b6a6851a6840719853b7a28ec2dee9.png" alt="image.png"><br>还需要调整丝印的位置和大小，选择映射</p>
+<p><img src="/posts/df56fc06/6ad561c3388b47de856ce23cbf653e3e.png" alt="image.png"><br>根据实际情况，调整以下参数</p>
+<p><img src="/posts/df56fc06/9ad75608bfe44ad08e2c8bbb698fa1e8.png" alt="image.png"><br>之后便可以开始外壳的建模，最终效果如下<br><img src="/posts/df56fc06/3a0be8a343c244bf81d3b6264f99ca71.png" alt="image.png"></p>
+<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><blockquote>
+<p>详细代码见<a target="_blank" rel="noopener" href="https://github.com/levi52/ESP32_UV_BOX">levi52@GitHub: ESP32_UV_BOX</a></p>
+</blockquote>
+<h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><p>在主界面下设四个功能页，之后各级再设功能分页，主要结构如下<br><img src="/posts/df56fc06/d554d5ff9ca640db81f2d0c2856ac90b.png" alt="image.png"></p>
+<blockquote>
+<p>设计参考：<br><a target="_blank" rel="noopener" href="https://space.bilibili.com/14368720">B站：黑人黑科技</a>的视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV19j41187SF">DIY万能遥控器</a><br><a target="_blank" rel="noopener" href="https://oshwhub.com/bukaiyuan/works">OSHWHub: 黑人黑科技</a>的开源工程<a target="_blank" rel="noopener" href="https://oshwhub.com/bukaiyuan/ESP32-hang-mu-yao-kong-qi">ESP32 万能遥控器</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/db83837706a14e418feb2864e9fb52ca.png" alt="主菜单.png"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
+<p>开发工具：Visual Studio Code + PlatformIO<br>图标：<a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont-阿里巴巴</a><br>颜色：<a target="_blank" rel="noopener" href="https://rgbcolorpicker.com/565">RGB COLOR PICKER</a><br>中文转换：<a target="_blank" rel="noopener" href="https://www.jyshare.com/front-end/3602/">中文转UNICODE</a><br>图片转换：<a target="_blank" rel="noopener" href="https://notisrac.github.io/FileToCArray/">FileToCArray</a></p>
+</blockquote>
+<p>代码结构主要如下</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ESP32_UV_BOX</span><br><span class="line">│  clearBuildDir<span class="selector-class">.bat</span>   build文件删除</span><br><span class="line">│  default_8MB<span class="selector-class">.csv</span>     存储分区</span><br><span class="line">│  LICENSE             开源协议</span><br><span class="line">│  platformio<span class="selector-class">.ini</span>      开发配置</span><br><span class="line">│  README<span class="selector-class">.md</span>           说明文档</span><br><span class="line">├─assets/              静态文件</span><br><span class="line">├─include</span><br><span class="line">│      README</span><br><span class="line">├─lib                  外部库</span><br><span class="line">│  │  README</span><br><span class="line">│  └─ArduinoZlib </span><br><span class="line">├─<span class="attribute">src</span>                  主要文件</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.cpp</span>       按键控制</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.h</span></span><br><span class="line">│  │  <span class="selector-tag">main</span><span class="selector-class">.cpp</span>         主程序</span><br><span class="line">│  │  network<span class="selector-class">.cpp</span>      网络请求</span><br><span class="line">│  │  network<span class="selector-class">.h</span></span><br><span class="line">│  │  sensor<span class="selector-class">.cpp</span>       传感器</span><br><span class="line">│  │  sensor<span class="selector-class">.h</span></span><br><span class="line">│  │  ui<span class="selector-class">.cpp</span>           界面</span><br><span class="line">│  │  ui<span class="selector-class">.h</span></span><br><span class="line">│  ├─<span class="attribute">font</span>/             字体文件</span><br><span class="line">│  └─img/              图片文件</span><br><span class="line">└─test/                测试文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><p>屏幕尺寸为1.8寸，分辨率是128x160，屏幕驱动是ST7735，使用<a target="_blank" rel="noopener" href="https://github.com/Bodmer/TFT_eSPI">TFT_eSPI</a>库驱动屏幕，所有界面使用<code>TFT_eSPI</code>绘制</p>
+<p>使用<code>TFT_eSPI</code>需要修改配置文件<code>User_Setup.h</code>，根据屏幕类型和显示情况修改内容</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_DRIVER <span class="comment">// 屏幕驱动</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_RGB <span class="comment">// 颜色顺序</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  128  <span class="comment">// 屏幕宽度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 160  <span class="comment">// 屏幕高度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_GREENTAB2  <span class="comment">// 仅ST7735</span></span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON // 黑白反转</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_OFF</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_BL   17 <span class="comment">// 背光引脚</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 23</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   5  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    2  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST   4  <span class="comment">// Reset pin (could connect to RST pin)</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>ledc</code>控制引脚输出PWM调节屏幕背光亮度</p>
+<h3 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h3><p>使用<code>mathertel/OneButton</code>库来实现按键的控制，分别注册短按，双击和长按函数来实现不同的操作</p>
+<p>上下短按为页面切换，中间短按为进入页面，中间长按为返回上一级</p>
+<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><h4 id="UV-1"><a href="#UV-1" class="headerlink" title="UV"></a>UV</h4><p>使用S12SD传感器来检测紫外线，然后经过放大，使用ADC采集电压，根据电压范围判断紫外线指数等级</p>
+<p>下图为紫外线模块<br><img src="/posts/df56fc06/922ab3f72ef447daafb15dbb491e8795.png" alt="image.png"><br>程序中使用此函数获取紫外线指数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">uint8_t</span> <span class="title">sensor_uv_data</span><span class="params">(<span class="type">void</span>)</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图中为Arduino对应的数值，详情见<a target="_blank" rel="noopener" href="https://wiki.dfrobot.com.cn/_SKU_SEN0162__UV_Sensor">DFROBOT: UV Sensor</a><br><img src="/posts/df56fc06/6ba2cbb88a73430790e063d3e377f5a7.png" alt="image.png"></p>
+</blockquote>
+<h4 id="AHT20"><a href="#AHT20" class="headerlink" title="AHT20"></a>AHT20</h4><p>使用<code>dvarrel/AHT20</code>库读取AHT20温湿度传感器的数据<br>主要为如下内容，AHT20数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">AHT20Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> humidity;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_aht20_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">AHT20Data <span class="title">sensor_aht20_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="BMP280"><a href="#BMP280" class="headerlink" title="BMP280"></a>BMP280</h4><p>使用<code>seeed-studio/Grove - Barometer Sensor BMP280</code>库读取BMP280传感器的数据<br>主要为如下内容，BMP280数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">BMP280Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> pressure;</span><br><span class="line">    <span class="type">float</span> altitude;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_bmp280_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">BMP280Data <span class="title">sensor_bmp280_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在函数<code>bool BMP280::init(void)</code>中注释掉<code>Wire.begin()</code><br>在主程序中上面两个传感器初始化前，要先使用<code>Wire.begin(21, 22);</code>来设置<code>IIC</code>引脚</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="配网"><a href="#配网" class="headerlink" title="配网"></a>配网</h4><p>初次使用时，会建立如下网络<code>ESP_UV_BOX_WIFI</code>，<br><img src="/posts/df56fc06/c8f8e9414a8448d6b543b0ff38702aef.png" alt="image.png"><br>连接网络，浏览器打开网址<code>192.168.1.1</code>，会出现如下配网页面</p>
+<blockquote>
+<p>页面代码参考: <a target="_blank" rel="noopener" href="https://blog.csdn.net/YANGJIERUN/article/details/129092371">CSDN: 请收藏！分享一个ESP32&#x2F;ESP8266高颜值WIFI配网页面代码-带下拉选择框和中英文版本。文末有arduino配网代码。</a></p>
+</blockquote>
+<p>一共四个输入框，分别是<code>WIFI SSID</code>, <code>WIFI PASSWORD</code>, <code>Private KEY</code>, <code>Location ID</code></p>
+<blockquote>
+<p>相关链接：<a target="_blank" rel="noopener" href="https://id.qweather.com/#/login?redirect=https%3A%2F%2Fconsole.qweather.com%2F%23%2Fapps&lang=zh">和风天气控制台</a>、<a target="_blank" rel="noopener" href="https://docs.qq.com/sheet/DTWNWWU9FeXhwSERG?tab=BB08J2">城市 ID</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/3d43aa47c4a04f188f323f635d9e87d4.png" alt="image.png"><br>点击保存后，芯片会重启连接网络</p>
+<p>网络配置相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">wifi_scan</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_connect</span><span class="params">(<span class="type">int</span> timeOut_s)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_disconnect</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ap_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">server_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleRoot</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleConfigWifi</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleNotFound</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">doClient</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifiConfigBySoftAP</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气时钟"><a href="#天气时钟" class="headerlink" title="天气时钟"></a>天气时钟</h4><p>天气等数据使用和风天气API，免费订阅每天可以有1000次请求</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://dev.qweather.com/docs/finance/subscription/#comparison">订阅规则</a></p>
+</blockquote>
+<ul>
+<li>实时天气数据使用<a target="_blank" rel="noopener" href="https://www.qweather.com/">和风天气</a>的<a target="_blank" rel="noopener" href="https://dev.qweather.com/">API</a>，具体代码参考<a target="_blank" rel="noopener" href="https://space.bilibili.com/393773788">B站：大聪明的二手脑袋</a>的视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wj421Z7Ds">Dudu天气时钟版本更新，全面对接和风天气，2.0版本继续开源</a></li>
+<li>时间数据使用<code>arduino-libraries/NTPClient</code>库获取网络时间<br>网络天气相关函数如下</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_now</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_future</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_air</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_city_id</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">urlEncode</span><span class="params">(<span class="type">const</span> String&amp; text)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>网络相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">time_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_time</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>同上，使用和风天气API，屏幕显示未来六天天气状况</p>
+<h4 id="空气质量"><a href="#空气质量" class="headerlink" title="空气质量"></a>空气质量</h4><p>同上，使用和风天气API，屏幕显示颗粒物PM10，颗粒物PM2.5，二氧化氮NO2，二氧化硫SO2，一氧化碳CO，臭氧O3</p>
+<h4 id="哔哩哔哩"><a href="#哔哩哔哩" class="headerlink" title="哔哩哔哩"></a>哔哩哔哩</h4><p>通过如下API接口获得JSON格式的数据，使用<a target="_blank" rel="noopener" href="https://arduinojson.org/">ArduinoJson</a>库解析获得关注数和粉丝数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//api.bilibili.com/x/relation/stat?vmid=用户UID</span></span><br></pre></td></tr></table></figure>
+
+<p>可以使用官网提供的<a target="_blank" rel="noopener" href="https://arduinojson.org/v7/assistant/#/step1">工具</a>生成解析代码</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ttl&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;mid&quot;</span><span class="punctuation">:</span> <span class="number">378576508</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;following&quot;</span><span class="punctuation">:</span> <span class="number">318</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;whisper&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;follower&quot;</span><span class="punctuation">:</span> <span class="number">56</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成的解析代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// String input;</span></span><br><span class="line"></span><br><span class="line">JsonDocument doc;</span><br><span class="line"></span><br><span class="line">DeserializationError error = <span class="built_in">deserializeJson</span>(doc, input);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (error) &#123;</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;deserializeJson() failed: &quot;</span>);</span><br><span class="line">  Serial.<span class="built_in">println</span>(error.<span class="built_in">c_str</span>());</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> code = doc[<span class="string">&quot;code&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* message = doc[<span class="string">&quot;message&quot;</span>]; <span class="comment">// &quot;0&quot;</span></span><br><span class="line"><span class="type">int</span> ttl = doc[<span class="string">&quot;ttl&quot;</span>]; <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">JsonObject data = doc[<span class="string">&quot;data&quot;</span>];</span><br><span class="line"><span class="type">long</span> data_mid = data[<span class="string">&quot;mid&quot;</span>]; <span class="comment">// 378576508</span></span><br><span class="line"><span class="type">int</span> data_following = data[<span class="string">&quot;following&quot;</span>]; <span class="comment">// 318</span></span><br><span class="line"><span class="type">int</span> data_whisper = data[<span class="string">&quot;whisper&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_black = data[<span class="string">&quot;black&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_follower = data[<span class="string">&quot;follower&quot;</span>]; <span class="comment">// 56</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>使用<code>fastled/FastLED</code>库驱动板载的一颗WS2812灯珠，暂时只添加不同颜色灯切换功能</p>
+<h1 id="实物"><a href="#实物" class="headerlink" title="实物"></a>实物</h1><h2 id="PCB"><a href="#PCB" class="headerlink" title="PCB"></a>PCB</h2><p><img src="/posts/df56fc06/9c97f95d9de94ff3805473966e0f3ed2.png" alt="image.png"></p>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>下图为部分页面<br><img src="/posts/df56fc06/59e9f63003d04a4f83c02cc1ec1dbcde.png" alt="image.png"><br>后续会上传B站视频</p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>最后非常感谢立创🥰提供的机会和各种优惠券，帮助我们实现想法，做出实物，参加征集令活动收获颇多，未来继续努力😄</p>
+<p><a target="_blank" rel="noopener" href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=8087F7&vCenter=true&random=false&width=435&lines=The+end..." alt="Typing SVG" style="display: inline-block; margin-right: 10px;"></a></p>
+<div style="display:flex">
+<a href="https://github.com/levi52" target="_blank"><img src="https://img.shields.io/badge/levi52-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://oshwhub.com/levi_01/works" target="_blank"><img src="https://img.shields.io/badge/levi_01-%40oshwhub?style=flat-square&logo=easyeda&logoColor=white&color=%235588ff" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://space.bilibili.com/378576508" target="_blank"><img src="https://img.shields.io/badge/travi5-%40bilibili?style=flat-square&logo=bilibili&logoColor=white&color=%2301affd" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://blog.csdn.net/Levi_5" target="_blank"><img src="https://img.shields.io/badge/Hi1L-CSDN?style=flat-square&logoColor=white&label=CSDN&color=%23fc5531" style="display: inline-block; margin-right: 10px;"></a> 
+<a href="https://levi52.github.io/" target="_blank"><img src="https://img.shields.io/badge/levi52_blog-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+</div>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google"
+      
+      
+        data-wechat-qrcode-title="share.title"
+      
+      
+        data-wechat-qrcode-helper="share.prompt"
+      
+    >
+    </div>
+  </div>
+  <script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js"></script>
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Levi52 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Levi52 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>Levi5
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://levi52.github.io/posts/df56fc06/" title="【立创开源】ESP32_UV_BOX">https://levi52.github.io/posts/df56fc06/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/378576508">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+
+            <span class="label">bilibili</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/ESP32/" rel="tag"><i class="fa fa-tag"></i>
+ ESP32</a>
+              <a href="/tags/PlatformIO/" rel="tag"><i class="fa fa-tag"></i>
+ PlatformIO</a>
+              <a href="/tags/%E8%87%AA%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i>
+ 自制</a>
+              <a href="/tags/%E7%AB%8B%E5%88%9B/" rel="tag"><i class="fa fa-tag"></i>
+ 立创</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"><i class="fa fa-tag"></i>
+ 开源</a>
+              <a href="/tags/%E7%B4%AB%E5%A4%96%E7%BA%BF/" rel="tag"><i class="fa fa-tag"></i>
+ 紫外线</a>
+              <a href="/tags/AHT20/" rel="tag"><i class="fa fa-tag"></i>
+ AHT20</a>
+              <a href="/tags/BMP280/" rel="tag"><i class="fa fa-tag"></i>
+ BMP280</a>
+              <a href="/tags/1-8%E5%AF%B8TFT/" rel="tag"><i class="fa fa-tag"></i>
+ 1.8寸TFT</a>
+              <a href="/tags/%E5%A4%96%E5%A3%B3/" rel="tag"><i class="fa fa-tag"></i>
+ 外壳</a>
+              <a href="/tags/%E9%9D%A2%E6%9D%BF/" rel="tag"><i class="fa fa-tag"></i>
+ 面板</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/224bc55d/" rel="prev" title="预告">
+                  <i class="fa fa-angle-left"></i> 预告
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Levi52</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">30k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">54 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/01/2024 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/levi52" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
