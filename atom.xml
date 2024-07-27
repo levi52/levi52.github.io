@@ -6,7 +6,7 @@
   <link href="https://levi52.github.io/atom.xml" rel="self"/>
   
   <link href="https://levi52.github.io/"/>
-  <updated>2024-06-26T13:49:12.700Z</updated>
+  <updated>2024-07-27T06:11:11.569Z</updated>
   <id>https://levi52.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【复刻】简易温湿度仪</title>
+    <link href="https://levi52.github.io/posts/5a3f2d15/"/>
+    <id>https://levi52.github.io/posts/5a3f2d15/</id>
+    <published>2024-07-27T05:53:23.000Z</published>
+    <updated>2024-07-27T06:11:11.569Z</updated>
+    
+    
+    <summary type="html">简易温湿度仪</summary>
+    
+    
+    
+    <category term="复刻" scheme="https://levi52.github.io/categories/%E5%A4%8D%E5%88%BB/"/>
+    
+    
+    <category term="立创" scheme="https://levi52.github.io/tags/%E7%AB%8B%E5%88%9B/"/>
+    
+    <category term="STM32" scheme="https://levi52.github.io/tags/STM32/"/>
+    
+    <category term="Keil5" scheme="https://levi52.github.io/tags/Keil5/"/>
+    
+    <category term="STM32CubeMX" scheme="https://levi52.github.io/tags/STM32CubeMX/"/>
+    
+    <category term="HAL" scheme="https://levi52.github.io/tags/HAL/"/>
+    
+    <category term="开源" scheme="https://levi52.github.io/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="复刻" scheme="https://levi52.github.io/tags/%E5%A4%8D%E5%88%BB/"/>
+    
+    <category term="SHT40" scheme="https://levi52.github.io/tags/SHT40/"/>
+    
+    <category term="0.91寸OLED" scheme="https://levi52.github.io/tags/0-91%E5%AF%B8OLED/"/>
+    
+    <category term="u8g2" scheme="https://levi52.github.io/tags/u8g2/"/>
+    
+  </entry>
   
   <entry>
     <title>【立创开源】ESP32_UV_BOX</title>
@@ -81,7 +118,7 @@
     <link href="https://levi52.github.io/posts/c4d6bdd0/"/>
     <id>https://levi52.github.io/posts/c4d6bdd0/</id>
     <published>2024-05-16T03:20:34.000Z</published>
-    <updated>2024-05-21T14:17:46.293Z</updated>
+    <updated>2024-07-27T06:05:33.802Z</updated>
     
     
     <summary type="html">无触摸，使用按键来控制屏幕控件</summary>

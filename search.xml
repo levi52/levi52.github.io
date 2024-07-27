@@ -1,6 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>预告</title>
+    <url>/posts/224bc55d/</url>
+    <content><![CDATA[<p>… … … … …</p>
+]]></content>
+      <categories>
+        <category>预告</category>
+      </categories>
+      <tags>
+        <tag>预告</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【复刻】简易温湿度仪</title>
+    <url>/posts/5a3f2d15/</url>
+    <content><![CDATA[<h1 id="1、项目功能介绍"><a href="#1、项目功能介绍" class="headerlink" title="1、项目功能介绍"></a>1、项目功能介绍</h1><p>本项目复刻自<a href="https://www.yuque.com/wldz/jlceda/nhdssggs78punq4a">🔗【立创训练营】桌面温湿度仪👈</a></p>
+<p>在原项目基础上，改用0.91寸OLED显示，加入锂电池充放电部分，加入蜂鸣器，通过按键切换显示页面，重新绘制原理图及PCB，减小电路板尺寸，使其更加小巧便携。</p>
+<p>项目功能：</p>
+<ul>
+<li>环境温度、湿度</li>
+<li>按键唤醒、休眠</li>
+<li>按键切换页面</li>
+</ul>
+<h1 id="2、项目属性"><a href="#2、项目属性" class="headerlink" title="2、项目属性"></a>2、项目属性</h1><p>此项目复刻自<a href="https://www.yuque.com/wldz/jlceda/nhdssggs78punq4a">🔗【立创训练营】桌面温湿度仪👈</a></p>
+<h1 id="3、开源协议"><a href="#3、开源协议" class="headerlink" title="3、开源协议"></a>3、开源协议</h1><p><a href="https://opensource.org/license/GPL-3.0">🔗GPL-3.0👈</a></p>
+<h1 id="4、硬件部分"><a href="#4、硬件部分" class="headerlink" title="4、硬件部分"></a>4、硬件部分</h1><p>硬件电路参考官方文档，修改了屏幕显示部分，以及电源部分</p>
+<h2 id="主控电路"><a href="#主控电路" class="headerlink" title="主控电路"></a>主控电路</h2><p><img src="https://image.lceda.cn/oshwhub/99b4d68ef5534d9292c076c266368ab1.png"></p>
+<h2 id="SHT40电路"><a href="#SHT40电路" class="headerlink" title="SHT40电路"></a>SHT40电路</h2><p><img src="https://image.lceda.cn/oshwhub/eb30093b0271401eadeb9b40db8a8aae.png"></p>
+<h2 id="OLED屏幕"><a href="#OLED屏幕" class="headerlink" title="OLED屏幕"></a>OLED屏幕</h2><p><img src="https://image.lceda.cn/oshwhub/ace98303720e4b3db59927a9aba08921.png"></p>
+<h2 id="蜂鸣器电路"><a href="#蜂鸣器电路" class="headerlink" title="蜂鸣器电路"></a>蜂鸣器电路</h2><p><img src="https://image.lceda.cn/oshwhub/dedad28e1c564ef28a968bfa0b25b2ec.png"></p>
+<h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><p><img src="https://image.lceda.cn/oshwhub/03d06f8cbef642a5a7685dc138b09c29.png"><br><img src="https://image.lceda.cn/oshwhub/03d06f8cbef642a5a7685dc138b09c29.png"></p>
+<blockquote>
+<p>详情见<a href="https://oshwhub.com/levi_01/simple-temperature-and-humidity-meter">🔗立创开源硬件平台：简易温湿度仪</a></p>
+</blockquote>
+<h1 id="5、软件部分"><a href="#5、软件部分" class="headerlink" title="5、软件部分"></a>5、软件部分</h1><p>使用<a href="https://www.yuque.com/wldz/jlceda/dqetva01onq5tgdz">🔗stm32cubemx👈</a>软件，快速生成基础代码</p>
+<table>
+<thead>
+<tr>
+<th align="center">引脚</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PB8</td>
+<td align="center">SHT40 IIC SCL</td>
+</tr>
+<tr>
+<td align="center">PB9</td>
+<td align="center">SHT40 IIC SDA</td>
+</tr>
+<tr>
+<td align="center">PA11</td>
+<td align="center">OLED IIC SCL</td>
+</tr>
+<tr>
+<td align="center">PA12</td>
+<td align="center">OLED IIC SDA</td>
+</tr>
+<tr>
+<td align="center">PB5</td>
+<td align="center">状态按键</td>
+</tr>
+<tr>
+<td align="center">PA8</td>
+<td align="center">显示切换</td>
+</tr>
+<tr>
+<td align="center">PB1</td>
+<td align="center">电压采集</td>
+</tr>
+<tr>
+<td align="center">PB2</td>
+<td align="center">蜂鸣器</td>
+</tr>
+<tr>
+<td align="center">PA13</td>
+<td align="center">SWDIO</td>
+</tr>
+<tr>
+<td align="center">PA14</td>
+<td align="center">SWCLK</td>
+</tr>
+<tr>
+<td align="center">PC14</td>
+<td align="center">RCC_OSC32_IN</td>
+</tr>
+<tr>
+<td align="center">PC15</td>
+<td align="center">RCC_OSC32_OUT</td>
+</tr>
+</tbody></table>
+<p>使用i2c1(PB8, PB9)来获取SHT40温湿度数据，i2c2(PA11, PA12)来控制OLED屏幕显示。</p>
+<p>OLED屏幕显示使用硬件I2C驱动，移植<a href="https://github.com/olikraus/u8g2">🔗u8g2库👈</a>。</p>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/BV1Wa4y1Z7Uc/">🔗B站：STM32 HAL库硬件IIC移植u8g2库👈</a></p>
+</blockquote>
+<blockquote>
+<p>项目工程<a href="https://pan.baidu.com/s/1d8KGuTHAFmlof1lcyZkdMA?pwd=dll9">🔗百度网盘：TEMP_HUMI_U8👈</a></p>
+</blockquote>
+<h1 id="6、BOM清单"><a href="#6、BOM清单" class="headerlink" title="6、BOM清单"></a>6、BOM清单</h1><blockquote>
+<p>详情见<a href="https://oshwhub.com/levi_01/simple-temperature-and-humidity-meter">🔗立创开源硬件平台：简易温湿度仪</a></p>
+</blockquote>
+<h1 id="7、大赛LOGO验证"><a href="#7、大赛LOGO验证" class="headerlink" title="7、大赛LOGO验证"></a>7、大赛LOGO验证</h1><p><img src="https://image.lceda.cn/oshwhub/9b629f9501d343c3ad9725d09e6e2682.png"></p>
+<h1 id="8、END"><a href="#8、END" class="headerlink" title="8、END"></a>8、END</h1><blockquote>
+<p><a href="https://www.bilibili.com/video/BV15oeiegEow/">🔗bilibili：简易温湿度仪👈</a><br><a href="https://oshwhub.com/levi_01/simple-temperature-and-humidity-meter">🔗立创开源硬件平台：简易温湿度仪</a><br><a href="https://pan.baidu.com/s/1d8KGuTHAFmlof1lcyZkdMA?pwd=dll9">🔗百度网盘：TEMP_HUMI_U8👈</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>复刻</category>
+      </categories>
+      <tags>
+        <tag>立创</tag>
+        <tag>STM32</tag>
+        <tag>Keil5</tag>
+        <tag>STM32CubeMX</tag>
+        <tag>HAL</tag>
+        <tag>开源</tag>
+        <tag>复刻</tag>
+        <tag>SHT40</tag>
+        <tag>0.91寸OLED</tag>
+        <tag>u8g2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【立创开源】ESP32_UV_BOX</title>
+    <url>/posts/df56fc06/</url>
+    <content><![CDATA[<h1 id="ESP-UV-BOX"><a href="#ESP-UV-BOX" class="headerlink" title="ESP_UV_BOX"></a>ESP_UV_BOX</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="https://oshwhub.com/activities/Xiari">🔗夏日征集令</a><br>ESP32-WROOM-32D-N8主控，通过GUVA-S12SD紫外线传感器获取环境紫外线强度；AHT20温湿度传感器获取环境温湿度；BMP280气压传感器获取环境压强；使用拨轮开关切换页面。<br>以下为制作过程记录</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
+<li>紫外线指数</li>
+<li>环境温湿度</li>
+<li>气压海拔</li>
+<li>简易照明</li>
+<li>天气时钟(网络)</li>
+<li>.</li>
+</ul>
+<h2 id="成本"><a href="#成本" class="headerlink" title="成本"></a>成本</h2><p>这里只列出了主要的器件，详情见<a href="https://docs.qq.com/sheet/DTXF2aW5JcUlzY0Na?tab=BB08J2">🔗腾讯文档：BOM_ESP_UV_BOX</a></p>
+<table>
+<thead>
+<tr>
+<th>主要元件</th>
+<th>价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ESP32-WROOM-32D(8MB)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>紫外线模块</td>
+<td>7.05</td>
+</tr>
+<tr>
+<td>AHT20</td>
+<td>1.62</td>
+</tr>
+<tr>
+<td>BMP280</td>
+<td>1.04</td>
+</tr>
+<tr>
+<td>四脚拨轮开关</td>
+<td>0.85</td>
+</tr>
+<tr>
+<td>CH340K</td>
+<td>1.4</td>
+</tr>
+</tbody></table>
+<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><blockquote>
+<p>硬件设计见<a href="https://oshwhub.com/levi_01/simple-esp-uv-detection-box">立创开源硬件平台</a></p>
+</blockquote>
+<h2 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h2><blockquote>
+<p>存在问题：下载完程序，可以运行，但是板子上电不运行，需要按复位，<a href="https://esp32.com/viewtopic.php?t=17326">&gt;去除BOOT0按键的电容&lt;</a>，解决问题<br>贴片开关的质量也不太行，开关手柄会断🙃<br>侧边按键质量似乎也不太好，按复位有时也没用🙃</p>
+</blockquote>
+<h2 id="主控电路"><a href="#主控电路" class="headerlink" title="主控电路"></a>主控电路</h2><h3 id="主控"><a href="#主控" class="headerlink" title="主控"></a>主控</h3><p>主控选择ESP32-WROOM-32D-N8，外围电路参考<a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_cn.pdf">官方技术规格书</a>。<br>引出SPI用于控制屏幕，IIC用于控制AHT20和BMP280，ADC用于采集电压值，以及按键控制<br><img src="/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png" alt="image.png"></p>
+<h3 id="自动下载"><a href="#自动下载" class="headerlink" title="自动下载"></a>自动下载</h3><p>串口芯片使用CH340K<br><img src="/posts/df56fc06/7d89effc779e4274b354b0442a294865.png" alt="image.png"></p>
+<h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><h3 id="电源切换电路"><a href="#电源切换电路" class="headerlink" title="电源切换电路"></a>电源切换电路</h3><p>使用PMOS，当没有外部电源时使用电池供电，有外部电源输入时不使用电池供电<br><img src="/posts/df56fc06/286190f2fcf24bc4bdd4d62e1ae7b63f.png" alt="image.png"></p>
+<h3 id="充电电路"><a href="#充电电路" class="headerlink" title="充电电路"></a>充电电路</h3><p>电池管理使用<a href="https://item.szlcsc.com/772193.html?kw=C725790&fromZone=s">TP4056</a>，电路参考<a href="https://atta.szlcsc.com/upload/public/pdf/source/20231109/CF74897CE79A500F7FE27A45ADCCC631.pdf">TP4056数据手册</a><br><img src="/posts/df56fc06/04faa10853da4b83bcad620b4eaec60e.png" alt="image.png"><br>充电电流如下，根据锂电池参数选择合适的电阻</p>
+<table>
+<thead>
+<tr>
+<th>Rprog(K)</th>
+<th>Ibat(mA)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.2</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>500</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>400</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>300</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>200</td>
+</tr>
+<tr>
+<td>12.0</td>
+<td>200</td>
+</tr>
+</tbody></table>
+<h2 id="外设"><a href="#外设" class="headerlink" title="外设"></a>外设</h2><h3 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h3><p>板载一个RESET和BOOT侧边按键，使用拨轮开关作为控制输入<br><img src="/posts/df56fc06/95154bb067354b339ee88efdf9f44841.png" alt="image.png"></p>
+<h3 id="TFT"><a href="#TFT" class="headerlink" title="TFT"></a>TFT</h3><p>使用1.8寸TFT屏幕插接，分辨率128x160，屏幕驱动ST7735，屏幕驱动电路参考屏幕原理图，可以通过BLK引脚控制屏幕亮度<br><img src="/posts/df56fc06/658738bf7cb94c4aae2a0b04c17d5cd0.png" alt="image.png"></p>
+<h3 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h3><p>紫外线部分电路参考紫外线模块电路设计</p>
+<p><img src="/posts/df56fc06/e0976dceda7b422ca7a9527d7b2ea3c3.png" alt="image.png"><br>通过采集电压，根据电压范围，得到紫外线强度</p>
+<p><img src="/posts/df56fc06/a360adfc92294010813b1446675f38d3.png" alt="image.png"></p>
+<h3 id="AHT20-BMP280"><a href="#AHT20-BMP280" class="headerlink" title="AHT20 BMP280"></a>AHT20 BMP280</h3><p>这两个器件，用烙铁不好焊，加热台方便些<br>AHT20可以检测环境温湿度<br><img src="/posts/df56fc06/4889306f2ecd47be96a50341cb9e54e4.png" alt="image.png"><br>BMP280可以检测大气压，温度，以及海拔高度(由压力和温度计算得到)<br><img src="/posts/df56fc06/78478d91f0de4458a481425c3c324f6f.png" alt="image.png"></p>
+<h2 id="面板"><a href="#面板" class="headerlink" title="面板"></a>面板</h2><p>使用立创EDA设计简单的面板</p>
+<h1 id="3D外壳"><a href="#3D外壳" class="headerlink" title="3D外壳"></a>3D外壳</h1><p>1.8寸版本<br>本次使用SOLIDWORKS2023建模</p>
+<h2 id="立创EDA导出模型"><a href="#立创EDA导出模型" class="headerlink" title="立创EDA导出模型"></a>立创EDA导出模型</h2><p><img src="/posts/df56fc06/68f3f871f74840cbb606b4e4b1bb5266.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/704b2689309b4b698dfd63b14240b134.png" alt="image.png"></p>
+<h2 id="SOLIDWORKS"><a href="#SOLIDWORKS" class="headerlink" title="SOLIDWORKS"></a>SOLIDWORKS</h2><p>使用SOLIDWORKS打开导出的<code>step</code>格式文件</p>
+<p><img src="/posts/df56fc06/6aab246aaed542ff8417809e7f9d992f.png" alt="image.png"><br>打开后如下图所示，可以看到电路板模型缺少丝印图案</p>
+<p><img src="/posts/df56fc06/56bb3bbf915a4040905f02d3ea609aaf.png" alt="image.png"><br>回到PCB工程，打开PCB的2D视图</p>
+<p><img src="/posts/df56fc06/8504cd94eda44d3985993ba18a6c7922.png" alt="image.png"><br>导出上下面丝印图<br>如下图点击PCB上表面，选择外观</p>
+<p><img src="/posts/df56fc06/e9846749266348c0bd20d668b8c3bc04.png" alt="image.png"><br>选择导出的顶层丝印图</p>
+<p><img src="/posts/df56fc06/e564401d3a914499a25c5fe3635eca73.png" alt="image.png"></p>
+<p><img src="/posts/df56fc06/32b6a6851a6840719853b7a28ec2dee9.png" alt="image.png"><br>还需要调整丝印的位置和大小，选择映射</p>
+<p><img src="/posts/df56fc06/6ad561c3388b47de856ce23cbf653e3e.png" alt="image.png"><br>根据实际情况，调整以下参数</p>
+<p><img src="/posts/df56fc06/9ad75608bfe44ad08e2c8bbb698fa1e8.png" alt="image.png"><br>之后便可以开始外壳的建模，最终效果如下<br><img src="/posts/df56fc06/3a0be8a343c244bf81d3b6264f99ca71.png" alt="image.png"></p>
+<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><blockquote>
+<p>详细代码见<a href="https://github.com/levi52/ESP32_UV_BOX">levi52@GitHub: ESP32_UV_BOX</a></p>
+</blockquote>
+<h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><p>在主界面下设四个功能页，之后各级再设功能分页，主要结构如下<br><img src="/posts/df56fc06/d554d5ff9ca640db81f2d0c2856ac90b.png" alt="image.png"></p>
+<blockquote>
+<p>设计参考：<br><a href="https://space.bilibili.com/14368720">B站：黑人黑科技</a>的视频<a href="https://www.bilibili.com/video/BV19j41187SF">DIY万能遥控器</a><br><a href="https://oshwhub.com/bukaiyuan/works">OSHWHub: 黑人黑科技</a>的开源工程<a href="https://oshwhub.com/bukaiyuan/ESP32-hang-mu-yao-kong-qi">ESP32 万能遥控器</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/db83837706a14e418feb2864e9fb52ca.png" alt="主菜单.png"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
+<p>开发工具：Visual Studio Code + PlatformIO<br>图标：<a href="https://www.iconfont.cn/">iconfont-阿里巴巴</a><br>颜色：<a href="https://rgbcolorpicker.com/565">RGB COLOR PICKER</a><br>中文转换：<a href="https://www.jyshare.com/front-end/3602/">中文转UNICODE</a><br>图片转换：<a href="https://notisrac.github.io/FileToCArray/">FileToCArray</a></p>
+</blockquote>
+<p>代码结构主要如下</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">ESP32_UV_BOX</span><br><span class="line">│  clearBuildDir<span class="selector-class">.bat</span>   build文件删除</span><br><span class="line">│  default_8MB<span class="selector-class">.csv</span>     存储分区</span><br><span class="line">│  LICENSE             开源协议</span><br><span class="line">│  platformio<span class="selector-class">.ini</span>      开发配置</span><br><span class="line">│  README<span class="selector-class">.md</span>           说明文档</span><br><span class="line">├─assets/              静态文件</span><br><span class="line">├─include</span><br><span class="line">│      README</span><br><span class="line">├─lib                  外部库</span><br><span class="line">│  │  README</span><br><span class="line">│  └─ArduinoZlib </span><br><span class="line">├─<span class="attribute">src</span>                  主要文件</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.cpp</span>       按键控制</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.h</span></span><br><span class="line">│  │  <span class="selector-tag">main</span><span class="selector-class">.cpp</span>         主程序</span><br><span class="line">│  │  network<span class="selector-class">.cpp</span>      网络请求</span><br><span class="line">│  │  network<span class="selector-class">.h</span></span><br><span class="line">│  │  sensor<span class="selector-class">.cpp</span>       传感器</span><br><span class="line">│  │  sensor<span class="selector-class">.h</span></span><br><span class="line">│  │  ui<span class="selector-class">.cpp</span>           界面</span><br><span class="line">│  │  ui<span class="selector-class">.h</span></span><br><span class="line">│  ├─<span class="attribute">font</span>/             字体文件</span><br><span class="line">│  └─img/              图片文件</span><br><span class="line">└─test/                测试文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><p>屏幕尺寸为1.8寸，分辨率是128x160，屏幕驱动是ST7735，使用<a href="https://github.com/Bodmer/TFT_eSPI">TFT_eSPI</a>库驱动屏幕，所有界面使用<code>TFT_eSPI</code>绘制</p>
+<p>使用<code>TFT_eSPI</code>需要修改配置文件<code>User_Setup.h</code>，根据屏幕类型和显示情况修改内容</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_DRIVER <span class="comment">// 屏幕驱动</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_RGB <span class="comment">// 颜色顺序</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  128  <span class="comment">// 屏幕宽度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 160  <span class="comment">// 屏幕高度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_GREENTAB2  <span class="comment">// 仅ST7735</span></span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON // 黑白反转</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_OFF</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_BL   17 <span class="comment">// 背光引脚</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 23</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   5  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    2  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST   4  <span class="comment">// Reset pin (could connect to RST pin)</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>ledc</code>控制引脚输出PWM调节屏幕背光亮度</p>
+<h3 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h3><p>使用<code>mathertel/OneButton</code>库来实现按键的控制，分别注册短按，双击和长按函数来实现不同的操作</p>
+<p>上下短按为页面切换，中间短按为进入页面，中间长按为返回上一级</p>
+<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><h4 id="UV-1"><a href="#UV-1" class="headerlink" title="UV"></a>UV</h4><p>使用S12SD传感器来检测紫外线，然后经过放大，使用ADC采集电压，根据电压范围判断紫外线指数等级</p>
+<p>下图为紫外线模块<br><img src="/posts/df56fc06/922ab3f72ef447daafb15dbb491e8795.png" alt="image.png"><br>程序中使用此函数获取紫外线指数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">uint8_t</span> <span class="title">sensor_uv_data</span><span class="params">(<span class="type">void</span>)</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>图中为Arduino对应的数值，详情见<a href="https://wiki.dfrobot.com.cn/_SKU_SEN0162__UV_Sensor">DFROBOT: UV Sensor</a><br><img src="/posts/df56fc06/6ba2cbb88a73430790e063d3e377f5a7.png" alt="image.png"></p>
+</blockquote>
+<h4 id="AHT20"><a href="#AHT20" class="headerlink" title="AHT20"></a>AHT20</h4><p>使用<code>dvarrel/AHT20</code>库读取AHT20温湿度传感器的数据<br>主要为如下内容，AHT20数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">AHT20Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> humidity;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_aht20_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">AHT20Data <span class="title">sensor_aht20_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="BMP280"><a href="#BMP280" class="headerlink" title="BMP280"></a>BMP280</h4><p>使用<code>seeed-studio/Grove - Barometer Sensor BMP280</code>库读取BMP280传感器的数据<br>主要为如下内容，BMP280数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">BMP280Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> pressure;</span><br><span class="line">    <span class="type">float</span> altitude;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_bmp280_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">BMP280Data <span class="title">sensor_bmp280_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在函数<code>bool BMP280::init(void)</code>中注释掉<code>Wire.begin()</code><br>在主程序中上面两个传感器初始化前，要先使用<code>Wire.begin(21, 22);</code>来设置<code>IIC</code>引脚</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="配网"><a href="#配网" class="headerlink" title="配网"></a>配网</h4><p>初次使用时，会建立如下网络<code>ESP_UV_BOX_WIFI</code>，<br><img src="/posts/df56fc06/c8f8e9414a8448d6b543b0ff38702aef.png" alt="image.png"><br>连接网络，浏览器打开网址<code>192.168.1.1</code>，会出现如下配网页面</p>
+<blockquote>
+<p>页面代码参考: <a href="https://blog.csdn.net/YANGJIERUN/article/details/129092371">CSDN: 请收藏！分享一个ESP32&#x2F;ESP8266高颜值WIFI配网页面代码-带下拉选择框和中英文版本。文末有arduino配网代码。</a></p>
+</blockquote>
+<p>一共四个输入框，分别是<code>WIFI SSID</code>, <code>WIFI PASSWORD</code>, <code>Private KEY</code>, <code>Location ID</code></p>
+<blockquote>
+<p>相关链接：<a href="https://id.qweather.com/#/login?redirect=https%3A%2F%2Fconsole.qweather.com%2F%23%2Fapps&lang=zh">和风天气控制台</a>、<a href="https://docs.qq.com/sheet/DTWNWWU9FeXhwSERG?tab=BB08J2">城市 ID</a></p>
+</blockquote>
+<p><img src="/posts/df56fc06/3d43aa47c4a04f188f323f635d9e87d4.png" alt="image.png"><br>点击保存后，芯片会重启连接网络</p>
+<p>网络配置相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">wifi_scan</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_connect</span><span class="params">(<span class="type">int</span> timeOut_s)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_disconnect</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ap_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">server_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleRoot</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleConfigWifi</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleNotFound</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">doClient</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifiConfigBySoftAP</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气时钟"><a href="#天气时钟" class="headerlink" title="天气时钟"></a>天气时钟</h4><p>天气等数据使用和风天气API，免费订阅每天可以有1000次请求</p>
+<blockquote>
+<p><a href="https://dev.qweather.com/docs/finance/subscription/#comparison">订阅规则</a></p>
+</blockquote>
+<ul>
+<li>实时天气数据使用<a href="https://www.qweather.com/">和风天气</a>的<a href="https://dev.qweather.com/">API</a>，具体代码参考<a href="https://space.bilibili.com/393773788">B站：大聪明的二手脑袋</a>的视频<a href="https://www.bilibili.com/video/BV1wj421Z7Ds">Dudu天气时钟版本更新，全面对接和风天气，2.0版本继续开源</a></li>
+<li>时间数据使用<code>arduino-libraries/NTPClient</code>库获取网络时间<br>网络天气相关函数如下</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_now</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_future</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_air</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_city_id</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">urlEncode</span><span class="params">(<span class="type">const</span> String&amp; text)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>网络相关函数如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">time_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_time</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>同上，使用和风天气API，屏幕显示未来六天天气状况</p>
+<h4 id="空气质量"><a href="#空气质量" class="headerlink" title="空气质量"></a>空气质量</h4><p>同上，使用和风天气API，屏幕显示颗粒物PM10，颗粒物PM2.5，二氧化氮NO2，二氧化硫SO2，一氧化碳CO，臭氧O3</p>
+<h4 id="哔哩哔哩"><a href="#哔哩哔哩" class="headerlink" title="哔哩哔哩"></a>哔哩哔哩</h4><p>通过如下API接口获得JSON格式的数据，使用<a href="https://arduinojson.org/">ArduinoJson</a>库解析获得关注数和粉丝数</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//api.bilibili.com/x/relation/stat?vmid=用户UID</span></span><br></pre></td></tr></table></figure>
+
+<p>可以使用官网提供的<a href="https://arduinojson.org/v7/assistant/#/step1">工具</a>生成解析代码</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ttl&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;mid&quot;</span><span class="punctuation">:</span> <span class="number">378576508</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;following&quot;</span><span class="punctuation">:</span> <span class="number">318</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;whisper&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;follower&quot;</span><span class="punctuation">:</span> <span class="number">56</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成的解析代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// String input;</span></span><br><span class="line"></span><br><span class="line">JsonDocument doc;</span><br><span class="line"></span><br><span class="line">DeserializationError error = <span class="built_in">deserializeJson</span>(doc, input);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (error) &#123;</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;deserializeJson() failed: &quot;</span>);</span><br><span class="line">  Serial.<span class="built_in">println</span>(error.<span class="built_in">c_str</span>());</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> code = doc[<span class="string">&quot;code&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* message = doc[<span class="string">&quot;message&quot;</span>]; <span class="comment">// &quot;0&quot;</span></span><br><span class="line"><span class="type">int</span> ttl = doc[<span class="string">&quot;ttl&quot;</span>]; <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">JsonObject data = doc[<span class="string">&quot;data&quot;</span>];</span><br><span class="line"><span class="type">long</span> data_mid = data[<span class="string">&quot;mid&quot;</span>]; <span class="comment">// 378576508</span></span><br><span class="line"><span class="type">int</span> data_following = data[<span class="string">&quot;following&quot;</span>]; <span class="comment">// 318</span></span><br><span class="line"><span class="type">int</span> data_whisper = data[<span class="string">&quot;whisper&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_black = data[<span class="string">&quot;black&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_follower = data[<span class="string">&quot;follower&quot;</span>]; <span class="comment">// 56</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>使用<code>fastled/FastLED</code>库驱动板载的一颗WS2812灯珠，暂时只添加不同颜色灯切换功能</p>
+<h1 id="实物"><a href="#实物" class="headerlink" title="实物"></a>实物</h1><h2 id="PCB"><a href="#PCB" class="headerlink" title="PCB"></a>PCB</h2><p><img src="/posts/df56fc06/9c97f95d9de94ff3805473966e0f3ed2.png" alt="image.png"></p>
+<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>下图为部分页面<br><img src="/posts/df56fc06/59e9f63003d04a4f83c02cc1ec1dbcde.png" alt="image.png"><br>后续会上传B站视频</p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>最后非常感谢立创🥰提供的机会和各种优惠券，帮助我们实现想法，做出实物，参加征集令活动收获颇多，未来继续努力😄</p>
+<p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=8087F7&vCenter=true&random=false&width=435&lines=The+end..." alt="Typing SVG" style="display: inline-block; margin-right: 10px;"></a></p>
+<div style="display:flex">
+<a href="https://github.com/levi52" target="_blank"><img src="https://img.shields.io/badge/levi52-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://oshwhub.com/levi_01/works" target="_blank"><img src="https://img.shields.io/badge/levi_01-%40oshwhub?style=flat-square&logo=easyeda&logoColor=white&color=%235588ff" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://space.bilibili.com/378576508" target="_blank"><img src="https://img.shields.io/badge/travi5-%40bilibili?style=flat-square&logo=bilibili&logoColor=white&color=%2301affd" style="display: inline-block; margin-right: 10px;"></a>
+<a href="https://blog.csdn.net/Levi_5" target="_blank"><img src="https://img.shields.io/badge/Hi1L-CSDN?style=flat-square&logoColor=white&label=CSDN&color=%23fc5531" style="display: inline-block; margin-right: 10px;"></a> 
+<a href="https://levi52.github.io/" target="_blank"><img src="https://img.shields.io/badge/levi52_blog-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
+</div>]]></content>
+      <categories>
+        <category>ESP32</category>
+        <category>开源</category>
+      </categories>
+      <tags>
+        <tag>ESP32</tag>
+        <tag>PlatformIO</tag>
+        <tag>自制</tag>
+        <tag>立创</tag>
+        <tag>开源</tag>
+        <tag>紫外线</tag>
+        <tag>AHT20</tag>
+        <tag>BMP280</tag>
+        <tag>1.8寸TFT</tag>
+        <tag>外壳</tag>
+        <tag>面板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ESP32S3-输入设备Keypad</title>
     <url>/posts/c4d6bdd0/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a><font style="color: #6e9afc">说明</font></h1><blockquote>
@@ -118,210 +448,6 @@
         <tag>多功能开关</tag>
         <tag>自制</tag>
         <tag>Squareline Studio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ESP32S3N8R8 + Squareline_Studio设计移植</title>
-    <url>/posts/b97be97c/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><blockquote>
-<p>硬件：<a href="https://lckfb.com/">立创ESP32S3R8N8开发板</a> + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font>+ <font style="color: #dc4040">Squareline Studio</font><br>代码：<a href="https://pan.baidu.com/s/1HlfkJY-gq79WkFS29hg6Wg?pwd=levi">百度网盘：ESP32S3_SQ(提取码：levi)</a><br>代码：<a href="https://pan.baidu.com/s/1nwjB5gQ_fUmbdlNZjtprzQ?pwd=levi">百度网盘：ESP32S3_SERVO(提取码：levi)</a><br>视频：<a href="https://www.bilibili.com/video/BV1CC411J72J">bilibili: 【ESP32】初试Squareline Studio设计 简单控制屏幕亮度</a><br>视频：<a href="https://www.bilibili.com/video/BV1kJ4m1P73e">bilibili: 【ESP32】Squareline Studio新增界面+移植过程 - 简单控制舵机</a><br>博客：<a href="https://blog.csdn.net/Levi_5/article/details/138243662">CSDN: 【ESP32】立创ESP32S3N8R8开发板+2.8寸TFT电容触摸屏+Squareline Studio+PlatformIO</a></p>
-</blockquote>
-<h1 id="Squareline-Studio"><a href="#Squareline-Studio" class="headerlink" title="Squareline Studio"></a>Squareline Studio</h1><h2 id="设计UI"><a href="#设计UI" class="headerlink" title="设计UI"></a>设计UI</h2><p><img src="/posts/b97be97c/Squareline.png" alt="image-"></p>
-<h2 id="导出文件"><a href="#导出文件" class="headerlink" title="导出文件"></a>导出文件</h2><ul>
-<li><p>工程设置<br>按如下所示设置工程，<code>Project Export Root</code>和<code>UI Files Export Path</code>路径可以选择为LVGL工程目录下新建的<code>export</code>文件夹<br><img src="/posts/b97be97c/project_setting.png"><br><img src="/posts/b97be97c/project_setting1.png"></p>
-</li>
-<li><p>Export<br><img src="/posts/b97be97c/export.png"></p>
-</li>
-</ul>
-<h1 id="PlatformIO"><a href="#PlatformIO" class="headerlink" title="PlatformIO"></a>PlatformIO</h1><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><ul>
-<li><p>导出文件<br>以下为<font color="#dc4140">Squareline Studio</font>导出的文件<br><img src="/posts/b97be97c/file_folder.png" alt="image-"></p>
-</li>
-<li><p>移植文件<br>资源文件复制到<font color="#dc4140">src&#x2F;lvgl_gui</font><br><img src="/posts/b97be97c/copy_file.png" alt="image-"></p>
-</li>
-</ul>
-<h2 id="LVGL"><a href="#LVGL" class="headerlink" title="LVGL"></a>LVGL</h2><ul>
-<li>修改lvgl<br>修改lvgl_conf.h，如下所示，关闭案例编译<br><img src="/posts/b97be97c/lvgl_conf.png" alt="image-"></li>
-</ul>
-<h2 id="main"><a href="#main" class="headerlink" title="main"></a>main</h2><ul>
-<li><p>添加头文件</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ui.h&quot;</span></span></span><br></pre></td></tr></table></figure></li>
-<li><p>UI初始化<br>删去之前LVGL官方案例的内容，添加如下代码</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ui_init</span>();</span><br></pre></td></tr></table></figure>
-<p><img src="/posts/b97be97c/ui_init.png" alt="image-"></p>
-</li>
-<li><p>lvgl显示</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">lvgl_task</span><span class="params">(<span class="type">void</span> *pt)</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        lv_timer_handler(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line"></span><br><span class="line">        vTaskDelay(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p><code>setup()</code>中创建任务</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">xTaskCreatePinnedToCore(lvgl_task, <span class="string">&quot;lvgl display&quot;</span>, <span class="number">1024</span> * <span class="number">15</span>, <span class="literal">NULL</span>, <span class="number">2</span>, <span class="literal">NULL</span>, <span class="number">1</span>);</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p><img src="/posts/b97be97c/S1.png" alt="image-"><br><img src="/posts/b97be97c/S2.jpg" alt="image-"><br><img src="/posts/b97be97c/S3.jpg" alt="image-"></p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
-]]></content>
-      <categories>
-        <category>ESP32</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>ESP32</tag>
-        <tag>PlatformIO</tag>
-        <tag>lvgl</tag>
-        <tag>2.8寸TFT</tag>
-        <tag>Squareline Studio</tag>
-        <tag>触摸屏</tag>
-        <tag>立创</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ESP32S3N8R8 + lvgl测试官方案例</title>
-    <url>/posts/2c4e27ec/</url>
-    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a><font style="color: #6e9afc">说明</font></h1><blockquote>
-<p>硬件：立创ESP32S3R8N8开发板 + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font><br>代码：<a href="https://pan.baidu.com/s/1tPKpCQTtXrIsN9fd9mheDQ?pwd=levi">百度网盘：ESP32S3_GT911TOUCH(提取码：levi)</a><br>视频：<a href="https://www.bilibili.com/video/BV1AT421m7Xa">bilibili: 【ESP32】2.8寸电容触摸屏(ST7789+GT911) lvgl 案例测试</a><br>博客：<a href="https://blog.csdn.net/Levi_5/article/details/137572195">CSDN: 【ESP32】立创ESP32S3R8N8开发板+2.8寸TFT电容触摸屏ST7789+GT911+PlatformIO</a></p>
-</blockquote>
-<h1 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a><font style="color: #e57200">新建工程</font></h1><ul>
-<li><p>点击侧边<code>PlatformIO</code>插件，新建工程<br><img src="/posts/2c4e27ec/open.png"></p>
-</li>
-<li><p>依次设置工程名，开发板，框架<br><img src="/posts/2c4e27ec/project.png"></p>
-</li>
-</ul>
-<h1 id="屏幕测试"><a href="#屏幕测试" class="headerlink" title="屏幕测试"></a><font style="color: #c16eff">屏幕测试</font></h1><h2 id="添加TFT-eSPI"><a href="#添加TFT-eSPI" class="headerlink" title="添加TFT_eSPI"></a>添加TFT_eSPI</h2><ul>
-<li><p>添加屏幕驱动库<code>TFT_eSPI</code>，按如下图顺序<br><img src="/posts/2c4e27ec/TFT_eSPI.png"><br><img src="/posts/2c4e27ec/TFTINSTALL.png"></p>
-</li>
-<li><p>添加TFT_eSPI到工程<br><img src="/posts/2c4e27ec/ADDTFT.png"></p>
-</li>
-<li><p>打开配置文件，可以看到已成功添加库<br><img src="/posts/2c4e27ec/TFTINSTALLED.png"></p>
-</li>
-</ul>
-<h2 id="修改TFT-eSPI"><a href="#修改TFT-eSPI" class="headerlink" title="修改TFT_eSPI"></a>修改TFT_eSPI</h2><ul>
-<li><p>打开<code>.pio\libdeps\esp32-s3-devkitc-1\TFT_eSPI\User_Setup.h</code>文件<br><img src="/posts/2c4e27ec/opensetup.png"></p>
-</li>
-<li><p>根据屏幕驱动芯片解注释</p>
-</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Only define one driver, the other ones must be commented out</span></span><br><span class="line"><span class="comment">// #define ILI9341_DRIVER       // Generic driver for common displays</span></span><br><span class="line"><span class="comment">//#define ILI9341_2_DRIVER     // Alternative ILI9341 driver, see https://github.com/Bodmer/TFT_eSPI/issues/1172</span></span><br><span class="line"><span class="comment">//#define ST7735_DRIVER      // Define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define ILI9163_DRIVER     // Define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define S6D02A1_DRIVER</span></span><br><span class="line"><span class="comment">//#define RPI_ILI9486_DRIVER // 20MHz maximum SPI</span></span><br><span class="line"><span class="comment">//#define HX8357D_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9481_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9486_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9488_DRIVER     // WARNING: Do not connect ILI9488 display SDO to MISO if other devices share the SPI bus (TFT SDO does NOT tristate when CS is high)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7789_DRIVER      <span class="comment">// Full configuration option, define additional parameters below for this display</span></span></span><br><span class="line"><span class="comment">//#define ST7789_2_DRIVER    // Minimal configuration option, define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define R61581_DRIVER</span></span><br><span class="line"><span class="comment">//#define RM68140_DRIVER</span></span><br><span class="line"><span class="comment">//#define ST7796_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1351_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_480_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_800_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_800ALT_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9225_DRIVER</span></span><br><span class="line"><span class="comment">//#define GC9A01_DRIVER</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>根据屏幕大小设置宽高</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// For ST7789, ST7735, ILI9163 and GC9A01 ONLY, define the pixel width and height in portrait orientation</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  80</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  128</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  172 // ST7789 172 x 320</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  170 // ST7789 170 x 320</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  240 <span class="comment">// ST7789 240 x 240 and 240 x 320</span></span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 160</span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 128</span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 240 // ST7789 240 x 240</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 320 <span class="comment">// ST7789 240 x 320</span></span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 240 // GC9A01 240 x 240</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>根据连线设置引脚</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP32 SETUP   ###</span></span><br><span class="line"><span class="comment">// For ESP32 Dev board (only tested with ILI9341 display)</span></span><br><span class="line"><span class="comment">// The hardware SPI can be mapped to any pins</span></span><br><span class="line"><span class="comment">//#define TFT_MISO 19</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 17</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   15  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    16  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST   4  // Reset pin (could connect to RST pin)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST  -1  <span class="comment">// Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="修改main-cpp"><a href="#修改main-cpp" class="headerlink" title="修改main.cpp"></a>修改main.cpp</h2><p>在屏幕上从上到下分别显示<font style="color: #ff0000">红</font><font style="color: #00ff00">绿</font><font style="color: #0000ff">蓝</font>三色，以及<font style="background: #8c8c8c;color: #ffffff">白色</font>文字，用来测试屏幕颜色显示是否正常。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_GREY 0x5AEB</span></span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>();       <span class="comment">// Invoke custom library</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  tft.<span class="built_in">init</span>();</span><br><span class="line">  tft.<span class="built_in">setRotation</span>(<span class="number">0</span>);</span><br><span class="line">  tft.<span class="built_in">fillScreen</span>(TFT_GREY);</span><br><span class="line">  tft.<span class="built_in">setTextColor</span>(TFT_WHITE, TFT_GREY);  <span class="comment">// Adding a background colour erases previous text automatically</span></span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_RED);</span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">50</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_GREEN);</span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">100</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_BLUE);</span><br><span class="line">  tft.<span class="built_in">drawCentreString</span>(<span class="string">&quot;Time flies&quot;</span>,<span class="number">120</span>,<span class="number">260</span>,<span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// put your main code here, to run repeatedly:</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载调试"><a href="#下载调试" class="headerlink" title="下载调试"></a>下载调试</h2><ul>
-<li><p>编译下载<br><img src="/posts/2c4e27ec/load.png"></p>
-</li>
-<li><p>根据屏幕显示情况修改<code>User_Setup.h</code>文件</p>
-</li>
-</ul>
-<p>如果颜色反转(白色显示为黑色)，如下图所示，则取消下一个注释，尝试两个选项，其中一个选项应该纠正反转。<br><img src="/posts/2c4e27ec/image-20240410132437581.png"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// If colours are inverted (white shows as black) then uncomment one of the next</span></span><br><span class="line"><span class="comment">// 2 lines try both options, one of the options should correct the inversion.</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_INVERSION_OFF</span></span><br></pre></td></tr></table></figure>
-<p>修改后，如下图所示，白色正常显示，但是RGB顺序存在问题<br><img src="/posts/2c4e27ec/image-20240410132701414.png"></p>
-<p>仅对于ST7735, ST7789和ILI9341，如果显示器上的蓝色和红色交换，则定义颜色顺序，一次尝试一个选项来找到显示的正确颜色顺序</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// For ST7735, ST7789 and ILI9341 ONLY, define the colour order IF the blue and red are swapped on your display</span></span><br><span class="line"><span class="comment">// Try ONE option at a time to find the correct colour order for your display</span></span><br><span class="line"><span class="comment">//  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue</span></span><br><span class="line"> <span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_BGR  <span class="comment">// Colour order Blue-Green-Red</span></span></span><br></pre></td></tr></table></figure>
-<p>修改后，如下图所示，RGB顺序正常<br><img src="/posts/2c4e27ec/image-20240410132744241.png"></p>
-<h1 id="LVGL测试"><a href="#LVGL测试" class="headerlink" title="LVGL测试"></a><font style="color: #6c9ba6">LVGL测试</font></h1><h2 id="添加LVGL"><a href="#添加LVGL" class="headerlink" title="添加LVGL"></a>添加LVGL</h2><ul>
-<li><p>根据实际情况，选择lvgl版本<br><img src="/posts/2c4e27ec/lvgl.png"><br>![](lvglinstall.png” style&#x3D;”zoom:67%;” &gt;</p>
-</li>
-<li><p>添加lvgl到工程<br>![](lvglinstalled.png” style&#x3D;”zoom:67%;” &gt;</p>
-</li>
-</ul>
-<h2 id="修改LVGL"><a href="#修改LVGL" class="headerlink" title="修改LVGL"></a>修改LVGL</h2><ul>
-<li><p>打开<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\lv_conf_template.h</code>文件</p>
-<p>将此文件重命名为<code>lv_conf.h</code></p>
-</li>
-</ul>
-<p>![](lvconf.png” style&#x3D;”zoom:67%;” &gt;</p>
-<ul>
-<li>使能lvgl</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* clang-format off */</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 1 <span class="comment">/*Set it to &quot;1&quot; to enable content*/</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> LV_CONF_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_CONF_H</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>设置周期</li>
-</ul>
-<p>默认显示刷新周期。LVG将重新绘制改变的区域与这个周期时间<br>输入设备读取周期毫秒</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Default display refresh period. LVG will redraw changed areas with this period time*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_DISP_DEF_REFR_PERIOD 1      <span class="comment">/*[ms]*/</span></span></span><br><span class="line"><span class="comment">/*Input device read period in milliseconds*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_INDEV_DEF_READ_PERIOD 1     <span class="comment">/*[ms]*/</span></span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>心跳使能</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Use a custom tick source that tells the elapsed time in milliseconds.</span></span><br><span class="line"><span class="comment"> *It removes the need to manually update the tick with `lv_tick_inc()`)*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_TICK_CUSTOM 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> LV_TICK_CUSTOM</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使能测试案例</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Show some widget. It might be required to increase `LV_MEM_SIZE` */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_USE_DEMO_WIDGETS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> LV_USE_DEMO_WIDGETS</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_DEMO_WIDGETS_SLIDESHOW 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>更改文件路径</p>
-<p>将<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\demos</code>文件夹移动至<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\src\demos</code></p>
-</li>
-<li><p>修改main.cpp</p>
-<p>将<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\examples\arduino\LVGL_Arduino\LVGL_Arduino.ino</code>文件内容复制</p>
-<ul>
-<li>设置头文件</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>设置宽高</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>修改类型</li>
-</ul>
-<p><code>lv_disp_t</code>修改为<code>lv_disp_drv_t</code></p>
-<p><code>lv_indev_t</code>修改为<code>lv_indev_drv_t</code></p>
-<ul>
-<li>注释掉触摸部分</li>
-</ul>
-</li>
-</ul>
-<h2 id="修改完成"><a href="#修改完成" class="headerlink" title="修改完成"></a>修改完成</h2><p>最终<code>main.cpp</code>文件内容如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br><span class="line"><span class="comment">/*Change to your screen resolution*/</span></span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_disp_draw_buf_t</span> draw_buf;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_color_t</span> buf[ screenWidth * <span class="number">10</span> ];</span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>(screenWidth, screenHeight); <span class="comment">/* TFT instance */</span></span><br><span class="line"><span class="comment">/* Display flushing */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_disp_flush</span><span class="params">( <span class="type">lv_disp_drv_t</span> *disp, <span class="type">const</span> <span class="type">lv_area_t</span> *area, <span class="type">lv_color_t</span> *color_p )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">uint32_t</span> w = ( area-&gt;x2 - area-&gt;x1 + <span class="number">1</span> );</span><br><span class="line">    <span class="type">uint32_t</span> h = ( area-&gt;y2 - area-&gt;y1 + <span class="number">1</span> );</span><br><span class="line">    tft.<span class="built_in">startWrite</span>();</span><br><span class="line">    tft.<span class="built_in">setAddrWindow</span>( area-&gt;x1, area-&gt;y1, w, h );</span><br><span class="line">    tft.<span class="built_in">pushColors</span>( ( <span class="type">uint16_t</span> * )&amp;color_p-&gt;full, w * h, <span class="literal">true</span> );</span><br><span class="line">    tft.<span class="built_in">endWrite</span>();</span><br><span class="line">    <span class="built_in">lv_disp_flush_ready</span>( disp );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="comment">// void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     uint16_t touchX, touchY;</span></span><br><span class="line"><span class="comment">//     bool touched = tft.getTouch( &amp;touchX, &amp;touchY, 600 );</span></span><br><span class="line"><span class="comment">//     if( !touched )</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         data-&gt;state = LV_INDEV_STATE_REL;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     else</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         data-&gt;state = LV_INDEV_STATE_PR;</span></span><br><span class="line"><span class="comment">//         /*Set the coordinates*/</span></span><br><span class="line"><span class="comment">//         data-&gt;point.x = touchX;</span></span><br><span class="line"><span class="comment">//         data-&gt;point.y = touchY;</span></span><br><span class="line"><span class="comment">//         Serial.print( &quot;Data x &quot; );</span></span><br><span class="line"><span class="comment">//         Serial.println( touchX );</span></span><br><span class="line"><span class="comment">//         Serial.print( &quot;Data y &quot; );</span></span><br><span class="line"><span class="comment">//         Serial.println( touchY );</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Serial.<span class="built_in">begin</span>( <span class="number">115200</span> ); <span class="comment">/* prepare for possible serial debug */</span></span><br><span class="line">    String LVGL_Arduino = <span class="string">&quot;Hello Arduino! &quot;</span>;</span><br><span class="line">    LVGL_Arduino += <span class="built_in">String</span>(<span class="string">&#x27;V&#x27;</span>) + <span class="built_in">lv_version_major</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_minor</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_patch</span>();</span><br><span class="line">    Serial.<span class="built_in">println</span>( LVGL_Arduino );</span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;I am LVGL_Arduino&quot;</span> );</span><br><span class="line">    <span class="built_in">lv_init</span>();</span><br><span class="line">    tft.<span class="built_in">begin</span>();          <span class="comment">/* TFT init */</span></span><br><span class="line">    tft.<span class="built_in">setRotation</span>( <span class="number">3</span> ); <span class="comment">/* Landscape orientation, flipped */</span></span><br><span class="line">    <span class="comment">/*Set the touchscreen calibration data,</span></span><br><span class="line"><span class="comment">     the actual data for your display can be acquired using</span></span><br><span class="line"><span class="comment">     the Generic -&gt; Touch_calibrate example from the TFT_eSPI library*/</span></span><br><span class="line">    <span class="type">uint16_t</span> calData[<span class="number">5</span>] = &#123; <span class="number">275</span>, <span class="number">3620</span>, <span class="number">264</span>, <span class="number">3532</span>, <span class="number">1</span> &#125;;</span><br><span class="line">    <span class="comment">// tft.setTouch( calData );</span></span><br><span class="line">    <span class="built_in">lv_disp_draw_buf_init</span>( &amp;draw_buf, buf, <span class="literal">NULL</span>, screenWidth * <span class="number">10</span> );</span><br><span class="line">    <span class="comment">/*Initialize the display*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_disp_drv_t</span> disp_drv;</span><br><span class="line">    <span class="built_in">lv_disp_drv_init</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Change the following line to your display resolution*/</span></span><br><span class="line">    disp_drv.hor_res = screenWidth;</span><br><span class="line">    disp_drv.ver_res = screenHeight;</span><br><span class="line">    disp_drv.flush_cb = my_disp_flush;</span><br><span class="line">    disp_drv.draw_buf = &amp;draw_buf;</span><br><span class="line">    <span class="built_in">lv_disp_drv_register</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Initialize the (dummy) input device driver*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_indev_drv_t</span> indev_drv;</span><br><span class="line">    <span class="built_in">lv_indev_drv_init</span>( &amp;indev_drv );</span><br><span class="line">    indev_drv.type = LV_INDEV_TYPE_POINTER;</span><br><span class="line">    <span class="comment">// indev_drv.read_cb = my_touchpad_read;</span></span><br><span class="line">    <span class="built_in">lv_indev_drv_register</span>( &amp;indev_drv );</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0</span></span><br><span class="line">    <span class="comment">/* Create simple label */</span></span><br><span class="line">    <span class="type">lv_obj_t</span> *label = <span class="built_in">lv_label_create</span>( <span class="built_in">lv_scr_act</span>() );</span><br><span class="line">    <span class="built_in">lv_label_set_text</span>( label, LVGL_Arduino.<span class="built_in">c_str</span>() );</span><br><span class="line">    <span class="built_in">lv_obj_align</span>( label, LV_ALIGN_CENTER, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="built_in">lv_demo_widgets</span>();            <span class="comment">// OK</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;Setup done&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">lv_timer_handler</span>(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line">    <span class="built_in">delay</span>( <span class="number">5</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p>显示效果如下图<br><img src="/posts/2c4e27ec/image-20240410134038409.png"></p>
-<h1 id="触摸测试"><a href="#触摸测试" class="headerlink" title="触摸测试"></a><font style="color: #26c492">触摸测试</font></h1><h2 id="添加bb-captouch"><a href="#添加bb-captouch" class="headerlink" title="添加bb_captouch"></a>添加<code>bb_captouch</code></h2><p><img src="/posts/2c4e27ec/bb_captouch.png"></p>
-<h2 id="修改main-cpp-1"><a href="#修改main-cpp-1" class="headerlink" title="修改main.cpp"></a>修改<code>main.cpp</code></h2><ul>
-<li><p>添加头文件</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bb_captouch.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置触摸芯片引脚</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// These defines are for a low cost ESP32 LCD board with the GT911 touch controller</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SDA  4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SCL  2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_INT 3</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_RST 1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置参数</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">BBCapTouch bbct;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *szNames[] = &#123;<span class="string">&quot;Unknown&quot;</span>, <span class="string">&quot;FT6x36&quot;</span>, <span class="string">&quot;GT911&quot;</span>, <span class="string">&quot;CST820&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">bbct.<span class="built_in">init</span>(TOUCH_SDA, TOUCH_SCL, TOUCH_RST, TOUCH_INT);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改<code>my_touchpad_read</code>函数</p>
-<p>这里的x,y坐标需要根据实际情况修改</p>
-<p><img src="/posts/2c4e27ec/pos.png"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_touchpad_read</span><span class="params">( <span class="type">lv_indev_drv_t</span> * indev_driver, <span class="type">lv_indev_data_t</span> * data )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TOUCHINFO ti;</span><br><span class="line">    <span class="keyword">if</span>(bbct.<span class="built_in">getSamples</span>(&amp;ti))</span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_PR;</span><br><span class="line">        <span class="comment">/*Set the coordinates*/</span></span><br><span class="line">        data-&gt;point.x = screenWidth - ti.y[<span class="number">0</span>];</span><br><span class="line">        data-&gt;point.y = ti.x[<span class="number">0</span>];</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data x &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( screenWidth - ti.y[<span class="number">0</span>] );</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data y &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( ti.x[<span class="number">0</span>] );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_REL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="修改完成-1"><a href="#修改完成-1" class="headerlink" title="修改完成"></a>修改完成</h2><p>最终<code>main.cpp</code>文件内容如下</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bb_captouch.h&gt;</span></span></span><br><span class="line"><span class="comment">// These defines are for a low cost ESP32 LCD board with the GT911 touch controller</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SDA  4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SCL  2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_INT 3</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_RST 1</span></span><br><span class="line">BBCapTouch bbct;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *szNames[] = &#123;<span class="string">&quot;Unknown&quot;</span>, <span class="string">&quot;FT6x36&quot;</span>, <span class="string">&quot;GT911&quot;</span>, <span class="string">&quot;CST820&quot;</span>&#125;;</span><br><span class="line"><span class="comment">/*Change to your screen resolution*/</span></span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_disp_draw_buf_t</span> draw_buf;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_color_t</span> buf[ screenWidth * <span class="number">10</span> ];</span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>(screenWidth, screenHeight); <span class="comment">/* TFT instance */</span></span><br><span class="line"><span class="comment">/* Display flushing */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_disp_flush</span><span class="params">( <span class="type">lv_disp_drv_t</span> *disp, <span class="type">const</span> <span class="type">lv_area_t</span> *area, <span class="type">lv_color_t</span> *color_p )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">uint32_t</span> w = ( area-&gt;x2 - area-&gt;x1 + <span class="number">1</span> );</span><br><span class="line">    <span class="type">uint32_t</span> h = ( area-&gt;y2 - area-&gt;y1 + <span class="number">1</span> );</span><br><span class="line">    tft.<span class="built_in">startWrite</span>();</span><br><span class="line">    tft.<span class="built_in">setAddrWindow</span>( area-&gt;x1, area-&gt;y1, w, h );</span><br><span class="line">    tft.<span class="built_in">pushColors</span>( ( <span class="type">uint16_t</span> * )&amp;color_p-&gt;full, w * h, <span class="literal">true</span> );</span><br><span class="line">    tft.<span class="built_in">endWrite</span>();</span><br><span class="line">    <span class="built_in">lv_disp_flush_ready</span>( disp );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_touchpad_read</span><span class="params">( <span class="type">lv_indev_drv_t</span> * indev_driver, <span class="type">lv_indev_data_t</span> * data )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// uint16_t touchX, touchY;</span></span><br><span class="line">    TOUCHINFO ti;</span><br><span class="line">    <span class="keyword">if</span>(bbct.<span class="built_in">getSamples</span>(&amp;ti))</span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_PR;</span><br><span class="line">        <span class="comment">/*Set the coordinates*/</span></span><br><span class="line">        data-&gt;point.x = screenWidth - ti.y[<span class="number">0</span>];</span><br><span class="line">        data-&gt;point.y = ti.x[<span class="number">0</span>];</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data x &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( screenWidth - ti.y[<span class="number">0</span>] );</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data y &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( ti.x[<span class="number">0</span>] );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_REL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Serial.<span class="built_in">begin</span>( <span class="number">115200</span> ); <span class="comment">/* prepare for possible serial debug */</span></span><br><span class="line">    String LVGL_Arduino = <span class="string">&quot;Hello Arduino! &quot;</span>;</span><br><span class="line">    LVGL_Arduino += <span class="built_in">String</span>(<span class="string">&#x27;V&#x27;</span>) + <span class="built_in">lv_version_major</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_minor</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_patch</span>();</span><br><span class="line">    Serial.<span class="built_in">println</span>( LVGL_Arduino );</span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;I am LVGL_Arduino&quot;</span> );</span><br><span class="line">    <span class="built_in">lv_init</span>();</span><br><span class="line">    tft.<span class="built_in">begin</span>();          <span class="comment">/* TFT init */</span></span><br><span class="line">    tft.<span class="built_in">setRotation</span>( <span class="number">3</span> ); <span class="comment">/* Landscape orientation, flipped */</span></span><br><span class="line">    bbct.<span class="built_in">init</span>(TOUCH_SDA, TOUCH_SCL, TOUCH_RST, TOUCH_INT);</span><br><span class="line">    <span class="type">int</span> iType = bbct.<span class="built_in">sensorType</span>();</span><br><span class="line">    Serial.<span class="built_in">printf</span>(<span class="string">&quot;Sensor type = %s\n&quot;</span>, szNames[iType]);</span><br><span class="line">    <span class="built_in">lv_disp_draw_buf_init</span>( &amp;draw_buf, buf, <span class="literal">NULL</span>, screenWidth * <span class="number">10</span> );</span><br><span class="line">    <span class="comment">/*Initialize the display*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_disp_drv_t</span> disp_drv;</span><br><span class="line">    <span class="built_in">lv_disp_drv_init</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Change the following line to your display resolution*/</span></span><br><span class="line">    disp_drv.hor_res = screenWidth;</span><br><span class="line">    disp_drv.ver_res = screenHeight;</span><br><span class="line">    disp_drv.flush_cb = my_disp_flush;</span><br><span class="line">    disp_drv.draw_buf = &amp;draw_buf;</span><br><span class="line">    <span class="built_in">lv_disp_drv_register</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Initialize the (dummy) input device driver*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_indev_drv_t</span> indev_drv;</span><br><span class="line">    <span class="built_in">lv_indev_drv_init</span>( &amp;indev_drv );</span><br><span class="line">    indev_drv.type = LV_INDEV_TYPE_POINTER;</span><br><span class="line">    indev_drv.read_cb = my_touchpad_read;</span><br><span class="line">    <span class="built_in">lv_indev_drv_register</span>( &amp;indev_drv );</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0</span></span><br><span class="line">    <span class="comment">/* Create simple label */</span></span><br><span class="line">    <span class="type">lv_obj_t</span> *label = <span class="built_in">lv_label_create</span>( <span class="built_in">lv_scr_act</span>() );</span><br><span class="line">    <span class="built_in">lv_label_set_text</span>( label, LVGL_Arduino.<span class="built_in">c_str</span>() );</span><br><span class="line">    <span class="built_in">lv_obj_align</span>( label, LV_ALIGN_CENTER, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="comment">// uncomment one of these demos</span></span><br><span class="line">    <span class="built_in">lv_demo_widgets</span>();            <span class="comment">// OK</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;Setup done&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">lv_timer_handler</span>(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line">    <span class="built_in">delay</span>( <span class="number">5</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="编译下载-1"><a href="#编译下载-1" class="headerlink" title="编译下载"></a>编译下载</h2><p>触摸显示效果如下图所示<br><img src="/posts/2c4e27ec/image-20240410134339063.png"></p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
-]]></content>
-      <categories>
-        <category>ESP32</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>ESP32</tag>
-        <tag>PlatformIO</tag>
-        <tag>lvgl</tag>
-        <tag>2.8寸TFT</tag>
-        <tag>触摸屏</tag>
-        <tag>立创</tag>
       </tags>
   </entry>
   <entry>
@@ -582,231 +708,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>【立创开源】ESP32_UV_BOX</title>
-    <url>/posts/df56fc06/</url>
-    <content><![CDATA[<h1 id="ESP-UV-BOX"><a href="#ESP-UV-BOX" class="headerlink" title="ESP_UV_BOX"></a>ESP_UV_BOX</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="https://oshwhub.com/activities/Xiari">🔗夏日征集令</a><br>ESP32-WROOM-32D-N8主控，通过GUVA-S12SD紫外线传感器获取环境紫外线强度；AHT20温湿度传感器获取环境温湿度；BMP280气压传感器获取环境压强；使用拨轮开关切换页面。<br>以下为制作过程记录</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><ul>
-<li>紫外线指数</li>
-<li>环境温湿度</li>
-<li>气压海拔</li>
-<li>简易照明</li>
-<li>天气时钟(网络)</li>
-<li>.</li>
-</ul>
-<h2 id="成本"><a href="#成本" class="headerlink" title="成本"></a>成本</h2><p>这里只列出了主要的器件，详情见<a href="https://docs.qq.com/sheet/DTXF2aW5JcUlzY0Na?tab=BB08J2">🔗腾讯文档：BOM_ESP_UV_BOX</a></p>
-<table>
-<thead>
-<tr>
-<th>主要元件</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>ESP32-WROOM-32D(8MB)</td>
-<td>15</td>
-</tr>
-<tr>
-<td>紫外线模块</td>
-<td>7.05</td>
-</tr>
-<tr>
-<td>AHT20</td>
-<td>1.62</td>
-</tr>
-<tr>
-<td>BMP280</td>
-<td>1.04</td>
-</tr>
-<tr>
-<td>四脚拨轮开关</td>
-<td>0.85</td>
-</tr>
-<tr>
-<td>CH340K</td>
-<td>1.4</td>
-</tr>
-</tbody></table>
-<h1 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h1><blockquote>
-<p>硬件设计见<a href="https://oshwhub.com/levi_01/simple-esp-uv-detection-box">立创开源硬件平台</a></p>
-</blockquote>
-<h2 id="原理图"><a href="#原理图" class="headerlink" title="原理图"></a>原理图</h2><blockquote>
-<p>存在问题：下载完程序，可以运行，但是板子上电不运行，需要按复位，<a href="https://esp32.com/viewtopic.php?t=17326">&gt;去除BOOT0按键的电容&lt;</a>，解决问题<br>贴片开关的质量也不太行，开关手柄会断🙃<br>侧边按键质量似乎也不太好，按复位有时也没用🙃</p>
-</blockquote>
-<h2 id="主控电路"><a href="#主控电路" class="headerlink" title="主控电路"></a>主控电路</h2><h3 id="主控"><a href="#主控" class="headerlink" title="主控"></a>主控</h3><p>主控选择ESP32-WROOM-32D-N8，外围电路参考<a href="https://www.espressif.com.cn/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_cn.pdf">官方技术规格书</a>。<br>引出SPI用于控制屏幕，IIC用于控制AHT20和BMP280，ADC用于采集电压值，以及按键控制<br><img src="/posts/df56fc06/970a90b53dde411ea2325a0830c91eed.png" alt="image.png"></p>
-<h3 id="自动下载"><a href="#自动下载" class="headerlink" title="自动下载"></a>自动下载</h3><p>串口芯片使用CH340K<br><img src="/posts/df56fc06/7d89effc779e4274b354b0442a294865.png" alt="image.png"></p>
-<h2 id="电源电路"><a href="#电源电路" class="headerlink" title="电源电路"></a>电源电路</h2><h3 id="电源切换电路"><a href="#电源切换电路" class="headerlink" title="电源切换电路"></a>电源切换电路</h3><p>使用PMOS，当没有外部电源时使用电池供电，有外部电源输入时不使用电池供电<br><img src="/posts/df56fc06/286190f2fcf24bc4bdd4d62e1ae7b63f.png" alt="image.png"></p>
-<h3 id="充电电路"><a href="#充电电路" class="headerlink" title="充电电路"></a>充电电路</h3><p>电池管理使用<a href="https://item.szlcsc.com/772193.html?kw=C725790&fromZone=s">TP4056</a>，电路参考<a href="https://atta.szlcsc.com/upload/public/pdf/source/20231109/CF74897CE79A500F7FE27A45ADCCC631.pdf">TP4056数据手册</a><br><img src="/posts/df56fc06/04faa10853da4b83bcad620b4eaec60e.png" alt="image.png"><br>充电电流如下，根据锂电池参数选择合适的电阻</p>
-<table>
-<thead>
-<tr>
-<th>Rprog(K)</th>
-<th>Ibat(mA)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.2</td>
-<td>1000</td>
-</tr>
-<tr>
-<td>2.4</td>
-<td>500</td>
-</tr>
-<tr>
-<td>3.0</td>
-<td>400</td>
-</tr>
-<tr>
-<td>4.0</td>
-<td>300</td>
-</tr>
-<tr>
-<td>6.0</td>
-<td>200</td>
-</tr>
-<tr>
-<td>12.0</td>
-<td>200</td>
-</tr>
-</tbody></table>
-<h2 id="外设"><a href="#外设" class="headerlink" title="外设"></a>外设</h2><h3 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h3><p>板载一个RESET和BOOT侧边按键，使用拨轮开关作为控制输入<br><img src="/posts/df56fc06/95154bb067354b339ee88efdf9f44841.png" alt="image.png"></p>
-<h3 id="TFT"><a href="#TFT" class="headerlink" title="TFT"></a>TFT</h3><p>使用1.8寸TFT屏幕插接，分辨率128x160，屏幕驱动ST7735，屏幕驱动电路参考屏幕原理图，可以通过BLK引脚控制屏幕亮度<br><img src="/posts/df56fc06/658738bf7cb94c4aae2a0b04c17d5cd0.png" alt="image.png"></p>
-<h3 id="UV"><a href="#UV" class="headerlink" title="UV"></a>UV</h3><p>紫外线部分电路参考紫外线模块电路设计</p>
-<p><img src="/posts/df56fc06/e0976dceda7b422ca7a9527d7b2ea3c3.png" alt="image.png"><br>通过采集电压，根据电压范围，得到紫外线强度</p>
-<p><img src="/posts/df56fc06/a360adfc92294010813b1446675f38d3.png" alt="image.png"></p>
-<h3 id="AHT20-BMP280"><a href="#AHT20-BMP280" class="headerlink" title="AHT20 BMP280"></a>AHT20 BMP280</h3><p>这两个器件，用烙铁不好焊，加热台方便些<br>AHT20可以检测环境温湿度<br><img src="/posts/df56fc06/4889306f2ecd47be96a50341cb9e54e4.png" alt="image.png"><br>BMP280可以检测大气压，温度，以及海拔高度(由压力和温度计算得到)<br><img src="/posts/df56fc06/78478d91f0de4458a481425c3c324f6f.png" alt="image.png"></p>
-<h2 id="面板"><a href="#面板" class="headerlink" title="面板"></a>面板</h2><p>使用立创EDA设计简单的面板</p>
-<h1 id="3D外壳"><a href="#3D外壳" class="headerlink" title="3D外壳"></a>3D外壳</h1><p>1.8寸版本<br>本次使用SOLIDWORKS2023建模</p>
-<h2 id="立创EDA导出模型"><a href="#立创EDA导出模型" class="headerlink" title="立创EDA导出模型"></a>立创EDA导出模型</h2><p><img src="/posts/df56fc06/68f3f871f74840cbb606b4e4b1bb5266.png" alt="image.png"></p>
-<p><img src="/posts/df56fc06/704b2689309b4b698dfd63b14240b134.png" alt="image.png"></p>
-<h2 id="SOLIDWORKS"><a href="#SOLIDWORKS" class="headerlink" title="SOLIDWORKS"></a>SOLIDWORKS</h2><p>使用SOLIDWORKS打开导出的<code>step</code>格式文件</p>
-<p><img src="/posts/df56fc06/6aab246aaed542ff8417809e7f9d992f.png" alt="image.png"><br>打开后如下图所示，可以看到电路板模型缺少丝印图案</p>
-<p><img src="/posts/df56fc06/56bb3bbf915a4040905f02d3ea609aaf.png" alt="image.png"><br>回到PCB工程，打开PCB的2D视图</p>
-<p><img src="/posts/df56fc06/8504cd94eda44d3985993ba18a6c7922.png" alt="image.png"><br>导出上下面丝印图<br>如下图点击PCB上表面，选择外观</p>
-<p><img src="/posts/df56fc06/e9846749266348c0bd20d668b8c3bc04.png" alt="image.png"><br>选择导出的顶层丝印图</p>
-<p><img src="/posts/df56fc06/e564401d3a914499a25c5fe3635eca73.png" alt="image.png"></p>
-<p><img src="/posts/df56fc06/32b6a6851a6840719853b7a28ec2dee9.png" alt="image.png"><br>还需要调整丝印的位置和大小，选择映射</p>
-<p><img src="/posts/df56fc06/6ad561c3388b47de856ce23cbf653e3e.png" alt="image.png"><br>根据实际情况，调整以下参数</p>
-<p><img src="/posts/df56fc06/9ad75608bfe44ad08e2c8bbb698fa1e8.png" alt="image.png"><br>之后便可以开始外壳的建模，最终效果如下<br><img src="/posts/df56fc06/3a0be8a343c244bf81d3b6264f99ca71.png" alt="image.png"></p>
-<h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><blockquote>
-<p>详细代码见<a href="https://github.com/levi52/ESP32_UV_BOX">levi52@GitHub: ESP32_UV_BOX</a></p>
-</blockquote>
-<h2 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h2><p>在主界面下设四个功能页，之后各级再设功能分页，主要结构如下<br><img src="/posts/df56fc06/d554d5ff9ca640db81f2d0c2856ac90b.png" alt="image.png"></p>
-<blockquote>
-<p>设计参考：<br><a href="https://space.bilibili.com/14368720">B站：黑人黑科技</a>的视频<a href="https://www.bilibili.com/video/BV19j41187SF">DIY万能遥控器</a><br><a href="https://oshwhub.com/bukaiyuan/works">OSHWHub: 黑人黑科技</a>的开源工程<a href="https://oshwhub.com/bukaiyuan/ESP32-hang-mu-yao-kong-qi">ESP32 万能遥控器</a></p>
-</blockquote>
-<p><img src="/posts/df56fc06/db83837706a14e418feb2864e9fb52ca.png" alt="主菜单.png"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><blockquote>
-<p>开发工具：Visual Studio Code + PlatformIO<br>图标：<a href="https://www.iconfont.cn/">iconfont-阿里巴巴</a><br>颜色：<a href="https://rgbcolorpicker.com/565">RGB COLOR PICKER</a><br>中文转换：<a href="https://www.jyshare.com/front-end/3602/">中文转UNICODE</a><br>图片转换：<a href="https://notisrac.github.io/FileToCArray/">FileToCArray</a></p>
-</blockquote>
-<p>代码结构主要如下</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">ESP32_UV_BOX</span><br><span class="line">│  clearBuildDir<span class="selector-class">.bat</span>   build文件删除</span><br><span class="line">│  default_8MB<span class="selector-class">.csv</span>     存储分区</span><br><span class="line">│  LICENSE             开源协议</span><br><span class="line">│  platformio<span class="selector-class">.ini</span>      开发配置</span><br><span class="line">│  README<span class="selector-class">.md</span>           说明文档</span><br><span class="line">├─assets/              静态文件</span><br><span class="line">├─include</span><br><span class="line">│      README</span><br><span class="line">├─lib                  外部库</span><br><span class="line">│  │  README</span><br><span class="line">│  └─ArduinoZlib </span><br><span class="line">├─<span class="attribute">src</span>                  主要文件</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.cpp</span>       按键控制</span><br><span class="line">│  │  <span class="selector-tag">button</span><span class="selector-class">.h</span></span><br><span class="line">│  │  <span class="selector-tag">main</span><span class="selector-class">.cpp</span>         主程序</span><br><span class="line">│  │  network<span class="selector-class">.cpp</span>      网络请求</span><br><span class="line">│  │  network<span class="selector-class">.h</span></span><br><span class="line">│  │  sensor<span class="selector-class">.cpp</span>       传感器</span><br><span class="line">│  │  sensor<span class="selector-class">.h</span></span><br><span class="line">│  │  ui<span class="selector-class">.cpp</span>           界面</span><br><span class="line">│  │  ui<span class="selector-class">.h</span></span><br><span class="line">│  ├─<span class="attribute">font</span>/             字体文件</span><br><span class="line">│  └─img/              图片文件</span><br><span class="line">└─test/                测试文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><p>屏幕尺寸为1.8寸，分辨率是128x160，屏幕驱动是ST7735，使用<a href="https://github.com/Bodmer/TFT_eSPI">TFT_eSPI</a>库驱动屏幕，所有界面使用<code>TFT_eSPI</code>绘制</p>
-<p>使用<code>TFT_eSPI</code>需要修改配置文件<code>User_Setup.h</code>，根据屏幕类型和显示情况修改内容</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_DRIVER <span class="comment">// 屏幕驱动</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_RGB <span class="comment">// 颜色顺序</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  128  <span class="comment">// 屏幕宽度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 160  <span class="comment">// 屏幕高度</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7735_GREENTAB2  <span class="comment">// 仅ST7735</span></span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON // 黑白反转</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_OFF</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_BL   17 <span class="comment">// 背光引脚</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 23</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   5  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    2  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST   4  <span class="comment">// Reset pin (could connect to RST pin)</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST  -1  // Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span><br></pre></td></tr></table></figure>
-
-<p>使用<code>ledc</code>控制引脚输出PWM调节屏幕背光亮度</p>
-<h3 id="控制"><a href="#控制" class="headerlink" title="控制"></a>控制</h3><p>使用<code>mathertel/OneButton</code>库来实现按键的控制，分别注册短按，双击和长按函数来实现不同的操作</p>
-<p>上下短按为页面切换，中间短按为进入页面，中间长按为返回上一级</p>
-<h3 id="传感器"><a href="#传感器" class="headerlink" title="传感器"></a>传感器</h3><h4 id="UV-1"><a href="#UV-1" class="headerlink" title="UV"></a>UV</h4><p>使用S12SD传感器来检测紫外线，然后经过放大，使用ADC采集电压，根据电压范围判断紫外线指数等级</p>
-<p>下图为紫外线模块<br><img src="/posts/df56fc06/922ab3f72ef447daafb15dbb491e8795.png" alt="image.png"><br>程序中使用此函数获取紫外线指数</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">uint8_t</span> <span class="title">sensor_uv_data</span><span class="params">(<span class="type">void</span>)</span></span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>图中为Arduino对应的数值，详情见<a href="https://wiki.dfrobot.com.cn/_SKU_SEN0162__UV_Sensor">DFROBOT: UV Sensor</a><br><img src="/posts/df56fc06/6ba2cbb88a73430790e063d3e377f5a7.png" alt="image.png"></p>
-</blockquote>
-<h4 id="AHT20"><a href="#AHT20" class="headerlink" title="AHT20"></a>AHT20</h4><p>使用<code>dvarrel/AHT20</code>库读取AHT20温湿度传感器的数据<br>主要为如下内容，AHT20数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">AHT20Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> humidity;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_aht20_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">AHT20Data <span class="title">sensor_aht20_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="BMP280"><a href="#BMP280" class="headerlink" title="BMP280"></a>BMP280</h4><p>使用<code>seeed-studio/Grove - Barometer Sensor BMP280</code>库读取BMP280传感器的数据<br>主要为如下内容，BMP280数据结构体，初始化函数，以及数据读取函数(返回数据结构体)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">BMP280Data</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">float</span> temperature;</span><br><span class="line">    <span class="type">float</span> pressure;</span><br><span class="line">    <span class="type">float</span> altitude;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">sensor_bmp280_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">BMP280Data <span class="title">sensor_bmp280_data</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>在函数<code>bool BMP280::init(void)</code>中注释掉<code>Wire.begin()</code><br>在主程序中上面两个传感器初始化前，要先使用<code>Wire.begin(21, 22);</code>来设置<code>IIC</code>引脚</p>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="配网"><a href="#配网" class="headerlink" title="配网"></a>配网</h4><p>初次使用时，会建立如下网络<code>ESP_UV_BOX_WIFI</code>，<br><img src="/posts/df56fc06/c8f8e9414a8448d6b543b0ff38702aef.png" alt="image.png"><br>连接网络，浏览器打开网址<code>192.168.1.1</code>，会出现如下配网页面</p>
-<blockquote>
-<p>页面代码参考: <a href="https://blog.csdn.net/YANGJIERUN/article/details/129092371">CSDN: 请收藏！分享一个ESP32&#x2F;ESP8266高颜值WIFI配网页面代码-带下拉选择框和中英文版本。文末有arduino配网代码。</a></p>
-</blockquote>
-<p>一共四个输入框，分别是<code>WIFI SSID</code>, <code>WIFI PASSWORD</code>, <code>Private KEY</code>, <code>Location ID</code></p>
-<blockquote>
-<p>相关链接：<a href="https://id.qweather.com/#/login?redirect=https%3A%2F%2Fconsole.qweather.com%2F%23%2Fapps&lang=zh">和风天气控制台</a>、<a href="https://docs.qq.com/sheet/DTWNWWU9FeXhwSERG?tab=BB08J2">城市 ID</a></p>
-</blockquote>
-<p><img src="/posts/df56fc06/3d43aa47c4a04f188f323f635d9e87d4.png" alt="image.png"><br>点击保存后，芯片会重启连接网络</p>
-<p>网络配置相关函数如下</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">wifi_scan</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_connect</span><span class="params">(<span class="type">int</span> timeOut_s)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifi_disconnect</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ap_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">server_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleRoot</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleConfigWifi</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">handleNotFound</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">doClient</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">wifiConfigBySoftAP</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="天气时钟"><a href="#天气时钟" class="headerlink" title="天气时钟"></a>天气时钟</h4><p>天气等数据使用和风天气API，免费订阅每天可以有1000次请求</p>
-<blockquote>
-<p><a href="https://dev.qweather.com/docs/finance/subscription/#comparison">订阅规则</a></p>
-</blockquote>
-<ul>
-<li>实时天气数据使用<a href="https://www.qweather.com/">和风天气</a>的<a href="https://dev.qweather.com/">API</a>，具体代码参考<a href="https://space.bilibili.com/393773788">B站：大聪明的二手脑袋</a>的视频<a href="https://www.bilibili.com/video/BV1wj421Z7Ds">Dudu天气时钟版本更新，全面对接和风天气，2.0版本继续开源</a></li>
-<li>时间数据使用<code>arduino-libraries/NTPClient</code>库获取网络时间<br>网络天气相关函数如下</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_now</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_weather_future</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_air</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_city_id</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function">String <span class="title">urlEncode</span><span class="params">(<span class="type">const</span> String&amp; text)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>网络相关函数如下</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">time_init</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">get_time</span><span class="params">(<span class="type">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>同上，使用和风天气API，屏幕显示未来六天天气状况</p>
-<h4 id="空气质量"><a href="#空气质量" class="headerlink" title="空气质量"></a>空气质量</h4><p>同上，使用和风天气API，屏幕显示颗粒物PM10，颗粒物PM2.5，二氧化氮NO2，二氧化硫SO2，一氧化碳CO，臭氧O3</p>
-<h4 id="哔哩哔哩"><a href="#哔哩哔哩" class="headerlink" title="哔哩哔哩"></a>哔哩哔哩</h4><p>通过如下API接口获得JSON格式的数据，使用<a href="https://arduinojson.org/">ArduinoJson</a>库解析获得关注数和粉丝数</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//api.bilibili.com/x/relation/stat?vmid=用户UID</span></span><br></pre></td></tr></table></figure>
-
-<p>可以使用官网提供的<a href="https://arduinojson.org/v7/assistant/#/step1">工具</a>生成解析代码</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;message&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ttl&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;mid&quot;</span><span class="punctuation">:</span> <span class="number">378576508</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;following&quot;</span><span class="punctuation">:</span> <span class="number">318</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;whisper&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;black&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;follower&quot;</span><span class="punctuation">:</span> <span class="number">56</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>生成的解析代码如下</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// String input;</span></span><br><span class="line"></span><br><span class="line">JsonDocument doc;</span><br><span class="line"></span><br><span class="line">DeserializationError error = <span class="built_in">deserializeJson</span>(doc, input);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (error) &#123;</span><br><span class="line">  Serial.<span class="built_in">print</span>(<span class="string">&quot;deserializeJson() failed: &quot;</span>);</span><br><span class="line">  Serial.<span class="built_in">println</span>(error.<span class="built_in">c_str</span>());</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> code = doc[<span class="string">&quot;code&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* message = doc[<span class="string">&quot;message&quot;</span>]; <span class="comment">// &quot;0&quot;</span></span><br><span class="line"><span class="type">int</span> ttl = doc[<span class="string">&quot;ttl&quot;</span>]; <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">JsonObject data = doc[<span class="string">&quot;data&quot;</span>];</span><br><span class="line"><span class="type">long</span> data_mid = data[<span class="string">&quot;mid&quot;</span>]; <span class="comment">// 378576508</span></span><br><span class="line"><span class="type">int</span> data_following = data[<span class="string">&quot;following&quot;</span>]; <span class="comment">// 318</span></span><br><span class="line"><span class="type">int</span> data_whisper = data[<span class="string">&quot;whisper&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_black = data[<span class="string">&quot;black&quot;</span>]; <span class="comment">// 0</span></span><br><span class="line"><span class="type">int</span> data_follower = data[<span class="string">&quot;follower&quot;</span>]; <span class="comment">// 56</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>使用<code>fastled/FastLED</code>库驱动板载的一颗WS2812灯珠，暂时只添加不同颜色灯切换功能</p>
-<h1 id="实物"><a href="#实物" class="headerlink" title="实物"></a>实物</h1><h2 id="PCB"><a href="#PCB" class="headerlink" title="PCB"></a>PCB</h2><p><img src="/posts/df56fc06/9c97f95d9de94ff3805473966e0f3ed2.png" alt="image.png"></p>
-<h2 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h2><p>下图为部分页面<br><img src="/posts/df56fc06/59e9f63003d04a4f83c02cc1ec1dbcde.png" alt="image.png"><br>后续会上传B站视频</p>
-<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><p>最后非常感谢立创🥰提供的机会和各种优惠券，帮助我们实现想法，做出实物，参加征集令活动收获颇多，未来继续努力😄</p>
-<p><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=8087F7&vCenter=true&random=false&width=435&lines=The+end..." alt="Typing SVG" style="display: inline-block; margin-right: 10px;"></a></p>
-<div style="display:flex">
-<a href="https://github.com/levi52" target="_blank"><img src="https://img.shields.io/badge/levi52-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
-<a href="https://oshwhub.com/levi_01/works" target="_blank"><img src="https://img.shields.io/badge/levi_01-%40oshwhub?style=flat-square&logo=easyeda&logoColor=white&color=%235588ff" style="display: inline-block; margin-right: 10px;"></a>
-<a href="https://space.bilibili.com/378576508" target="_blank"><img src="https://img.shields.io/badge/travi5-%40bilibili?style=flat-square&logo=bilibili&logoColor=white&color=%2301affd" style="display: inline-block; margin-right: 10px;"></a>
-<a href="https://blog.csdn.net/Levi_5" target="_blank"><img src="https://img.shields.io/badge/Hi1L-CSDN?style=flat-square&logoColor=white&label=CSDN&color=%23fc5531" style="display: inline-block; margin-right: 10px;"></a> 
-<a href="https://levi52.github.io/" target="_blank"><img src="https://img.shields.io/badge/levi52_blog-%40github?style=flat-square&logo=github&logoColor=black&color=%23e0e0e0" style="display: inline-block; margin-right: 10px;"></a>
-</div>]]></content>
-      <categories>
-        <category>ESP32</category>
-        <category>开源</category>
-      </categories>
-      <tags>
-        <tag>ESP32</tag>
-        <tag>PlatformIO</tag>
-        <tag>自制</tag>
-        <tag>立创</tag>
-        <tag>开源</tag>
-        <tag>紫外线</tag>
-        <tag>AHT20</tag>
-        <tag>BMP280</tag>
-        <tag>1.8寸TFT</tag>
-        <tag>外壳</tag>
-        <tag>面板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安信可Ai-M61-32S环境搭建 + 点灯</title>
     <url>/posts/17ee55dc/</url>
     <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><blockquote>
@@ -891,15 +792,225 @@
       </tags>
   </entry>
   <entry>
-    <title>预告</title>
-    <url>/posts/224bc55d/</url>
-    <content><![CDATA[<p>… … … … …</p>
+    <title>ESP32S3N8R8 + Squareline_Studio设计移植</title>
+    <url>/posts/b97be97c/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><blockquote>
+<p>硬件：<a href="https://lckfb.com/">立创ESP32S3R8N8开发板</a> + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font>+ <font style="color: #dc4040">Squareline Studio</font><br>代码：<a href="https://pan.baidu.com/s/1HlfkJY-gq79WkFS29hg6Wg?pwd=levi">百度网盘：ESP32S3_SQ(提取码：levi)</a><br>代码：<a href="https://pan.baidu.com/s/1nwjB5gQ_fUmbdlNZjtprzQ?pwd=levi">百度网盘：ESP32S3_SERVO(提取码：levi)</a><br>视频：<a href="https://www.bilibili.com/video/BV1CC411J72J">bilibili: 【ESP32】初试Squareline Studio设计 简单控制屏幕亮度</a><br>视频：<a href="https://www.bilibili.com/video/BV1kJ4m1P73e">bilibili: 【ESP32】Squareline Studio新增界面+移植过程 - 简单控制舵机</a><br>博客：<a href="https://blog.csdn.net/Levi_5/article/details/138243662">CSDN: 【ESP32】立创ESP32S3N8R8开发板+2.8寸TFT电容触摸屏+Squareline Studio+PlatformIO</a></p>
+</blockquote>
+<h1 id="Squareline-Studio"><a href="#Squareline-Studio" class="headerlink" title="Squareline Studio"></a>Squareline Studio</h1><h2 id="设计UI"><a href="#设计UI" class="headerlink" title="设计UI"></a>设计UI</h2><p><img src="/posts/b97be97c/Squareline.png" alt="image-"></p>
+<h2 id="导出文件"><a href="#导出文件" class="headerlink" title="导出文件"></a>导出文件</h2><ul>
+<li><p>工程设置<br>按如下所示设置工程，<code>Project Export Root</code>和<code>UI Files Export Path</code>路径可以选择为LVGL工程目录下新建的<code>export</code>文件夹<br><img src="/posts/b97be97c/project_setting.png"><br><img src="/posts/b97be97c/project_setting1.png"></p>
+</li>
+<li><p>Export<br><img src="/posts/b97be97c/export.png"></p>
+</li>
+</ul>
+<h1 id="PlatformIO"><a href="#PlatformIO" class="headerlink" title="PlatformIO"></a>PlatformIO</h1><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><ul>
+<li><p>导出文件<br>以下为<font color="#dc4140">Squareline Studio</font>导出的文件<br><img src="/posts/b97be97c/file_folder.png" alt="image-"></p>
+</li>
+<li><p>移植文件<br>资源文件复制到<font color="#dc4140">src&#x2F;lvgl_gui</font><br><img src="/posts/b97be97c/copy_file.png" alt="image-"></p>
+</li>
+</ul>
+<h2 id="LVGL"><a href="#LVGL" class="headerlink" title="LVGL"></a>LVGL</h2><ul>
+<li>修改lvgl<br>修改lvgl_conf.h，如下所示，关闭案例编译<br><img src="/posts/b97be97c/lvgl_conf.png" alt="image-"></li>
+</ul>
+<h2 id="main"><a href="#main" class="headerlink" title="main"></a>main</h2><ul>
+<li><p>添加头文件</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;ui.h&quot;</span></span></span><br></pre></td></tr></table></figure></li>
+<li><p>UI初始化<br>删去之前LVGL官方案例的内容，添加如下代码</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ui_init</span>();</span><br></pre></td></tr></table></figure>
+<p><img src="/posts/b97be97c/ui_init.png" alt="image-"></p>
+</li>
+<li><p>lvgl显示</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">lvgl_task</span><span class="params">(<span class="type">void</span> *pt)</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        lv_timer_handler(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line"></span><br><span class="line">        vTaskDelay(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><code>setup()</code>中创建任务</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">xTaskCreatePinnedToCore(lvgl_task, <span class="string">&quot;lvgl display&quot;</span>, <span class="number">1024</span> * <span class="number">15</span>, <span class="literal">NULL</span>, <span class="number">2</span>, <span class="literal">NULL</span>, <span class="number">1</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p><img src="/posts/b97be97c/S1.png" alt="image-"><br><img src="/posts/b97be97c/S2.jpg" alt="image-"><br><img src="/posts/b97be97c/S3.jpg" alt="image-"></p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
 ]]></content>
       <categories>
-        <category>预告</category>
+        <category>ESP32</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>预告</tag>
+        <tag>ESP32</tag>
+        <tag>PlatformIO</tag>
+        <tag>lvgl</tag>
+        <tag>2.8寸TFT</tag>
+        <tag>Squareline Studio</tag>
+        <tag>触摸屏</tag>
+        <tag>立创</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>ESP32S3N8R8 + lvgl测试官方案例</title>
+    <url>/posts/2c4e27ec/</url>
+    <content><![CDATA[<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a><font style="color: #6e9afc">说明</font></h1><blockquote>
+<p>硬件：立创ESP32S3R8N8开发板 + 2.8寸TFT显示屏(ST7789) + 电容触摸(GT911)<br>软件：<font style="color: #36b0f3">Visual Studio Code</font> + <font style="color: #e57200">PlatformIO</font><br>代码：<a href="https://pan.baidu.com/s/1tPKpCQTtXrIsN9fd9mheDQ?pwd=levi">百度网盘：ESP32S3_GT911TOUCH(提取码：levi)</a><br>视频：<a href="https://www.bilibili.com/video/BV1AT421m7Xa">bilibili: 【ESP32】2.8寸电容触摸屏(ST7789+GT911) lvgl 案例测试</a><br>博客：<a href="https://blog.csdn.net/Levi_5/article/details/137572195">CSDN: 【ESP32】立创ESP32S3R8N8开发板+2.8寸TFT电容触摸屏ST7789+GT911+PlatformIO</a></p>
+</blockquote>
+<h1 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a><font style="color: #e57200">新建工程</font></h1><ul>
+<li><p>点击侧边<code>PlatformIO</code>插件，新建工程<br><img src="/posts/2c4e27ec/open.png"></p>
+</li>
+<li><p>依次设置工程名，开发板，框架<br><img src="/posts/2c4e27ec/project.png"></p>
+</li>
+</ul>
+<h1 id="屏幕测试"><a href="#屏幕测试" class="headerlink" title="屏幕测试"></a><font style="color: #c16eff">屏幕测试</font></h1><h2 id="添加TFT-eSPI"><a href="#添加TFT-eSPI" class="headerlink" title="添加TFT_eSPI"></a>添加TFT_eSPI</h2><ul>
+<li><p>添加屏幕驱动库<code>TFT_eSPI</code>，按如下图顺序<br><img src="/posts/2c4e27ec/TFT_eSPI.png"><br><img src="/posts/2c4e27ec/TFTINSTALL.png"></p>
+</li>
+<li><p>添加TFT_eSPI到工程<br><img src="/posts/2c4e27ec/ADDTFT.png"></p>
+</li>
+<li><p>打开配置文件，可以看到已成功添加库<br><img src="/posts/2c4e27ec/TFTINSTALLED.png"></p>
+</li>
+</ul>
+<h2 id="修改TFT-eSPI"><a href="#修改TFT-eSPI" class="headerlink" title="修改TFT_eSPI"></a>修改TFT_eSPI</h2><ul>
+<li><p>打开<code>.pio\libdeps\esp32-s3-devkitc-1\TFT_eSPI\User_Setup.h</code>文件<br><img src="/posts/2c4e27ec/opensetup.png"></p>
+</li>
+<li><p>根据屏幕驱动芯片解注释</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Only define one driver, the other ones must be commented out</span></span><br><span class="line"><span class="comment">// #define ILI9341_DRIVER       // Generic driver for common displays</span></span><br><span class="line"><span class="comment">//#define ILI9341_2_DRIVER     // Alternative ILI9341 driver, see https://github.com/Bodmer/TFT_eSPI/issues/1172</span></span><br><span class="line"><span class="comment">//#define ST7735_DRIVER      // Define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define ILI9163_DRIVER     // Define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define S6D02A1_DRIVER</span></span><br><span class="line"><span class="comment">//#define RPI_ILI9486_DRIVER // 20MHz maximum SPI</span></span><br><span class="line"><span class="comment">//#define HX8357D_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9481_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9486_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9488_DRIVER     // WARNING: Do not connect ILI9488 display SDO to MISO if other devices share the SPI bus (TFT SDO does NOT tristate when CS is high)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ST7789_DRIVER      <span class="comment">// Full configuration option, define additional parameters below for this display</span></span></span><br><span class="line"><span class="comment">//#define ST7789_2_DRIVER    // Minimal configuration option, define additional parameters below for this display</span></span><br><span class="line"><span class="comment">//#define R61581_DRIVER</span></span><br><span class="line"><span class="comment">//#define RM68140_DRIVER</span></span><br><span class="line"><span class="comment">//#define ST7796_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1351_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_480_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_800_DRIVER</span></span><br><span class="line"><span class="comment">//#define SSD1963_800ALT_DRIVER</span></span><br><span class="line"><span class="comment">//#define ILI9225_DRIVER</span></span><br><span class="line"><span class="comment">//#define GC9A01_DRIVER</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据屏幕大小设置宽高</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// For ST7789, ST7735, ILI9163 and GC9A01 ONLY, define the pixel width and height in portrait orientation</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  80</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  128</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  172 // ST7789 172 x 320</span></span><br><span class="line"><span class="comment">// #define TFT_WIDTH  170 // ST7789 170 x 320</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_WIDTH  240 <span class="comment">// ST7789 240 x 240 and 240 x 320</span></span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 160</span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 128</span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 240 // ST7789 240 x 240</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_HEIGHT 320 <span class="comment">// ST7789 240 x 320</span></span></span><br><span class="line"><span class="comment">// #define TFT_HEIGHT 240 // GC9A01 240 x 240</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>根据连线设置引脚</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP32 SETUP   ###</span></span><br><span class="line"><span class="comment">// For ESP32 Dev board (only tested with ILI9341 display)</span></span><br><span class="line"><span class="comment">// The hardware SPI can be mapped to any pins</span></span><br><span class="line"><span class="comment">//#define TFT_MISO 19</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_MOSI 17</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_SCLK 18</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_CS   15  <span class="comment">// Chip select control pin</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_DC    16  <span class="comment">// Data Command control pin</span></span></span><br><span class="line"><span class="comment">//#define TFT_RST   4  // Reset pin (could connect to RST pin)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_RST  -1  <span class="comment">// Set TFT_RST to -1 if display RESET is connected to ESP32 board RST</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="修改main-cpp"><a href="#修改main-cpp" class="headerlink" title="修改main.cpp"></a>修改main.cpp</h2><p>在屏幕上从上到下分别显示<font style="color: #ff0000">红</font><font style="color: #00ff00">绿</font><font style="color: #0000ff">蓝</font>三色，以及<font style="background: #8c8c8c;color: #ffffff">白色</font>文字，用来测试屏幕颜色显示是否正常。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_GREY 0x5AEB</span></span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>();       <span class="comment">// Invoke custom library</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  tft.<span class="built_in">init</span>();</span><br><span class="line">  tft.<span class="built_in">setRotation</span>(<span class="number">0</span>);</span><br><span class="line">  tft.<span class="built_in">fillScreen</span>(TFT_GREY);</span><br><span class="line">  tft.<span class="built_in">setTextColor</span>(TFT_WHITE, TFT_GREY);  <span class="comment">// Adding a background colour erases previous text automatically</span></span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_RED);</span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">50</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_GREEN);</span><br><span class="line">  tft.<span class="built_in">fillRect</span>(<span class="number">0</span>,<span class="number">100</span>,<span class="number">240</span>,<span class="number">50</span>,TFT_BLUE);</span><br><span class="line">  tft.<span class="built_in">drawCentreString</span>(<span class="string">&quot;Time flies&quot;</span>,<span class="number">120</span>,<span class="number">260</span>,<span class="number">4</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// put your main code here, to run repeatedly:</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="下载调试"><a href="#下载调试" class="headerlink" title="下载调试"></a>下载调试</h2><ul>
+<li><p>编译下载<br><img src="/posts/2c4e27ec/load.png"></p>
+</li>
+<li><p>根据屏幕显示情况修改<code>User_Setup.h</code>文件</p>
+</li>
+</ul>
+<p>如果颜色反转(白色显示为黑色)，如下图所示，则取消下一个注释，尝试两个选项，其中一个选项应该纠正反转。<br><img src="/posts/2c4e27ec/image-20240410132437581.png"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// If colours are inverted (white shows as black) then uncomment one of the next</span></span><br><span class="line"><span class="comment">// 2 lines try both options, one of the options should correct the inversion.</span></span><br><span class="line"><span class="comment">// #define TFT_INVERSION_ON</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TFT_INVERSION_OFF</span></span><br></pre></td></tr></table></figure>
+<p>修改后，如下图所示，白色正常显示，但是RGB顺序存在问题<br><img src="/posts/2c4e27ec/image-20240410132701414.png"></p>
+<p>仅对于ST7735, ST7789和ILI9341，如果显示器上的蓝色和红色交换，则定义颜色顺序，一次尝试一个选项来找到显示的正确颜色顺序</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// For ST7735, ST7789 and ILI9341 ONLY, define the colour order IF the blue and red are swapped on your display</span></span><br><span class="line"><span class="comment">// Try ONE option at a time to find the correct colour order for your display</span></span><br><span class="line"><span class="comment">//  #define TFT_RGB_ORDER TFT_RGB  // Colour order Red-Green-Blue</span></span><br><span class="line"> <span class="meta">#<span class="keyword">define</span> TFT_RGB_ORDER TFT_BGR  <span class="comment">// Colour order Blue-Green-Red</span></span></span><br></pre></td></tr></table></figure>
+<p>修改后，如下图所示，RGB顺序正常<br><img src="/posts/2c4e27ec/image-20240410132744241.png"></p>
+<h1 id="LVGL测试"><a href="#LVGL测试" class="headerlink" title="LVGL测试"></a><font style="color: #6c9ba6">LVGL测试</font></h1><h2 id="添加LVGL"><a href="#添加LVGL" class="headerlink" title="添加LVGL"></a>添加LVGL</h2><ul>
+<li><p>根据实际情况，选择lvgl版本<br><img src="/posts/2c4e27ec/lvgl.png"><br>![](lvglinstall.png” style&#x3D;”zoom:67%;” &gt;</p>
+</li>
+<li><p>添加lvgl到工程<br>![](lvglinstalled.png” style&#x3D;”zoom:67%;” &gt;</p>
+</li>
+</ul>
+<h2 id="修改LVGL"><a href="#修改LVGL" class="headerlink" title="修改LVGL"></a>修改LVGL</h2><ul>
+<li><p>打开<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\lv_conf_template.h</code>文件</p>
+<p>将此文件重命名为<code>lv_conf.h</code></p>
+</li>
+</ul>
+<p>![](lvconf.png” style&#x3D;”zoom:67%;” &gt;</p>
+<ul>
+<li>使能lvgl</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* clang-format off */</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 1 <span class="comment">/*Set it to &quot;1&quot; to enable content*/</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> LV_CONF_H</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_CONF_H</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置周期</li>
+</ul>
+<p>默认显示刷新周期。LVG将重新绘制改变的区域与这个周期时间<br>输入设备读取周期毫秒</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Default display refresh period. LVG will redraw changed areas with this period time*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_DISP_DEF_REFR_PERIOD 1      <span class="comment">/*[ms]*/</span></span></span><br><span class="line"><span class="comment">/*Input device read period in milliseconds*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_INDEV_DEF_READ_PERIOD 1     <span class="comment">/*[ms]*/</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>心跳使能</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Use a custom tick source that tells the elapsed time in milliseconds.</span></span><br><span class="line"><span class="comment"> *It removes the need to manually update the tick with `lv_tick_inc()`)*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_TICK_CUSTOM 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> LV_TICK_CUSTOM</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使能测试案例</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Show some widget. It might be required to increase `LV_MEM_SIZE` */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_USE_DEMO_WIDGETS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> LV_USE_DEMO_WIDGETS</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LV_DEMO_WIDGETS_SLIDESHOW 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>更改文件路径</p>
+<p>将<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\demos</code>文件夹移动至<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\src\demos</code></p>
+</li>
+<li><p>修改main.cpp</p>
+<p>将<code>.pio\libdeps\esp32-s3-devkitc-1\lvgl\examples\arduino\LVGL_Arduino\LVGL_Arduino.ino</code>文件内容复制</p>
+<ul>
+<li>设置头文件</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置宽高</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改类型</li>
+</ul>
+<p><code>lv_disp_t</code>修改为<code>lv_disp_drv_t</code></p>
+<p><code>lv_indev_t</code>修改为<code>lv_indev_drv_t</code></p>
+<ul>
+<li>注释掉触摸部分</li>
+</ul>
+</li>
+</ul>
+<h2 id="修改完成"><a href="#修改完成" class="headerlink" title="修改完成"></a>修改完成</h2><p>最终<code>main.cpp</code>文件内容如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br><span class="line"><span class="comment">/*Change to your screen resolution*/</span></span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_disp_draw_buf_t</span> draw_buf;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_color_t</span> buf[ screenWidth * <span class="number">10</span> ];</span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>(screenWidth, screenHeight); <span class="comment">/* TFT instance */</span></span><br><span class="line"><span class="comment">/* Display flushing */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_disp_flush</span><span class="params">( <span class="type">lv_disp_drv_t</span> *disp, <span class="type">const</span> <span class="type">lv_area_t</span> *area, <span class="type">lv_color_t</span> *color_p )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">uint32_t</span> w = ( area-&gt;x2 - area-&gt;x1 + <span class="number">1</span> );</span><br><span class="line">    <span class="type">uint32_t</span> h = ( area-&gt;y2 - area-&gt;y1 + <span class="number">1</span> );</span><br><span class="line">    tft.<span class="built_in">startWrite</span>();</span><br><span class="line">    tft.<span class="built_in">setAddrWindow</span>( area-&gt;x1, area-&gt;y1, w, h );</span><br><span class="line">    tft.<span class="built_in">pushColors</span>( ( <span class="type">uint16_t</span> * )&amp;color_p-&gt;full, w * h, <span class="literal">true</span> );</span><br><span class="line">    tft.<span class="built_in">endWrite</span>();</span><br><span class="line">    <span class="built_in">lv_disp_flush_ready</span>( disp );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="comment">// void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     uint16_t touchX, touchY;</span></span><br><span class="line"><span class="comment">//     bool touched = tft.getTouch( &amp;touchX, &amp;touchY, 600 );</span></span><br><span class="line"><span class="comment">//     if( !touched )</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         data-&gt;state = LV_INDEV_STATE_REL;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     else</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         data-&gt;state = LV_INDEV_STATE_PR;</span></span><br><span class="line"><span class="comment">//         /*Set the coordinates*/</span></span><br><span class="line"><span class="comment">//         data-&gt;point.x = touchX;</span></span><br><span class="line"><span class="comment">//         data-&gt;point.y = touchY;</span></span><br><span class="line"><span class="comment">//         Serial.print( &quot;Data x &quot; );</span></span><br><span class="line"><span class="comment">//         Serial.println( touchX );</span></span><br><span class="line"><span class="comment">//         Serial.print( &quot;Data y &quot; );</span></span><br><span class="line"><span class="comment">//         Serial.println( touchY );</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Serial.<span class="built_in">begin</span>( <span class="number">115200</span> ); <span class="comment">/* prepare for possible serial debug */</span></span><br><span class="line">    String LVGL_Arduino = <span class="string">&quot;Hello Arduino! &quot;</span>;</span><br><span class="line">    LVGL_Arduino += <span class="built_in">String</span>(<span class="string">&#x27;V&#x27;</span>) + <span class="built_in">lv_version_major</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_minor</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_patch</span>();</span><br><span class="line">    Serial.<span class="built_in">println</span>( LVGL_Arduino );</span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;I am LVGL_Arduino&quot;</span> );</span><br><span class="line">    <span class="built_in">lv_init</span>();</span><br><span class="line">    tft.<span class="built_in">begin</span>();          <span class="comment">/* TFT init */</span></span><br><span class="line">    tft.<span class="built_in">setRotation</span>( <span class="number">3</span> ); <span class="comment">/* Landscape orientation, flipped */</span></span><br><span class="line">    <span class="comment">/*Set the touchscreen calibration data,</span></span><br><span class="line"><span class="comment">     the actual data for your display can be acquired using</span></span><br><span class="line"><span class="comment">     the Generic -&gt; Touch_calibrate example from the TFT_eSPI library*/</span></span><br><span class="line">    <span class="type">uint16_t</span> calData[<span class="number">5</span>] = &#123; <span class="number">275</span>, <span class="number">3620</span>, <span class="number">264</span>, <span class="number">3532</span>, <span class="number">1</span> &#125;;</span><br><span class="line">    <span class="comment">// tft.setTouch( calData );</span></span><br><span class="line">    <span class="built_in">lv_disp_draw_buf_init</span>( &amp;draw_buf, buf, <span class="literal">NULL</span>, screenWidth * <span class="number">10</span> );</span><br><span class="line">    <span class="comment">/*Initialize the display*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_disp_drv_t</span> disp_drv;</span><br><span class="line">    <span class="built_in">lv_disp_drv_init</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Change the following line to your display resolution*/</span></span><br><span class="line">    disp_drv.hor_res = screenWidth;</span><br><span class="line">    disp_drv.ver_res = screenHeight;</span><br><span class="line">    disp_drv.flush_cb = my_disp_flush;</span><br><span class="line">    disp_drv.draw_buf = &amp;draw_buf;</span><br><span class="line">    <span class="built_in">lv_disp_drv_register</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Initialize the (dummy) input device driver*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_indev_drv_t</span> indev_drv;</span><br><span class="line">    <span class="built_in">lv_indev_drv_init</span>( &amp;indev_drv );</span><br><span class="line">    indev_drv.type = LV_INDEV_TYPE_POINTER;</span><br><span class="line">    <span class="comment">// indev_drv.read_cb = my_touchpad_read;</span></span><br><span class="line">    <span class="built_in">lv_indev_drv_register</span>( &amp;indev_drv );</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0</span></span><br><span class="line">    <span class="comment">/* Create simple label */</span></span><br><span class="line">    <span class="type">lv_obj_t</span> *label = <span class="built_in">lv_label_create</span>( <span class="built_in">lv_scr_act</span>() );</span><br><span class="line">    <span class="built_in">lv_label_set_text</span>( label, LVGL_Arduino.<span class="built_in">c_str</span>() );</span><br><span class="line">    <span class="built_in">lv_obj_align</span>( label, LV_ALIGN_CENTER, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="built_in">lv_demo_widgets</span>();            <span class="comment">// OK</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;Setup done&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">lv_timer_handler</span>(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line">    <span class="built_in">delay</span>( <span class="number">5</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h2><p>显示效果如下图<br><img src="/posts/2c4e27ec/image-20240410134038409.png"></p>
+<h1 id="触摸测试"><a href="#触摸测试" class="headerlink" title="触摸测试"></a><font style="color: #26c492">触摸测试</font></h1><h2 id="添加bb-captouch"><a href="#添加bb-captouch" class="headerlink" title="添加bb_captouch"></a>添加<code>bb_captouch</code></h2><p><img src="/posts/2c4e27ec/bb_captouch.png"></p>
+<h2 id="修改main-cpp-1"><a href="#修改main-cpp-1" class="headerlink" title="修改main.cpp"></a>修改<code>main.cpp</code></h2><ul>
+<li><p>添加头文件</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bb_captouch.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置触摸芯片引脚</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// These defines are for a low cost ESP32 LCD board with the GT911 touch controller</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SDA  4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SCL  2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_INT 3</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_RST 1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置参数</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">BBCapTouch bbct;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *szNames[] = &#123;<span class="string">&quot;Unknown&quot;</span>, <span class="string">&quot;FT6x36&quot;</span>, <span class="string">&quot;GT911&quot;</span>, <span class="string">&quot;CST820&quot;</span>&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">bbct.<span class="built_in">init</span>(TOUCH_SDA, TOUCH_SCL, TOUCH_RST, TOUCH_INT);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>my_touchpad_read</code>函数</p>
+<p>这里的x,y坐标需要根据实际情况修改</p>
+<p><img src="/posts/2c4e27ec/pos.png"></p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_touchpad_read</span><span class="params">( <span class="type">lv_indev_drv_t</span> * indev_driver, <span class="type">lv_indev_data_t</span> * data )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    TOUCHINFO ti;</span><br><span class="line">    <span class="keyword">if</span>(bbct.<span class="built_in">getSamples</span>(&amp;ti))</span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_PR;</span><br><span class="line">        <span class="comment">/*Set the coordinates*/</span></span><br><span class="line">        data-&gt;point.x = screenWidth - ti.y[<span class="number">0</span>];</span><br><span class="line">        data-&gt;point.y = ti.x[<span class="number">0</span>];</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data x &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( screenWidth - ti.y[<span class="number">0</span>] );</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data y &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( ti.x[<span class="number">0</span>] );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_REL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="修改完成-1"><a href="#修改完成-1" class="headerlink" title="修改完成"></a>修改完成</h2><p>最终<code>main.cpp</code>文件内容如下</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;SPI.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;lvgl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;TFT_eSPI.h&gt;</span> <span class="comment">// Hardware-specific library</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;demos/lv_demos.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bb_captouch.h&gt;</span></span></span><br><span class="line"><span class="comment">// These defines are for a low cost ESP32 LCD board with the GT911 touch controller</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SDA  4</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_SCL  2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_INT 3</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TOUCH_RST 1</span></span><br><span class="line">BBCapTouch bbct;</span><br><span class="line"><span class="type">const</span> <span class="type">char</span> *szNames[] = &#123;<span class="string">&quot;Unknown&quot;</span>, <span class="string">&quot;FT6x36&quot;</span>, <span class="string">&quot;GT911&quot;</span>, <span class="string">&quot;CST820&quot;</span>&#125;;</span><br><span class="line"><span class="comment">/*Change to your screen resolution*/</span></span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenWidth  = <span class="number">320</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">const</span> <span class="type">uint16_t</span> screenHeight = <span class="number">240</span>;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_disp_draw_buf_t</span> draw_buf;</span><br><span class="line"><span class="type">static</span> <span class="type">lv_color_t</span> buf[ screenWidth * <span class="number">10</span> ];</span><br><span class="line">TFT_eSPI tft = <span class="built_in">TFT_eSPI</span>(screenWidth, screenHeight); <span class="comment">/* TFT instance */</span></span><br><span class="line"><span class="comment">/* Display flushing */</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_disp_flush</span><span class="params">( <span class="type">lv_disp_drv_t</span> *disp, <span class="type">const</span> <span class="type">lv_area_t</span> *area, <span class="type">lv_color_t</span> *color_p )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">uint32_t</span> w = ( area-&gt;x2 - area-&gt;x1 + <span class="number">1</span> );</span><br><span class="line">    <span class="type">uint32_t</span> h = ( area-&gt;y2 - area-&gt;y1 + <span class="number">1</span> );</span><br><span class="line">    tft.<span class="built_in">startWrite</span>();</span><br><span class="line">    tft.<span class="built_in">setAddrWindow</span>( area-&gt;x1, area-&gt;y1, w, h );</span><br><span class="line">    tft.<span class="built_in">pushColors</span>( ( <span class="type">uint16_t</span> * )&amp;color_p-&gt;full, w * h, <span class="literal">true</span> );</span><br><span class="line">    tft.<span class="built_in">endWrite</span>();</span><br><span class="line">    <span class="built_in">lv_disp_flush_ready</span>( disp );</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Read the touchpad*/</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">my_touchpad_read</span><span class="params">( <span class="type">lv_indev_drv_t</span> * indev_driver, <span class="type">lv_indev_data_t</span> * data )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// uint16_t touchX, touchY;</span></span><br><span class="line">    TOUCHINFO ti;</span><br><span class="line">    <span class="keyword">if</span>(bbct.<span class="built_in">getSamples</span>(&amp;ti))</span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_PR;</span><br><span class="line">        <span class="comment">/*Set the coordinates*/</span></span><br><span class="line">        data-&gt;point.x = screenWidth - ti.y[<span class="number">0</span>];</span><br><span class="line">        data-&gt;point.y = ti.x[<span class="number">0</span>];</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data x &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( screenWidth - ti.y[<span class="number">0</span>] );</span><br><span class="line">        Serial.<span class="built_in">print</span>( <span class="string">&quot;Data y &quot;</span> );</span><br><span class="line">        Serial.<span class="built_in">println</span>( ti.x[<span class="number">0</span>] );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        data-&gt;state = LV_INDEV_STATE_REL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Serial.<span class="built_in">begin</span>( <span class="number">115200</span> ); <span class="comment">/* prepare for possible serial debug */</span></span><br><span class="line">    String LVGL_Arduino = <span class="string">&quot;Hello Arduino! &quot;</span>;</span><br><span class="line">    LVGL_Arduino += <span class="built_in">String</span>(<span class="string">&#x27;V&#x27;</span>) + <span class="built_in">lv_version_major</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_minor</span>() + <span class="string">&quot;.&quot;</span> + <span class="built_in">lv_version_patch</span>();</span><br><span class="line">    Serial.<span class="built_in">println</span>( LVGL_Arduino );</span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;I am LVGL_Arduino&quot;</span> );</span><br><span class="line">    <span class="built_in">lv_init</span>();</span><br><span class="line">    tft.<span class="built_in">begin</span>();          <span class="comment">/* TFT init */</span></span><br><span class="line">    tft.<span class="built_in">setRotation</span>( <span class="number">3</span> ); <span class="comment">/* Landscape orientation, flipped */</span></span><br><span class="line">    bbct.<span class="built_in">init</span>(TOUCH_SDA, TOUCH_SCL, TOUCH_RST, TOUCH_INT);</span><br><span class="line">    <span class="type">int</span> iType = bbct.<span class="built_in">sensorType</span>();</span><br><span class="line">    Serial.<span class="built_in">printf</span>(<span class="string">&quot;Sensor type = %s\n&quot;</span>, szNames[iType]);</span><br><span class="line">    <span class="built_in">lv_disp_draw_buf_init</span>( &amp;draw_buf, buf, <span class="literal">NULL</span>, screenWidth * <span class="number">10</span> );</span><br><span class="line">    <span class="comment">/*Initialize the display*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_disp_drv_t</span> disp_drv;</span><br><span class="line">    <span class="built_in">lv_disp_drv_init</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Change the following line to your display resolution*/</span></span><br><span class="line">    disp_drv.hor_res = screenWidth;</span><br><span class="line">    disp_drv.ver_res = screenHeight;</span><br><span class="line">    disp_drv.flush_cb = my_disp_flush;</span><br><span class="line">    disp_drv.draw_buf = &amp;draw_buf;</span><br><span class="line">    <span class="built_in">lv_disp_drv_register</span>( &amp;disp_drv );</span><br><span class="line">    <span class="comment">/*Initialize the (dummy) input device driver*/</span></span><br><span class="line">    <span class="type">static</span> <span class="type">lv_indev_drv_t</span> indev_drv;</span><br><span class="line">    <span class="built_in">lv_indev_drv_init</span>( &amp;indev_drv );</span><br><span class="line">    indev_drv.type = LV_INDEV_TYPE_POINTER;</span><br><span class="line">    indev_drv.read_cb = my_touchpad_read;</span><br><span class="line">    <span class="built_in">lv_indev_drv_register</span>( &amp;indev_drv );</span><br><span class="line"><span class="meta">#<span class="keyword">if</span> 0</span></span><br><span class="line">    <span class="comment">/* Create simple label */</span></span><br><span class="line">    <span class="type">lv_obj_t</span> *label = <span class="built_in">lv_label_create</span>( <span class="built_in">lv_scr_act</span>() );</span><br><span class="line">    <span class="built_in">lv_label_set_text</span>( label, LVGL_Arduino.<span class="built_in">c_str</span>() );</span><br><span class="line">    <span class="built_in">lv_obj_align</span>( label, LV_ALIGN_CENTER, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line"><span class="meta">#<span class="keyword">else</span></span></span><br><span class="line">    <span class="comment">// uncomment one of these demos</span></span><br><span class="line">    <span class="built_in">lv_demo_widgets</span>();            <span class="comment">// OK</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    Serial.<span class="built_in">println</span>( <span class="string">&quot;Setup done&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">lv_timer_handler</span>(); <span class="comment">/* let the GUI do its work */</span></span><br><span class="line">    <span class="built_in">delay</span>( <span class="number">5</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译下载-1"><a href="#编译下载-1" class="headerlink" title="编译下载"></a>编译下载</h2><p>触摸显示效果如下图所示<br><img src="/posts/2c4e27ec/image-20240410134339063.png"></p>
+<h1 id="END"><a href="#END" class="headerlink" title="END"></a>END</h1><center> 2024 <font color="#00bcd9">Levi5</font></center>
+]]></content>
+      <categories>
+        <category>ESP32</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>ESP32</tag>
+        <tag>PlatformIO</tag>
+        <tag>lvgl</tag>
+        <tag>2.8寸TFT</tag>
+        <tag>触摸屏</tag>
+        <tag>立创</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
