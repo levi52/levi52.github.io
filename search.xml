@@ -13,6 +13,81 @@
       </tags>
   </entry>
   <entry>
+    <title>Python使用指南</title>
+    <url>/posts/f4c9fbf3/</url>
+    <content><![CDATA[<p>Python 是一种高级、解释型、多范式的编程语言，以其简洁易学的语法、丰富的库和框架、强大的跨平台性而广受欢迎，广泛应用于 Web 开发、数据科学、自动化脚本、网络爬虫等领域，拥有活跃的开发者社区支持。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p><a href="https://mirrors.aliyun.com/python-release/">python阿里云镜像站</a></p>
+<p><a href="https://www.python.org/downloads/">python官网下载</a></p>
+</blockquote>
+<p>选择合适的版本下载</p>
+<h3 id="直接安装"><a href="#直接安装" class="headerlink" title="直接安装"></a>直接安装</h3><ol>
+<li><p>双击安装包</p>
+<p><img src="/posts/f4c9fbf3/setup.png"></p>
+<p><code>Install Now</code>以管理员权限安装Python，勾选添加到环境变量</p>
+</li>
+<li><p>结束</p>
+<p><img src="/posts/f4c9fbf3/close.png"></p>
+</li>
+<li><p>测试</p>
+<p>打开命令行，输入<code>python</code></p>
+<p><img src="/posts/f4c9fbf3/test.png"></p>
+</li>
+</ol>
+<h3 id="自定义安装"><a href="#自定义安装" class="headerlink" title="自定义安装"></a>自定义安装</h3><ol>
+<li><p>双击安装包</p>
+<p><img src="/posts/f4c9fbf3/custom.png"></p>
+<p><code>Install Now</code>以管理员权限安装Python，勾选添加到环境变量</p>
+</li>
+<li><p>可选功能</p>
+<p><img src="/posts/f4c9fbf3/features.png"></p>
+<ul>
+<li><code>Documentation</code>: 安装Python文档文件。选择这个选项会在你的Python安装目录中包含Python的官方文档，方便你离线查阅Python的语法、库、模块等信息。如果你经常需要查看Python文档，或者没有稳定的网络环境，安装文档会很有帮助。</li>
+<li><code>pip</code>: pip是Python的包管理工具，是Python开发中非常重要的工具，可以用来下载和安装其他Python包。</li>
+<li><code>tcl/tk and IDLE</code>: 安装Tkinter和IDLE开发环境。Tkinter是 Python的标准GUI库，基于Tcl&#x2F;Tk，可以用来创建简单的桌面应用程序。IDLE是Python的集成开发环境(IDE)，提供了一个简单的文本编辑器和交互式解释器，适合初学者编写和调试Python代码。</li>
+<li><code>Python test suite</code>: 安装标准库测试套件。Python的标准库包含了大量的测试用例，用于验证Python解释器和标准库的功能是否正常。通常用于开发人员进行Python解释器的测试和调试，对于普通用户来说，这个选项可以不选。</li>
+<li><code>py launcher for all users</code>: <code>py launcher</code>是一个命令行工具，可以让你在命令行中使用 <code>py</code> 命令来启动 Python 程序，而不需要输入完整的Python可执行文件路径。会安装到系统目录中，所有用户都可以使用。安装这个选项需要管理员权限(elevation)。</li>
+</ul>
+</li>
+<li><p>高级选项</p>
+<p><img src="/posts/f4c9fbf3/advanced.png"></p>
+<ul>
+<li><code>Install for all users</code>: 为所有用户安装。选择这个选项会将Python安装在系统目录下(通常是 C:\Program Files\Python版本号)，这样所有用户都可以访问和使用Python。如果不选，则只安装在当前用户的目录下(通常是 C:\Users\用户名\AppData\Local\Programs\Python\Python版本号)，只有当前用户可以访问。</li>
+<li><code>Associate files with Python(requires the py launcher)</code>: 将文件关联到Python(需要py启动器)。选择这个选项会将.py文件关联到Python，这样你双击.py文件时，系统会使用Python来执行该文件。这个选项需要前面勾选安装py启动器，因为py启动器负责解析和执行.py文件。</li>
+<li><code>Create shortcuts for installed applications</code>: 为安装的应用程序创建快捷方式。选择这个选项会在开始菜单中为Python的应用程序创建快捷方式，方便快速启动应用程序。</li>
+<li><code>Add Python to environment variables</code>: 将Python添加到环境变量。选择这个选项会将Python的可执行文件路径添加到系统的环境变量中(通常是 Path 变量)，这样你可以在命令行中直接使用python命令来启动Python解释器，而不需要输入完整的路径。</li>
+<li><code>Precompile standard library</code>: 预编译标准库。选择这个选项会在安装过程中将Python的标准库模块预先编译成字节码文件(.pyc 文件)，这样在运行Python程序时，可以加快标准库模块的加载速度，提高程序的启动速度。</li>
+<li><code>Download debugging symbols</code>: 下载调试符号。调试符号包含了Python解释器和库的调试信息，选择这个选项会下载调试符号文件。调试符号主要用于开发人员进行调试和分析Python程序的性能问题，对于普通用户来说，这个选项可以不选。</li>
+<li><code>Download debug binaries(requires VS 2015 or later)</code>: 下载调试二进制文件(需要 Visual Studio 2015 或更高版本)。调试二进制文件是Python解释器和库的调试版本，包含了调试信息和符号。选择这个选项会下载调试二进制文件，但需要你安装了Visual Studio 2015或更高版本的开发环境。调试二进制文件同样主要用于开发人员进行调试和分析Python程序的问题，对于普通用户来说，这个选项也可以不选。</li>
+<li><code>Customize install location</code>: 自定义安装位置</li>
+</ul>
+</li>
+<li><p>结束</p>
+<p><img src="/posts/f4c9fbf3/close.png"></p>
+</li>
+<li><p>测试</p>
+<p>打开命令行，输入<code>python</code><br><img src="/posts/f4c9fbf3/test.png"></p>
+</li>
+</ol>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><ol>
+<li><p>双击安装包</p>
+<p><img src="/posts/f4c9fbf3/uninstall.png"></p>
+</li>
+<li><p>结束</p>
+<p><img src="/posts/f4c9fbf3/uninstallF.png"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>使用指南</category>
+      </categories>
+      <tags>
+        <tag>使用指南</tag>
+        <tag>软件</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>miniconda使用指南</title>
     <url>/posts/69b213e4/</url>
     <content><![CDATA[<p>Conda 是一个开源的包管理和环境管理工具，最初由 Anaconda, Inc. 开发。它主要用于管理软件包和创建隔离的环境，以便在不同的项目中使用不同的依赖版本，而不发生冲突。Conda 支持多种编程语言，包括但不限于 Python、R、Ruby、Lua、Scala、Java 和 C&#x2F;C++ 等。</p>
@@ -158,10 +233,10 @@
         <category>使用指南</category>
       </categories>
       <tags>
-        <tag>miniconda</tag>
-        <tag>python</tag>
         <tag>使用指南</tag>
         <tag>软件</tag>
+        <tag>python</tag>
+        <tag>miniconda</tag>
       </tags>
   </entry>
   <entry>
@@ -1189,9 +1264,9 @@
         <category>使用指南</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>使用指南</tag>
         <tag>软件</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
