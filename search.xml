@@ -13,6 +13,134 @@
       </tags>
   </entry>
   <entry>
+    <title>miniconda使用指南</title>
+    <url>/posts/69b213e4/</url>
+    <content><![CDATA[<p>Conda 是一个开源的包管理和环境管理工具，最初由 Anaconda, Inc. 开发。它主要用于管理软件包和创建隔离的环境，以便在不同的项目中使用不同的依赖版本，而不发生冲突。Conda 支持多种编程语言，包括但不限于 Python、R、Ruby、Lua、Scala、Java 和 C&#x2F;C++ 等。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">miniconda清华大学开源软件镜像站</a></p>
+<p><a href="https://repo.anaconda.com/miniconda/">miniconda官网下载</a></p>
+</blockquote>
+<p>选择合适的版本下载</p>
+<p><img src="/posts/69b213e4/version.png"></p>
+<ol>
+<li><p>双击安装包</p>
+<p><img src="/posts/69b213e4/setup.png"></p>
+</li>
+<li><p>同意协议</p>
+<p><img src="/posts/69b213e4/agree.png"></p>
+<p><img src="/posts/69b213e4/installfor.png"></p>
+</li>
+<li><p>安装路径</p>
+<p><img src="/posts/69b213e4/installpath.png"></p>
+</li>
+<li><p>环境变量</p>
+<p><img src="/posts/69b213e4/addpath.png"></p>
+</li>
+<li><p>结束</p>
+<p><img src="/posts/69b213e4/finish.png"></p>
+</li>
+<li><p>命令行工具<code>Anaconda Prompt</code></p>
+<p><img src="/posts/69b213e4/prompt.png"></p>
+</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>清除缓存</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda clean --all</span><br></pre></td></tr></table></figure>
+
+<p>清理 Conda 的缓存，包括包缓存、环境缓存等，以释放磁盘空间</p>
+<h3 id="环境管理"><a href="#环境管理" class="headerlink" title="环境管理"></a>环境管理</h3><ol>
+<li><p>创建虚拟环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda create -n your_env_name python=x.x</span><br></pre></td></tr></table></figure>
+<p>参数说明：</p>
+<ul>
+<li><code>your_env_name</code>：虚拟环境名</li>
+<li><code>x.x</code>：指定环境<code>python</code>版本，如不指定 Python 版本，Conda 会使用默认的 Python 版本来创建环境。</li>
+</ul>
+</li>
+<li><p>查看虚拟环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda env list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>激活虚拟环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">activate your_env_name</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li><code>your_env_name</code>：虚拟环境名</li>
+</ul>
+</li>
+<li><p>关闭虚拟环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">deactivate your_env_name</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li><code>your_env_name</code>：虚拟环境名</li>
+</ul>
+</li>
+<li><p>删除虚拟环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda env remove --name your_env_name --all</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li><code>your_env_name</code>：虚拟环境名</li>
+</ul>
+</li>
+<li><p>克隆环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda create --name myclone --clone myenv</span><br></pre></td></tr></table></figure>
+
+<p>克隆 <code>myenv</code> 环境到一个新的环境 <code>myclone</code></p>
+</li>
+<li><p>导出环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda env export --name myenv &gt; environment.yml</span><br></pre></td></tr></table></figure>
+
+<p>导出 <code>myenv</code> 环境到一个 YAML 文件，方便分享或重新创建环境</p>
+</li>
+<li><p>导入环境</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda env create -f environment.yml</span><br></pre></td></tr></table></figure>
+
+<p>从 YAML 文件创建一个新环境</p>
+</li>
+</ol>
+<h3 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h3><ol>
+<li><p>包安装</p>
+<p><code>conda</code> or <code>pip</code></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">activate your_env_name</span><br><span class="line">conda install package_name</span><br></pre></td></tr></table></figure>
+
+<p>安装特定版本包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install numpy=1.18.5</span><br></pre></td></tr></table></figure>
+
+<p>不激活环境安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install -n your_env_name package_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda update package_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看已安装包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">activate your_env_name</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure>
+
+<p>不激活环境查看</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda list -n your_env_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>搜索包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda search package_name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除环境中包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda activate your_env_name</span><br><span class="line">conda remove package_name</span><br></pre></td></tr></table></figure>
+
+<p>不激活环境删除</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda remove -n your_env_name package_name</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>打开安装目录<code>C:\Users\username\miniconda3</code>运行<code>Uninstall-Miniconda3.exe</code></p>
+]]></content>
+      <categories>
+        <category>使用指南</category>
+      </categories>
+      <tags>
+        <tag>miniconda</tag>
+        <tag>python</tag>
+        <tag>使用指南</tag>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【复刻】简易温湿度仪</title>
     <url>/posts/5a3f2d15/</url>
     <content><![CDATA[<h1 id="1、项目功能介绍"><a href="#1、项目功能介绍" class="headerlink" title="1、项目功能介绍"></a>1、项目功能介绍</h1><p>本项目复刻自<a href="https://www.yuque.com/wldz/jlceda/nhdssggs78punq4a">🔗【立创训练营】桌面温湿度仪👈</a></p>
@@ -999,18 +1127,47 @@
     <title>Hello World</title>
     <url>/posts/4a17b156/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Hexo 是一个基于 Node.js 的快速、简洁且高效的博客框架。它使用 Markdown（或其他渲染器）解析文章，然后生成静态网页。</p>
+<h1 id="创建新博文"><a href="#创建新博文" class="headerlink" title="创建新博文"></a>创建新博文</h1><p>在博客目录下，运行以下命令来创建新博文：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My_New_Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>将在 <code>source/_posts</code> 目录下创建一个名为 <code>My_New_Post.md</code> 的 Markdown 文件</p>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="编写博文"><a href="#编写博文" class="headerlink" title="编写博文"></a>编写博文</h1><p>打开 <code>source/_posts/My_New_Post.md</code> 文件，在其中编写博文内容。一个基本的博文格式如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My<span class="emphasis">_New_</span>Post</span><br><span class="line">date: 2024-01-01 00:00:00</span><br><span class="line">tags: </span><br><span class="line"><span class="bullet">	-</span> 标签1</span><br><span class="line"><span class="bullet">	-</span> 标签2</span><br><span class="line">categories: </span><br><span class="line"><span class="bullet">	-</span> 分类1</span><br><span class="line">author: Levi5</span><br><span class="line"><span class="section">description: My<span class="emphasis">_New_</span>Post</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line">这里是博文内容</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><code>title</code>: 博文标题</li>
+<li><code>date</code>: 博文日期</li>
+<li><code>tags</code>: 博文标签，可选</li>
+<li><code>categories</code>: 博文分类，可选</li>
+<li><code>author</code>: 作者，可选</li>
+<li><code>description</code>: 博文描述，可选</li>
+<li>博文内容: Markdown 格式的正文内容</li>
+</ul>
+<h1 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>或简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>然后在浏览器中访问 <code>http://localhost:4000</code> 查看博文</p>
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h1 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>或简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h1 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>或简写为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>使用指南</category>
+      </categories>
+      <tags>
+        <tag>使用指南</tag>
+        <tag>软件</tag>
+        <tag>hexo</tag>
+      </tags>
   </entry>
 </search>
