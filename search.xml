@@ -128,6 +128,30 @@
 <p>不激活环境删除</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda remove -n your_env_name package_name</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="镜像源"><a href="#镜像源" class="headerlink" title="镜像源"></a>镜像源</h3><p>打开命令行</p>
+<ol>
+<li><p>清华大学镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>中科大镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>阿里云镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.aliyun.com/anaconda/pkgs/free/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看当前配置的镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --show channels</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除镜像源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>恢复默认源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --remove-key channels</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清除索引缓存</p>
+<p>在添加或修改镜像源后，建议清除 Conda 的索引缓存，以确保使用的是最新的索引：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda clean --index-cache</span><br></pre></td></tr></table></figure></li>
+</ol>
 <h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p>打开安装目录<code>C:\Users\username\miniconda3</code>运行<code>Uninstall-Miniconda3.exe</code></p>
 ]]></content>
       <categories>
