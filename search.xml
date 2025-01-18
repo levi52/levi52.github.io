@@ -13,6 +13,80 @@
       </tags>
   </entry>
   <entry>
+    <title>Obsidian使用指南</title>
+    <url>/posts/fe8eaf10/</url>
+    <content><![CDATA[<p>Obsidian是基于 Markdown 文件的本地知识管理软件，可以方便地构建知识库</p>
+<p><img src="/posts/fe8eaf10/vault.png"></p>
+<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><ul>
+<li>新建仓库：指定文件夹创建仓库，设置仓库名称以及存放位置</li>
+</ul>
+<p><img src="/posts/fe8eaf10/newvault.png"></p>
+<p>仓库地址</p>
+<p><img src="/posts/fe8eaf10/vaultf.png"></p>
+<p>创建完成</p>
+<p><img src="/posts/fe8eaf10/tempvault.png"></p>
+<ul>
+<li>打开本地仓库：将一个本地文件夹作为仓库</li>
+</ul>
+<p><img src="/posts/fe8eaf10/testvaultf.png"></p>
+<p>创建完成</p>
+<p><img src="/posts/fe8eaf10/testvault.png"></p>
+<p>页面布局</p>
+<p><img src="/posts/fe8eaf10/view.png"></p>
+<h1 id="切换仓库"><a href="#切换仓库" class="headerlink" title="切换仓库"></a>切换仓库</h1><p>点击底部切换仓库</p>
+<p><img src="/posts/fe8eaf10/swv.png"></p>
+<h1 id="创建文件夹-笔记"><a href="#创建文件夹-笔记" class="headerlink" title="创建文件夹&#x2F;笔记"></a>创建文件夹&#x2F;笔记</h1><p><img src="/posts/fe8eaf10/newf.png"></p>
+<h1 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h1><p>一共三种模式阅读视图，源码模式，实时阅览</p>
+<p><img src="/posts/fe8eaf10/edit.png"></p>
+<h1 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h1><p>显示笔记大纲</p>
+<p><img src="/posts/fe8eaf10/li.png"></p>
+<h1 id="新增链接"><a href="#新增链接" class="headerlink" title="新增链接"></a>新增链接</h1><p>引用其他笔记内容</p>
+<p>输入<code>[[</code>或右键新增链接，会弹出可选链接，<code>ctrl</code>+单击跳转</p>
+<p><img src="/posts/fe8eaf10/link.png"></p>
+<h1 id="快速预览"><a href="#快速预览" class="headerlink" title="快速预览"></a>快速预览</h1><p>按住<code>ctrl</code>，鼠标悬浮在引用的内容上，可以快速引用预览内容</p>
+<p><img src="/posts/fe8eaf10/qv1.png"></p>
+<p>按住<code>ctrl</code>，鼠标悬浮在侧边文件列表的内容上，可以快速引用预览内容</p>
+<p><img src="/posts/fe8eaf10/qv2.png"></p>
+<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><p>有多种匹配搜索方式，方便快捷搜索文件</p>
+<p><img src="/posts/fe8eaf10/search.png"></p>
+<h1 id="书签"><a href="#书签" class="headerlink" title="书签"></a>书签</h1><p>创建书签方便管理，也可搜索书签快速切换</p>
+<p><img src="/posts/fe8eaf10/label.png"></p>
+<p>添加书签</p>
+<p><img src="/posts/fe8eaf10/addla.png"></p>
+<h1 id="快速切换"><a href="#快速切换" class="headerlink" title="快速切换"></a>快速切换</h1><p>搜索文件，快速切换文件，可以输入文件名或者书签名</p>
+<p><img src="/posts/fe8eaf10/sw.png"></p>
+<h1 id="关系图谱"><a href="#关系图谱" class="headerlink" title="关系图谱"></a>关系图谱</h1><p>选择打开链接视图，打开局部关系图</p>
+<p><img src="/posts/fe8eaf10/pa.png"><br>侧边栏选择查看关系图谱</p>
+<p><img src="/posts/fe8eaf10/pa1.png"></p>
+<h1 id="新建白板"><a href="#新建白板" class="headerlink" title="新建白板"></a>新建白板</h1><p>创建白板，绘制流图</p>
+<p><img src="/posts/fe8eaf10/board.png"></p>
+<h1 id="打开-创建日记"><a href="#打开-创建日记" class="headerlink" title="打开&#x2F;创建日记"></a>打开&#x2F;创建日记</h1><p>打开日记，如没有则自动创建</p>
+<p><img src="/posts/fe8eaf10/d.png"></p>
+<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p>创建模板，快速设置笔记格式。</p>
+<p>首先创建模板</p>
+<p><img src="/posts/fe8eaf10/template.png"></p>
+<p>设置模板目录以及时间格式</p>
+<p><img src="/posts/fe8eaf10/tf.png"></p>
+<p>新建笔记，设置模板</p>
+<p><img src="/posts/fe8eaf10/ct.png"><br><img src="/posts/fe8eaf10/ct1.png"></p>
+<h1 id="命令面板"><a href="#命令面板" class="headerlink" title="命令面板"></a>命令面板</h1><p>打开命令面板，快速选择命令</p>
+<p><img src="/posts/fe8eaf10/cmd.png"></p>
+<h1 id="Typora图片兼容"><a href="#Typora图片兼容" class="headerlink" title="Typora图片兼容"></a>Typora图片兼容</h1><p>Obsidian设置</p>
+<p><img src="/posts/fe8eaf10/tpic.png"></p>
+<p>Typora设置</p>
+<p><img src="/posts/fe8eaf10/toset.png"></p>
+]]></content>
+      <categories>
+        <category>使用指南</category>
+      </categories>
+      <tags>
+        <tag>使用指南</tag>
+        <tag>软件</tag>
+        <tag>Obsidian</tag>
+        <tag>知识库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python使用指南</title>
     <url>/posts/f4c9fbf3/</url>
     <content><![CDATA[<p>Python 是一种高级、解释型、多范式的编程语言，以其简洁易学的语法、丰富的库和框架、强大的跨平台性而广受欢迎，广泛应用于 Web 开发、数据科学、自动化脚本、网络爬虫等领域，拥有活跃的开发者社区支持。</p>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-levi.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-levi.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-levi.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"levi52.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"show_result":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Obsidian使用指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Obsidian使用指南">
+<meta property="og:url" content="https://levi52.github.io/posts/fe8eaf10/index.html">
+<meta property="og:site_name" content="Levi52&#39;s Blog">
+<meta property="og:description" content="Obsidian使用指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/vault.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/newvault.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/vaultf.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/tempvault.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/testvaultf.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/testvault.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/view.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/swv.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/newf.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/edit.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/li.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/link.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/qv1.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/qv2.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/search.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/label.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/addla.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/sw.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/pa.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/pa1.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/board.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/d.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/template.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/tf.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/ct.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/ct1.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/cmd.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/tpic.png">
+<meta property="og:image" content="https://levi52.github.io/posts/fe8eaf10/toset.png">
+<meta property="article:published_time" content="2025-01-11T07:08:53.000Z">
+<meta property="article:modified_time" content="2025-01-11T07:28:36.401Z">
+<meta property="article:author" content="Levi52">
+<meta property="article:tag" content="使用指南">
+<meta property="article:tag" content="软件">
+<meta property="article:tag" content="Obsidian">
+<meta property="article:tag" content="知识库">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://levi52.github.io/posts/fe8eaf10/vault.png">
+
+
+<link rel="canonical" href="https://levi52.github.io/posts/fe8eaf10/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://levi52.github.io/posts/fe8eaf10/","path":"posts/fe8eaf10/","title":"Obsidian使用指南"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Obsidian使用指南 | Levi52's Blog</title>
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Levi52's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Levi52's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">REMEMBER YOU WILL DIE</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-resource"><a href="/resource/" rel="section"><i class="fa fa-book fa-fw"></i>资源</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%87%E6%8D%A2%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">切换仓库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9-%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">创建文件夹&#x2F;笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%A7%E7%BA%B2"><span class="nav-number">5.</span> <span class="nav-text">大纲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%93%BE%E6%8E%A5"><span class="nav-number">6.</span> <span class="nav-text">新增链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E9%A2%84%E8%A7%88"><span class="nav-number">7.</span> <span class="nav-text">快速预览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2"><span class="nav-number">8.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A6%E7%AD%BE"><span class="nav-number">9.</span> <span class="nav-text">书签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2"><span class="nav-number">10.</span> <span class="nav-text">快速切换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9B%BE%E8%B0%B1"><span class="nav-number">11.</span> <span class="nav-text">关系图谱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E7%99%BD%E6%9D%BF"><span class="nav-number">12.</span> <span class="nav-text">新建白板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E5%BC%80-%E5%88%9B%E5%BB%BA%E6%97%A5%E8%AE%B0"><span class="nav-number">13.</span> <span class="nav-text">打开&#x2F;创建日记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF"><span class="nav-number">14.</span> <span class="nav-text">模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF"><span class="nav-number">15.</span> <span class="nav-text">命令面板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Typora%E5%9B%BE%E7%89%87%E5%85%BC%E5%AE%B9"><span class="nav-number">16.</span> <span class="nav-text">Typora图片兼容</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi52"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Levi52</p>
+  <div class="site-description" itemprop="description">NEED NOT TO KNOW</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/levi52" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;levi52" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/378576508" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;378576508" rel="noopener me" target="_blank"><i class="fab fa-youtube fa-fw"></i>bilibili</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com" rel="noopener" target="_blank">GitHub</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://bilibili.com/" title="https:&#x2F;&#x2F;bilibili.com" rel="noopener" target="_blank">bilibili</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://levi52.github.io/posts/fe8eaf10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi52">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Levi52's Blog">
+      <meta itemprop="description" content="NEED NOT TO KNOW">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Obsidian使用指南 | Levi52's Blog">
+      <meta itemprop="description" content="Obsidian使用指南">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Obsidian使用指南
+        </h1>
+
+        <div class="post-meta-container">
+          
+
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-01-11 15:08:53 / 修改时间：15:28:36" itemprop="dateCreated datePublished" datetime="2025-01-11T15:08:53+08:00">2025-01-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" itemprop="url" rel="index"><span itemprop="name">使用指南</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>499</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">Obsidian使用指南</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>Obsidian是基于 Markdown 文件的本地知识管理软件，可以方便地构建知识库</p>
+<p><img src="/posts/fe8eaf10/vault.png"></p>
+<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><ul>
+<li>新建仓库：指定文件夹创建仓库，设置仓库名称以及存放位置</li>
+</ul>
+<p><img src="/posts/fe8eaf10/newvault.png"></p>
+<p>仓库地址</p>
+<p><img src="/posts/fe8eaf10/vaultf.png"></p>
+<p>创建完成</p>
+<p><img src="/posts/fe8eaf10/tempvault.png"></p>
+<ul>
+<li>打开本地仓库：将一个本地文件夹作为仓库</li>
+</ul>
+<p><img src="/posts/fe8eaf10/testvaultf.png"></p>
+<p>创建完成</p>
+<p><img src="/posts/fe8eaf10/testvault.png"></p>
+<p>页面布局</p>
+<p><img src="/posts/fe8eaf10/view.png"></p>
+<h1 id="切换仓库"><a href="#切换仓库" class="headerlink" title="切换仓库"></a>切换仓库</h1><p>点击底部切换仓库</p>
+<p><img src="/posts/fe8eaf10/swv.png"></p>
+<h1 id="创建文件夹-笔记"><a href="#创建文件夹-笔记" class="headerlink" title="创建文件夹&#x2F;笔记"></a>创建文件夹&#x2F;笔记</h1><p><img src="/posts/fe8eaf10/newf.png"></p>
+<h1 id="模式"><a href="#模式" class="headerlink" title="模式"></a>模式</h1><p>一共三种模式阅读视图，源码模式，实时阅览</p>
+<p><img src="/posts/fe8eaf10/edit.png"></p>
+<h1 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h1><p>显示笔记大纲</p>
+<p><img src="/posts/fe8eaf10/li.png"></p>
+<h1 id="新增链接"><a href="#新增链接" class="headerlink" title="新增链接"></a>新增链接</h1><p>引用其他笔记内容</p>
+<p>输入<code>[[</code>或右键新增链接，会弹出可选链接，<code>ctrl</code>+单击跳转</p>
+<p><img src="/posts/fe8eaf10/link.png"></p>
+<h1 id="快速预览"><a href="#快速预览" class="headerlink" title="快速预览"></a>快速预览</h1><p>按住<code>ctrl</code>，鼠标悬浮在引用的内容上，可以快速引用预览内容</p>
+<p><img src="/posts/fe8eaf10/qv1.png"></p>
+<p>按住<code>ctrl</code>，鼠标悬浮在侧边文件列表的内容上，可以快速引用预览内容</p>
+<p><img src="/posts/fe8eaf10/qv2.png"></p>
+<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><p>有多种匹配搜索方式，方便快捷搜索文件</p>
+<p><img src="/posts/fe8eaf10/search.png"></p>
+<h1 id="书签"><a href="#书签" class="headerlink" title="书签"></a>书签</h1><p>创建书签方便管理，也可搜索书签快速切换</p>
+<p><img src="/posts/fe8eaf10/label.png"></p>
+<p>添加书签</p>
+<p><img src="/posts/fe8eaf10/addla.png"></p>
+<h1 id="快速切换"><a href="#快速切换" class="headerlink" title="快速切换"></a>快速切换</h1><p>搜索文件，快速切换文件，可以输入文件名或者书签名</p>
+<p><img src="/posts/fe8eaf10/sw.png"></p>
+<h1 id="关系图谱"><a href="#关系图谱" class="headerlink" title="关系图谱"></a>关系图谱</h1><p>选择打开链接视图，打开局部关系图</p>
+<p><img src="/posts/fe8eaf10/pa.png"><br>侧边栏选择查看关系图谱</p>
+<p><img src="/posts/fe8eaf10/pa1.png"></p>
+<h1 id="新建白板"><a href="#新建白板" class="headerlink" title="新建白板"></a>新建白板</h1><p>创建白板，绘制流图</p>
+<p><img src="/posts/fe8eaf10/board.png"></p>
+<h1 id="打开-创建日记"><a href="#打开-创建日记" class="headerlink" title="打开&#x2F;创建日记"></a>打开&#x2F;创建日记</h1><p>打开日记，如没有则自动创建</p>
+<p><img src="/posts/fe8eaf10/d.png"></p>
+<h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><p>创建模板，快速设置笔记格式。</p>
+<p>首先创建模板</p>
+<p><img src="/posts/fe8eaf10/template.png"></p>
+<p>设置模板目录以及时间格式</p>
+<p><img src="/posts/fe8eaf10/tf.png"></p>
+<p>新建笔记，设置模板</p>
+<p><img src="/posts/fe8eaf10/ct.png"><br><img src="/posts/fe8eaf10/ct1.png"></p>
+<h1 id="命令面板"><a href="#命令面板" class="headerlink" title="命令面板"></a>命令面板</h1><p>打开命令面板，快速选择命令</p>
+<p><img src="/posts/fe8eaf10/cmd.png"></p>
+<h1 id="Typora图片兼容"><a href="#Typora图片兼容" class="headerlink" title="Typora图片兼容"></a>Typora图片兼容</h1><p>Obsidian设置</p>
+<p><img src="/posts/fe8eaf10/tpic.png"></p>
+<p>Typora设置</p>
+<p><img src="/posts/fe8eaf10/toset.png"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,qq,wechat,tencent,douban,qzone,linkedin,diandian,facebook,twitter,google"
+      
+      
+        data-wechat-qrcode-title="share.title"
+      
+      
+        data-wechat-qrcode-helper="share.prompt"
+      
+    >
+    </div>
+  </div>
+  <script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js"></script>
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Levi52 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Levi52 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>Levi5
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://levi52.github.io/posts/fe8eaf10/" title="Obsidian使用指南">https://levi52.github.io/posts/fe8eaf10/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" rel="tag"><i class="fa fa-tag"></i>
+ 使用指南</a>
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i>
+ 软件</a>
+              <a href="/tags/Obsidian/" rel="tag"><i class="fa fa-tag"></i>
+ Obsidian</a>
+              <a href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i>
+ 知识库</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/f4c9fbf3/" rel="prev" title="Python使用指南">
+                  <i class="fa fa-angle-left"></i> Python使用指南
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Levi52</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">36k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:05</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("01/01/2024 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/levi52" class="github-corner" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.31/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>
